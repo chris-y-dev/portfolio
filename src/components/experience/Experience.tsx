@@ -5,7 +5,7 @@ import Accordion from "./Accordion";
 
 const Experience = () => {
   return (
-    <div className="border-blue py-4">
+    <div className="border-blue py-5">
       <div className="container">
         <h1>My Experience</h1>
         <div className="w-100">

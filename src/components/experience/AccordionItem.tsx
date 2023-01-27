@@ -1,11 +1,21 @@
-import React from "react";
+import React, { FunctionComponent, PropsWithChildren } from "react";
+import AccordionData from "../../interfaces/AccordionData";
 
-const AccordionItem = (props: any) => {
+const AccordionItem = (props: { item: AccordionData }) => {
+  const toggleAccordion = (id: string) => {
+    console.log(id);
+  };
+
   return (
     <div className="w-100">
-      <button className="accordionButton">{props.data.label}</button>
+      <button
+        className="accordionButton"
+        onClick={() => toggleAccordion(props.item.id)}
+      >
+        {props.item.buttonLabel}
+      </button>
       <div className="accordionPanel">
-        <p> {props.data.content}</p>
+        <p> {props.item.content}</p>
       </div>
     </div>
   );
