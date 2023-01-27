@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Inconsolata&family=Jost:wght@200;300;400&display=swap');
+$jost: jost, sans-serif;
+
+* {
+  box-sizing: border-box
+} 
+
+.border-blue{
+  border: 2px blue solid;
+}
+
+.border-red{
+  border: 2px red solid;
+}
+
+.border-green{
+  border: 2px green solid;
+}
+
+.background-primary{
+  background-color: #202020;
+}
+
+.nav-link,
+.text-white{
+  color: white !important;
+}
+
+h1,
+h2,
+h3,
+p,
+li{
+  font-family: $jost;
+}
+
+html,
+body{
+  background-color: #202020;
+}
+
+.text-shadow{
+  text-shadow: 3px 3px 10px rgba(0,0,0, 0.7);
+}
