@@ -18,6 +18,7 @@ const Expertise = () => {
 
         {/* Tiered Skills */}
         <div className="inner-container text-center border-red">
+
           <div className="row">
             <div className="col-md-6 col-sm-12 border-green">Column</div>
             <div className="col-md-6 col-sm-12  border-green">Column</div>
