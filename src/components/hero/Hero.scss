@@ -1,11 +1,26 @@
 .hero-container{
-    background-image: url(../../assets/sample.gif);
+    background-image: url(../../assets/sample2.gif);
     background-position: top center;
     background-size: cover;
+    background-repeat: no-repeat;
     background-color: black;
-    min-height: 70vh;
+    min-height: 80vh;
+
+    @media screen and (max-width: 600px) {
+        background-position: 28%;
+    }
+
+    //1080 depends on the size of future gif/3D Model.
+    @media screen and (min-width: 1080px) {
+        background-size: contain;
+      }
 }
 
-.title-font{
-    font-size: 6rem !important;
+.title{
+    font-size: 7rem;
+    font-weight: 800;
+}
+
+.subtitle{
+    font-size: 2rem;
 }

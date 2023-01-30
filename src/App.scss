@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Inconsolata&family=Jost:wght@200;300;400&display=swap');
 $jost: jost, sans-serif;
+$primary-colour: black;
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  color: white !important
 } 
 
 .border-blue{
@@ -18,27 +20,42 @@ $jost: jost, sans-serif;
 }
 
 .background-primary{
-  background-color: #202020;
+  background-color: $primary-colour;
 }
 
-.nav-link,
-.text-white{
-  color: white !important;
-}
 
 h1,
 h2,
-h3,
 p,
 li{
   font-family: $jost;
+
 }
 
 html,
 body{
-  background-color: #202020;
+  background-color: $primary-colour;
 }
 
 .text-shadow{
   text-shadow: 3px 3px 10px rgba(0,0,0, 0.7);
+}
+
+.section-heading{
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+// TODO: Variable width for different screen sizes
+.container{
+  max-width: 70% !important;
+}
+
+.inner-container{
+  width: 100%;
+
+  .row{
+    width: 100% !important;
+    margin: auto;
+  }
 }
