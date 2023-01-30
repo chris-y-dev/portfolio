@@ -40,7 +40,7 @@ const Accordion = () => {
 
   const openAccordion = (id: string) => {
     setOpenedAccordion(id);
-
+  };
 
   return (
     <div className="d-flex flex-column align-items-center w-100">
