@@ -7,7 +7,7 @@ const Experience = () => {
   return (
     <div className="border-blue py-5">
       <div className="container">
-        <h1>My Experience</h1>
+        <h2 className="section-heading">MY EXPERIENCE</h2>
         <div className="w-100">
           <Accordion />
         </div>
