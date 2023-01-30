@@ -47,6 +47,9 @@ const Accordion = () => {
       {items.map((item) => {
         return <AccordionItem item={item} key={item.id} />;
       })}
+      {items.map((item) => {
+        return <AccordionItem item={item} key={item.id} />;
+      })}
     </div>
   );
 };
