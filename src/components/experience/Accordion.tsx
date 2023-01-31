@@ -38,14 +38,21 @@ const Accordion = () => {
     setOpenedAccordion(items[0].id);
   }, []);
 
-  const openAccordion = (id: string) => {
+  const toggleAccordion = (id: string) => {
     setOpenedAccordion(id);
   };
 
   return (
     <div className="d-flex flex-column align-items-center w-100">
       {items.map((item) => {
-        return <AccordionItem item={item} key={item.id} />;
+        return (
+          <AccordionItem
+            item={item}
+            key={item.id}
+            isOpen={openedAccordion == item.id ? true : false}
+            toggleAccordion={toggleAccordion}
+          />
+        );
       })}
     </div>
   );

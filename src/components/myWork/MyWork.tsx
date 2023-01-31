@@ -5,7 +5,7 @@ const MyWork = () => {
     <div className="border-blue py-5">
       <div className="container">
         <h2 className="section-heading">MY WORK</h2>
-        <div className="container text-center border-red">
+        <div className="inner-container text-center border-red">
           <div className="row">
             <div className="col-lg-8 col-md-6 col-sm-12 border-green">
               Column Primary

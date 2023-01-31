@@ -8,15 +8,25 @@ $blue-panel: #262f56;
     border-radius: 5px;
     border: none;
     color: white;
+    text-align: left;
 ;
 }
 
 .accordionPanel{
     display: block;
     width: 100%;
+    margin-bottom: 0.5rem;
     background-color: rgba($color: $blue-panel, $alpha: 0.6);
     min-height: 6rem;
     border-radius: 10px;
     padding: 1rem;
-    margin: 1rem 0;
+
+}
+
+.showAccordion{
+    display: block;
+}
+
+.hideAccordion{
+    display:none
 }

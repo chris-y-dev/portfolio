@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Inconsolata&family=Jost:wght@200;300;400&display=swap');
 $jost: jost, sans-serif;
-$primary-colour: black;
+$bg-primary: rgb(30,30,30);
+$salmon-pink: rgb(255, 178, 191);
 
 * {
   box-sizing: border-box;
   color: white !important
 } 
+
+*::selection{
+  background-color: $salmon-pink;
+}
 
 .border-blue{
   border: 2px blue solid;
@@ -19,22 +24,17 @@ $primary-colour: black;
   border: 2px green solid;
 }
 
-.background-primary{
-  background-color: $primary-colour;
-}
-
-
 h1,
 h2,
 p,
 li{
   font-family: $jost;
-
 }
 
 html,
-body{
-  background-color: $primary-colour;
+body,
+.backgorund-primary{
+  background-color: $bg-primary;
 }
 
 .text-shadow{

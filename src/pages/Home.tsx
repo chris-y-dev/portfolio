@@ -7,7 +7,7 @@ import MyWork from "../components/myWork/MyWork";
 
 const Home = () => {
   return (
-    <div className="text-white vh-100 background-primary">
+    <div className="text-white vh-100 backgorund-primary">
       <Header />
       <Hero />
       <Experience />
