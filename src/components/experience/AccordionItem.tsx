@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { FunctionComponent, PropsWithChildren } from "react";
 import AccordionData from "../../interfaces/AccordionData";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const AccordionItem = (props: {
   item: AccordionData;
@@ -14,10 +16,13 @@ const AccordionItem = (props: {
   return (
     <div className="w-100">
       <button
-        className="accordionButton my-2 py-3 px-4 text-left"
+        className={`accordionButton ${
+          props.isOpen ? "btn-active" : "btn-inactive"
+        } d-flex flex-row my-2 py-3 px-4 text-left justify-content-between align-items-center`}
         onClick={() => toggleAccordion(props.item.id)}
       >
         {props.item.buttonLabel}
+        <FontAwesomeIcon icon={faChevronDown} />
       </button>
       <div
         className={`accordionPanel ${

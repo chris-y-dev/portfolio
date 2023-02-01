@@ -39,7 +39,11 @@ const Accordion = () => {
   }, []);
 
   const toggleAccordion = (id: string) => {
-    setOpenedAccordion(id);
+    if (openedAccordion != id) {
+      setOpenedAccordion(id);
+    } else {
+      setOpenedAccordion("");
+    }
   };
 
   return (
@@ -53,9 +57,6 @@ const Accordion = () => {
             toggleAccordion={toggleAccordion}
           />
         );
-      })}
-      {items.map((item) => {
-        return <AccordionItem item={item} key={item.id} />;
       })}
     </div>
   );

@@ -1,0 +1,23 @@
+$skill-panel: #313131;
+
+.expertiseContainer{
+    border: 1px solid white;
+    min-height: 250px;
+    text-align: left;
+}
+.skillContainer{
+    background-color: rgba($skill-panel, 0.6);
+    width: 100%;
+    min-height: 200px;
+    border-radius: 10px;
+
+    .heading{
+        text-align: left;
+    }
+}
+
+.pillContainer{
+    border-radius: 25px;
+    background-color: red;
+    min-width: 1rem;
+}

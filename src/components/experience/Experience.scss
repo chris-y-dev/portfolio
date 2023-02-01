@@ -1,15 +1,22 @@
-$blue-primary: #26268e;
-$blue-panel: #262f56;
+$blue-primary: #4f97a8;
+$blue-inactive: #3a5f69;
+$blue-panel: #2c4c60;
 
 .accordionButton{
     display:block;
     width: 100%;
-    background-color: $blue-primary;
     border-radius: 5px;
     border: none;
     color: white;
     text-align: left;
-;
+}
+
+.btn-active{
+    background-color: $blue-primary;
+}
+
+.btn-inactive{
+    background-color: $blue-inactive;
 }
 
 .accordionPanel{
@@ -17,7 +24,7 @@ $blue-panel: #262f56;
     width: 100%;
     margin-bottom: 0.5rem;
     background-color: rgba($color: $blue-panel, $alpha: 0.6);
-    min-height: 6rem;
+    min-height: 10rem;
     border-radius: 10px;
     padding: 1rem;
 
