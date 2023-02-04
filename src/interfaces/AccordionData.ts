@@ -1,5 +1,7 @@
 export default interface AccordionData{
-    buttonLabel: string,
     id: string,
-    content: string
+    buttonLabel: string,
+    description: string,
+    companyImagePath: string,
+    technologies: string[]
 }

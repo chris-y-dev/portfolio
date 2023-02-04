@@ -10,14 +10,46 @@ $blue-panel: #2c4c60;
     color: white;
     text-align: left;
 }
-
-.btn-active{
+    
+.--btn-active{
     background-color: $blue-primary;
 }
 
-.btn-inactive{
+.--btn-inactive{
     background-color: $blue-inactive;
 }
+
+@keyframes openingIcon {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 180deg;
+    }
+}
+
+@keyframes closingIcon {
+    from {
+        rotate: 180deg;
+    } to {
+        rotate: 360deg;
+    }
+}
+
+.--btn-active-icon{
+        rotate: 0deg;
+        animation-name: openingIcon;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards; 
+}
+
+.--btn-inactive-icon{
+    rotate: 180deg;
+    animation-name: closingIcon;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards; 
+}
+
+
 
 .accordionPanel{
     display: block;
@@ -27,13 +59,26 @@ $blue-panel: #2c4c60;
     min-height: 10rem;
     border-radius: 10px;
     padding: 1rem;
-
+    
 }
 
-.showAccordion{
-    display: block;
+@keyframes panelFadeIn {
+    from {
+        opacity: 50%;
+        translate: 0 -20%;
+    } to {
+        opacity: 100%;
+        translate: 0%;
+    }
+    
 }
 
-.hideAccordion{
-    display:none
+.--showAccordion{
+    animation-name: panelFadeIn;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.--hideAccordion{
+    display: none !important;
 }

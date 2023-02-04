@@ -1,0 +1,29 @@
+.projectBlock{
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 33vh;
+    background-color: grey;
+
+    &:hover{
+        
+        img{
+            zoom: 10%;
+        }
+    }
+
+    img{
+        width: 100%;
+        height: 75%;
+        background-color: black;
+    }
+
+    .projectBlock_panel{
+        position:absolute;
+        height: 25%;
+        width:100%;
+        background-color: darkblue;
+        bottom: 0px;
+    }
+}

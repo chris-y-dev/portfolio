@@ -11,19 +11,36 @@ import AccordionData from "../../interfaces/AccordionData";
 const Accordion = () => {
   const items: AccordionData[] = [
     {
-      buttonLabel: "Accordion item 1",
       id: "item1",
-      content: "Text of accordion item 1",
+      buttonLabel: "Software Engineer Intern @ Xero",
+      description:
+        "Carry out requried tasks as an intern. Carry out requried tasks as an intern. Carry out requried tasks as an intern. Carry out requried tasks as an intern.",
+      companyImagePath: "../../assets/xero_logo.png",
+      technologies: ["C#", "dotnet", "Docker", "AWS", "TeamCity"],
     },
     {
-      buttonLabel: "Accordion item 2",
       id: "item2",
-      content: "Text of accordion item 2",
+      buttonLabel: "Frontend Developer @ Pegboard",
+      description:
+        "Develop SPA for large retail businesses. Users can customise 3D models of products before making an order. Also developed UI for admin/internal use for businesses. Most of the work invovled JavaScript and JS frameworks.",
+      companyImagePath: "../../assets/pegboardco_logo.png",
+      technologies: [
+        "TypeScript",
+        "Angular",
+        "Vectary",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Git",
+      ],
     },
     {
-      buttonLabel: "Accordion item 3",
       id: "item3",
-      content: "Text of accordion item 3",
+      buttonLabel: "Web Desginer and Developer @ BerniesMusicLand",
+      description:
+        "Carried out maintenance of legacy websites using PHP, HTML, CSS and WordPress. Invovled in the initial design of new website, balancing between UX and business requirements.",
+      companyImagePath: "../../assets/bml_logo.jpg",
+      technologies: ["HTML", "CSS", "Photoshop", "Figma", "WordPress", "PHP"],
     },
   ];
   //TODO: create accordion functions
@@ -39,7 +56,7 @@ const Accordion = () => {
   }, []);
 
   const toggleAccordion = (id: string) => {
-    if (openedAccordion != id) {
+    if (openedAccordion !== id) {
       setOpenedAccordion(id);
     } else {
       setOpenedAccordion("");
@@ -53,7 +70,7 @@ const Accordion = () => {
           <AccordionItem
             item={item}
             key={item.id}
-            isOpen={openedAccordion == item.id ? true : false}
+            isOpen={openedAccordion === item.id ? true : false}
             toggleAccordion={toggleAccordion}
           />
         );
