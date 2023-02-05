@@ -15,7 +15,7 @@ const Accordion = () => {
       buttonLabel: "Software Engineer Intern @ Xero",
       description:
         "Carry out requried tasks as an intern. Carry out requried tasks as an intern. Carry out requried tasks as an intern. Carry out requried tasks as an intern.",
-      companyImagePath: "../../assets/xero_logo.png",
+      companyImagePath: "/expertise/xero_logo.png",
       technologies: ["C#", "dotnet", "Docker", "AWS", "TeamCity"],
     },
     {
@@ -23,7 +23,7 @@ const Accordion = () => {
       buttonLabel: "Frontend Developer @ Pegboard",
       description:
         "Develop SPA for large retail businesses. Users can customise 3D models of products before making an order. Also developed UI for admin/internal use for businesses. Most of the work invovled JavaScript and JS frameworks.",
-      companyImagePath: "../../assets/pegboardco_logo.png",
+      companyImagePath: "/expertise/pegboardco_logo.png",
       technologies: [
         "TypeScript",
         "Angular",
@@ -39,7 +39,7 @@ const Accordion = () => {
       buttonLabel: "Web Desginer and Developer @ BerniesMusicLand",
       description:
         "Carried out maintenance of legacy websites using PHP, HTML, CSS and WordPress. Invovled in the initial design of new website, balancing between UX and business requirements.",
-      companyImagePath: "../../assets/bml_logo.jpg",
+      companyImagePath: "/expertise/bml_logo.jpg",
       technologies: ["HTML", "CSS", "Photoshop", "Figma", "WordPress", "PHP"],
     },
   ];

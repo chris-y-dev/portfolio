@@ -8,7 +8,7 @@ const MyWork = () => {
       projectName: "Example",
       projectDescShort: "Example",
       projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "../../assets/images/myWork/sample_project.jpg",
+      projectThumbnailPath: "/myWork/sample_project.jpg",
       projectLink: "/",
       projectScreenshots: [],
       isFeatured: true,
@@ -18,7 +18,7 @@ const MyWork = () => {
       projectName: "Example",
       projectDescShort: "Example",
       projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "../../assets/images/myWork/sample_project.jpg",
+      projectThumbnailPath: "/myWork/sample_project.jpg",
       projectLink: "/",
       projectScreenshots: [],
       isFeatured: false,
@@ -28,7 +28,7 @@ const MyWork = () => {
       projectName: "Example",
       projectDescShort: "Example",
       projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "../../assets/images/myWork/sample_project.jpg",
+      projectThumbnailPath: "/myWork/sample_project.jpg",
       projectLink: "/",
       projectScreenshots: [],
       isFeatured: false,
@@ -38,7 +38,7 @@ const MyWork = () => {
       projectName: "Example",
       projectDescShort: "Example",
       projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "../../assets/images/myWork/sample_project.jpg",
+      projectThumbnailPath: "/myWork/sample_project.jpg",
       projectLink: "/",
       projectScreenshots: [],
       isFeatured: false,
@@ -48,7 +48,7 @@ const MyWork = () => {
       projectName: "Example",
       projectDescShort: "Example",
       projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "../../assets/images/myWork/sample_project.jpg",
+      projectThumbnailPath: "/myWork/sample_project.jpg",
       projectLink: "/",
       projectScreenshots: [],
       isFeatured: false,
@@ -58,7 +58,7 @@ const MyWork = () => {
       projectName: "Example",
       projectDescShort: "Example",
       projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "../../assets/images/myWork/sample_project.jpg",
+      projectThumbnailPath: "/myWork/sample_project.jpg",
       projectLink: "/",
       projectScreenshots: [],
       isFeatured: false,
@@ -68,7 +68,7 @@ const MyWork = () => {
       projectName: "Example",
       projectDescShort: "Example",
       projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "../../assets/images/myWork/sample_project.jpg",
+      projectThumbnailPath: "/myWork/sample_project.jpg",
       projectLink: "/",
       projectScreenshots: [],
       isFeatured: true,
@@ -81,7 +81,7 @@ const MyWork = () => {
       <div className="container overflow-hidden">
         <h2 className="section-heading">MY WORK</h2>
         <div className="inner-container text-center border-red">
-          <div className="row gy-3 gx-5">
+          <div className="row gy-4 gx-4">
             {workData.map((project) => {
               if (project.isFeatured) {
                 return (
