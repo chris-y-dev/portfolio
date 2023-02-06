@@ -1,4 +1,4 @@
-export default interface TechnologiesData{
+export default interface HardAndSoftSkillData{
     proficiencyTitle: string,
     technolgies: string[]
 }

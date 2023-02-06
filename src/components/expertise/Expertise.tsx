@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ExpertiseData from "../../interfaces/ExpertiseData";
-import TechnologiesData from "../../interfaces/TechnologiesData";
+import HardAndSoftSkillData from "../../interfaces/HardAndSoftSkillData";
+import TechnologiesData from "../../interfaces/HardAndSoftSkillData";
 import "./Expertise.scss";
 import ExpertiseContainer from "./ExpertiseContainer";
-import TechnologiesContainer from "./TechnologiesContainer";
+import HardAndSoftSkillsContainer from "./HardAndSoftSkillsContainer";
 
 const Expertise = () => {
   const [expertiseData, setExpertiseData] = useState<ExpertiseData[]>([]);
@@ -23,6 +24,48 @@ const Expertise = () => {
       expertiseTitle: "Web Design",
       description:
         " Passionate about designing modern websites for small businesses, informed by UX/UI principles.",
+    },
+  ];
+
+  const hardAndSoftSkillData: HardAndSoftSkillData[] = [
+    {
+      proficiencyTitle: "Expert",
+      technolgies: [
+        "C#",
+        "Dotnet",
+        "API",
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS",
+      ],
+    },
+    {
+      proficiencyTitle: "Proficient",
+      technolgies: [
+        "Angular",
+        "React",
+        "SQL",
+        "Docker",
+        "SCSS",
+        "Unit Testing",
+      ],
+    },
+    {
+      proficiencyTitle: "Intermediate",
+      technolgies: ["AWS", "Azure", "ReactNative", "Express", "MongoDB"],
+    },
+    {
+      proficiencyTitle: "Soft Skill Highlights",
+      technolgies: [
+        "Open & Assertive Communicator",
+        "Empathetic & Respectful",
+        "Open-minded",
+        "Feedback-seeking",
+        "Time Management",
+        "Accountable",
+        "Effective Collaborator",
+      ],
     },
   ];
 
@@ -51,20 +94,13 @@ const Expertise = () => {
         {/* Tiered Skills */}
         <div className="inner-container text-center border-red">
           <div className="row gy-4">
-            <div className="col-md-6 col-sm-12 border-green">
-              <TechnologiesContainer />
-            </div>
-            <div className="col-md-6 col-sm-12 border-green">
-              <TechnologiesContainer />
-            </div>
-          </div>
-          <div className="row gy-4 ">
-            <div className="col-md-6 col-sm-12  border-green">
-              <TechnologiesContainer />
-            </div>
-            <div className="col-md-6 col-sm-12  border-green">
-              <TechnologiesContainer />
-            </div>
+            {hardAndSoftSkillData.map((skillData) => {
+              return (
+                <div className="col-md-6 col-sm-12 border-green">
+                  <HardAndSoftSkillsContainer skillData={skillData} />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

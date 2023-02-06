@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { FunctionComponent, PropsWithChildren } from "react";
 import AccordionData from "../../interfaces/AccordionData";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import TechPill from "../expertise/TechPill";
+import TechPill from "../expertise/SkillPill";
 import fetchStaticImage from "../../hooks/fetchStaticImage";
 
 const AccordionItem = (props: {
