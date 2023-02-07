@@ -23,7 +23,7 @@ const Expertise = () => {
     {
       expertiseTitle: "Web Design",
       description:
-        " Passionate about designing modern websites for small businesses, informed by UX/UI principles.",
+        "Passionate about designing modern websites for small businesses, informed by UX/UI principles.",
     },
   ];
 
@@ -83,7 +83,7 @@ const Expertise = () => {
           <div className="row h-20">
             {expertiseData.map((data) => {
               return (
-                <div className="col-lg-4 col-md-6 col-sm-12 border-green p-0">
+                <div className="col-lg-4 col-md-6 col-sm-12 p-0">
                   <ExpertiseContainer data={data} />
                 </div>
               );

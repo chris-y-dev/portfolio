@@ -1,57 +1,97 @@
-$skill-panel: #313131;
-$expert-gold: goldenrod;
-$proficient-silver: silver;
-$intermediate-bronze: brown;
-$softSkills-purple: purple;
+$dark-grey-panel: #313131;
+$expert-gold: rgb(221, 174, 54);
+$proficient-silver: rgb(170, 170, 170);
+$intermediate-bronze: rgb(180, 92, 48);
+$softSkills-purple: rgb(189, 109, 211);
+$softSkills-green: rgb(111, 190, 176);
+
 
 .expertiseContainer{
     border: 1px solid white;
     min-height: 250px;
     text-align: left;
 
+    h3,
+    h4,
+    p{
+        font-weight: 300;
+    }
 }
+
 .skillContainer{
-    background-color: rgba($skill-panel, 0.6);
+    background-color: rgba($dark-grey-panel, 0.6);
     width: 100%;
     min-height: 200px;
     border-radius: 10px;
-    border: 3px solid;
 
     .heading{
         text-align: left;
+        font-weight: 300;
+        
     }
 
     &.--expert{
-        border-color:  $expert-gold;
 
         .pillContainer{
             background-color: $expert-gold;
         }
     }
     &.--proficient{
-        border-color: $proficient-silver;
+
         .pillContainer{
             background-color: $proficient-silver;
         }
     }
 
     &.--intermediate{
-        border-color: $intermediate-bronze;
+    
         .pillContainer{
             background-color: $intermediate-bronze;
         }
     }
 
     &.--softSkills{
-        border-color: $softSkills-purple;
+    
         .pillContainer{
-            background-color: $softSkills-purple;
+            background-image: linear-gradient(to right, $softSkills-purple, $softSkills-green);
         }
     }
+    
+    &:hover{
+        .pillContainer{
+
+            &:before{
+                transform: translateX(250%);
+            }
+        }
+    }
+
+  
 }
 
+
 .pillContainer{
+    position: relative;
     border-radius: 25px;
-    background-color: red;
+    background-color: rgba($color: black, $alpha: 0.2);
     min-width: 1rem;
+    overflow: hidden !important;
+
+
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        filter: blur(10px);
+        transform: translateX(-200%) skewX(-30deg);
+        transition: 0.6s;
+        
+    }
+
+    &:hover:before{
+        transform: translateX(200%)
+    }
 }

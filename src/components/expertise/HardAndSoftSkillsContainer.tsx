@@ -18,7 +18,7 @@ const HardAndSoftSkillsContainer = (props: {
         skillType_styling[props.skillData.proficiencyTitle]
       }`}
     >
-      <h4 className="heading">{props.skillData.proficiencyTitle}</h4>
+      <h3 className="heading mb-4">{props.skillData.proficiencyTitle}</h3>
       <div className="d-flex flex-row text-center flex-wrap">
         {props.skillData.technolgies.map((pill) => {
           return <SkillPill pill={pill} />;

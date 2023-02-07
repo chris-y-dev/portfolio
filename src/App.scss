@@ -55,7 +55,11 @@ body,
 
 // TODO: Variable width for different screen sizes
 .container{
-  max-width: 70% !important;
+  max-width: 900px !important;
+
+  @media screen and (max-width: $grid-breakpoints-lg) {
+    max-width: 80% !important;
+  }
 
   @media screen and (max-width: $grid-breakpoints-sm) {
     max-width: 90% !important;
@@ -70,5 +74,4 @@ body,
     margin: auto;
   }
 
- 
 }

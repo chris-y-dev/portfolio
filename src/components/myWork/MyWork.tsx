@@ -81,7 +81,7 @@ const MyWork = () => {
       <div className="container overflow-hidden">
         <h2 className="section-heading">MY WORK</h2>
         <div className="inner-container text-center border-red">
-          <div className="row gy-5 gx-5">
+          <div className="row gy-5 gx-5 pb-5">
             {workData.map((project) => {
               if (project.isFeatured) {
                 return (

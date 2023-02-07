@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { FunctionComponent, PropsWithChildren } from "react";
 import AccordionData from "../../interfaces/AccordionData";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import TechPill from "../expertise/SkillPill";
+import SkillPill from "../expertise/SkillPill";
 import fetchStaticImage from "../../hooks/fetchStaticImage";
 
 const AccordionItem = (props: {
@@ -43,7 +43,7 @@ const AccordionItem = (props: {
             <p> {props.item.description}</p>
             <div className="d-flex flex-row flex-wrap">
               {props.item.technologies.map((tech) => {
-                return <TechPill pill={tech} key={tech} />;
+                return <SkillPill pill={tech} key={tech} />;
               })}
             </div>
           </div>
