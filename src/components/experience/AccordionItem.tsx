@@ -34,7 +34,7 @@ const AccordionItem = (props: {
         />
       </button>
       <div
-        className={`accordionPanel p-4 ${
+        className={`accordionPanel p-4 my-3 ${
           props.isOpen ? "--showAccordion d-flex flex-row" : "--hideAccordion"
         }`}
       >

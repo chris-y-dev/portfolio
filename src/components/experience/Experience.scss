@@ -1,6 +1,7 @@
-$blue-primary: #4f97a8;
-$blue-inactive: #3a5f69;
-$blue-panel: #2c4c60;
+$accordion-button-glow: rgb(15, 30, 97);
+$accordion-button-active: #1e5da0;
+$accordion-button-inactive: #535c75;
+$accordion-panel: #414361;
 
 .accordionButton{
     display:block;
@@ -14,11 +15,13 @@ $blue-panel: #2c4c60;
 }
     
 .--btn-active{
-    background-color: $blue-primary;
+    background-color: $accordion-button-active;
+    box-shadow: inset 0 0 10px 0px rgba($color: $accordion-button-glow, $alpha: 0.5);
+    
 }
 
 .--btn-inactive{
-    background-color: $blue-inactive;
+    background-color: $accordion-button-inactive;
 }
 
 @keyframes openingIcon {
@@ -56,10 +59,10 @@ $blue-panel: #2c4c60;
 .accordionPanel{
     display: block;
     width: 100%;
-    margin-bottom: 0.5rem;
-    background-color: rgba($color: $blue-panel, $alpha: 0.6);
+    background-color: rgba($color: $accordion-panel, $alpha: 0.5);
     min-height: 10rem;
     border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(black, 0.5);
     
     .companyLogo{
         max-width: 70%;

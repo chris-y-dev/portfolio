@@ -13,3 +13,4 @@ export interface ProjectScreenshot{
     imagePath: string,
     imageDescription: string
 }
+

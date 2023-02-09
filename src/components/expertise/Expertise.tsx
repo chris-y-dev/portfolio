@@ -74,7 +74,7 @@ const Expertise = () => {
   }, []);
 
   return (
-    <div className="border-blue py-5">
+    <div className="border-blue py-5" id="expertise">
       <div className="container">
         <h2 className="section-heading">EXPERTISE</h2>
 

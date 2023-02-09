@@ -10,7 +10,7 @@ const ProjectBlock = (props: { projectData: MyWorkData }) => {
     <div className="projectBlock d-flex flex-column">
       <img src={img} alt={props.projectData.projectName} />
 
-      <div className="projectBlock_panel p-2">
+      <div className="projectBlock_panel pt-3">
         {props.projectData.projectName}
       </div>
     </div>

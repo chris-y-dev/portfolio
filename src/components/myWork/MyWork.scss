@@ -1,4 +1,6 @@
 @import "../expertise/Expertise.scss";
+$filter-background: rgb(66, 66, 73);
+$option-selected: rgb(42, 54, 165);
 
 @keyframes hoverEnlarge {
     from{
@@ -37,5 +39,33 @@
         width:100%;
         background-color: $dark-grey-panel;
         bottom: 0px;
+        font-size: 80%
     }
+}
+
+#projectFilter{
+    color: white;
+    background-color: $filter-background;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    &:focus{
+        outline: black;
+    }
+    
+
+    option{
+        font-weight: 200;
+        color: white;
+        border-bottom: 1px solid rgba($color: black, $alpha: 0.5);
+
+        &:checked{
+            background-color: $option-selected;
+        }
+    }
+}
+
+label{
+    font-weight: 200;
 }

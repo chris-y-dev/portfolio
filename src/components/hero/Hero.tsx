@@ -5,7 +5,7 @@ let heroGif = require("../../assets/sample.gif");
 
 const Hero = () => {
   return (
-    <div className="border-blue hero-container py-5">
+    <div className="hero-container py-5" id="home">
       <div className="container">
         <h1 className="title text-shadow">CHRIS Y.</h1>
         <h3 className="subtitle text-shadow">

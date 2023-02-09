@@ -1,0 +1,27 @@
+@import '../../App.scss';
+
+
+@keyframes colorFade {
+    0%{scale: 100%;}
+    25%{
+       
+    }
+    50% { 
+        scale: 120%;}
+    100%{ 
+        scale: 100%;}
+}
+
+.brand-logo{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 200;
+    color: white;
+
+    &:hover{
+        color: white;
+        animation-name: colorFade;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}

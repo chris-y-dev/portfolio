@@ -1,7 +1,10 @@
 $dark-grey-panel: #313131;
 $expert-gold: rgb(221, 174, 54);
+$expert-gold-dark: rgb(201, 159, 53);
 $proficient-silver: rgb(170, 170, 170);
+$proficient-silver-dark: rgb(131, 131, 131);
 $intermediate-bronze: rgb(180, 92, 48);
+$intermediate-bronze-dark: rgb(147, 76, 41);
 $softSkills-purple: rgb(189, 109, 211);
 $softSkills-green: rgb(111, 190, 176);
 
@@ -33,20 +36,20 @@ $softSkills-green: rgb(111, 190, 176);
     &.--expert{
 
         .pillContainer{
-            background-color: $expert-gold;
+            background-image: linear-gradient(to right, $expert-gold, $expert-gold-dark);
         }
     }
     &.--proficient{
 
         .pillContainer{
-            background-color: $proficient-silver;
+            background-image: linear-gradient(to right, $proficient-silver, $proficient-silver-dark);
         }
     }
 
     &.--intermediate{
     
         .pillContainer{
-            background-color: $intermediate-bronze;
+            background-image: linear-gradient(to right, $intermediate-bronze, $intermediate-bronze-dark);
         }
     }
 
