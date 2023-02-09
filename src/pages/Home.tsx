@@ -1,6 +1,7 @@
 import React from "react";
 import Experience from "../components/experience/Experience";
 import Expertise from "../components/expertise/Expertise";
+import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
 import MyWork from "../components/myWork/MyWork";
@@ -13,6 +14,7 @@ const Home = () => {
       <Experience />
       <Expertise />
       <MyWork />
+      <Footer />
     </div>
   );
 };

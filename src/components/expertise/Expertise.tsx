@@ -14,16 +14,19 @@ const Expertise = () => {
       expertiseTitle: "Software Dev",
       description:
         "Experience with enterprise-level technologies such as WebAPIs and AWS. Familiar with SOLID principles and CLEAN architecture, particularly the use of Depency Injection.",
+      graphicPath: "/expertise/software-development.png",
     },
     {
       expertiseTitle: "Frontend Dev",
       description:
-        "2 years of development experience in HTML, CSS, JS, React, and Angular frameworks.",
+        "2 years of development experience in HTML, CSS, JS, React, and Angular frameworks. Miculous about Responsive development - Try resizing this website!",
+      graphicPath: "/expertise/frontend-development.png",
     },
     {
       expertiseTitle: "Web Design",
       description:
         "Passionate about designing modern websites for small businesses, informed by UX/UI principles.",
+      graphicPath: "/expertise/web-design.png",
     },
   ];
 
@@ -80,10 +83,10 @@ const Expertise = () => {
 
         {/* High level skills */}
         <div className="inner-container text-center border-red">
-          <div className="row h-20">
+          <div className="row h-20 gx-2 gy-2">
             {expertiseData.map((data) => {
               return (
-                <div className="col-lg-4 col-md-6 col-sm-12 p-0">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                   <ExpertiseContainer data={data} />
                 </div>
               );

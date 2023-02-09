@@ -8,10 +8,15 @@ $intermediate-bronze-dark: rgb(147, 76, 41);
 $softSkills-purple: rgb(189, 109, 211);
 $softSkills-green: rgb(111, 190, 176);
 
+#expertise{
+    margin-bottom: 2rem;
+}
 
 .expertiseContainer{
-    border: 1px solid white;
-    min-height: 250px;
+    // border: 1px solid white;
+    border-radius: 10px;
+    background-color: #2f2f2f;
+    height: 100%;
     text-align: left;
 
     h3,
@@ -19,12 +24,17 @@ $softSkills-green: rgb(111, 190, 176);
     p{
         font-weight: 300;
     }
+
+    img{
+        width: 70%;
+        max-width: 200px;
+    }
 }
 
 .skillContainer{
     background-color: rgba($dark-grey-panel, 0.6);
     width: 100%;
-    min-height: 200px;
+    height: 100%;
     border-radius: 10px;
 
     .heading{
