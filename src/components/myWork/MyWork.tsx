@@ -159,14 +159,6 @@ const MyWork = () => {
                 }
               })}
           </div>
-          {/* <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12 border-green">
-              Row 3
-            </div>
-            <div className="col-lg-8 col-md-6 col-sm-12 border-green">
-              Row 3
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

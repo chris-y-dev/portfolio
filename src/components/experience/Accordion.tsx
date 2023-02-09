@@ -13,6 +13,8 @@ const Accordion = () => {
     {
       id: "item1",
       buttonLabel: "Software Engineer Intern @ Xero",
+      workType: "Full-time",
+      workPeriod: "November 2022 - February 2023",
       description:
         "Carry out requried tasks as an intern. Carry out requried tasks as an intern. Carry out requried tasks as an intern. Carry out requried tasks as an intern.",
       companyImagePath: "/experience/xero_logo.png",
@@ -21,6 +23,8 @@ const Accordion = () => {
     {
       id: "item2",
       buttonLabel: "Frontend Developer @ Pegboard",
+      workPeriod: "July 2022 - Ongoing",
+      workType: "Part-time",
       description:
         "Develop SPA for large retail businesses. Users can customise 3D models of products before making an order. Also developed UI for admin/internal use for businesses. Most of the work invovled JavaScript and JS frameworks.",
       companyImagePath: "/experience/pegboardco_logo.png",
@@ -37,6 +41,8 @@ const Accordion = () => {
     {
       id: "item3",
       buttonLabel: "Web Desginer and Developer @ BerniesMusicLand",
+      workType: "Part-time",
+      workPeriod: "May 2022 - Ongoing",
       description:
         "Carried out maintenance of legacy websites using PHP, HTML, CSS and WordPress. Invovled in the initial design of new website, balancing between UX and business requirements.",
       companyImagePath: "/experience/bml_logo.jpg",

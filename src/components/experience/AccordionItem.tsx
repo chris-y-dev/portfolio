@@ -39,6 +39,9 @@ const AccordionItem = (props: {
       >
         <div className="row">
           <div className="col-md-9 col-xs-12 d-flex flex-column">
+            <p>
+              {props.item.workType} {props.item.workPeriod}
+            </p>
             <p> {props.item.description}</p>
             <div className="d-flex flex-row flex-wrap">
               {props.item.technologies.map((tech) => {

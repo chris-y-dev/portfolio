@@ -8,8 +8,24 @@ $intermediate-bronze-dark: rgb(147, 76, 41);
 $softSkills-purple: rgb(189, 109, 211);
 $softSkills-green: rgb(111, 190, 176);
 
+@keyframes textGlow {
+    0%{
+        text-shadow: 0 0 3px rgba($color: rgb(252, 251, 168), $alpha: 1.0);;
+    } 
+    50% {
+        text-shadow: 0 0 13px;
+    }
+    75%{
+        text-shadow: 0 0 13px;
+    }
+    100%{
+        text-shadow: 0 0 3px;
+    }
+    
+}
+
 #expertise{
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .expertiseContainer{
@@ -18,6 +34,12 @@ $softSkills-green: rgb(111, 190, 176);
     background-color: #2f2f2f;
     height: 100%;
     text-align: left;
+    padding: 0.5rem 1rem;
+
+    
+    @media screen and (max-width: 768px) {
+        padding: 1rem 2.5em; 
+    }
 
     h3,
     h4,
@@ -25,10 +47,23 @@ $softSkills-green: rgb(111, 190, 176);
         font-weight: 300;
     }
 
+    p{
+        text-align: left;
+        width: 100%;
+    }
+
     img{
         width: 70%;
         max-width: 200px;
     }
+
+    .--description-highlight{
+        animation-name: textGlow;
+        animation-duration: 2.5s;
+        font-weight: 400;
+        animation-iteration-count: infinite;
+    }
+
 }
 
 .skillContainer{
