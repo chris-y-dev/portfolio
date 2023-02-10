@@ -5,12 +5,34 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
+import {
+  createBrowserRouter,
+  RouterProvider
+} from "react-router-dom";
+import Home from "./pages/Home";
+import ErrorPage from "./pages/ErrorPage";
+import WorkDetailPage from "./pages/WorkShowcasePage";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/work-showcase/:projectId",
+    element: <WorkDetailPage />,
+    errorElement: <ErrorPage />
+  }
+])
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

@@ -10,7 +10,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="border-blue row w-100 m-0">
+    <div className="border-blue row w-100 m-0" id="socials">
       <div className="py-5 ps-5 pe-3 socials_container col-md-5 col-sm-12">
         <h3>AVAILABLE FOR SELECT FREELANCE OPPORTUNITIES</h3>
         <ul>

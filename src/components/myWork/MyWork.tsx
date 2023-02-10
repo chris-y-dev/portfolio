@@ -2,6 +2,7 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import MyWorkData from "../../interfaces/MyWorkData";
 import ProjectBlock from "./ProjectBlock";
 import { ProjectFilterCategory } from "../../interfaces/ProjectFilterCategory";
+import workData from "../../assets/data/WorkShowcaseData";
 
 const MyWork = () => {
   const [selectedFilter, setSelectedFilter] = useState("");
@@ -20,81 +21,11 @@ const MyWork = () => {
       categoryId: "mobile",
     },
   ];
+  
 
-  const workData: MyWorkData[] = [
-    {
-      projectName: "FEATURED Coming Soon",
-      projectDescShort: "Example",
-      projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "/myWork/static.gif",
-      projectLink: "/",
-      projectScreenshots: [],
-      isFeatured: true,
-      category: "software",
-    },
-    {
-      projectName: "Bilingual Website Script & Design - MBMT",
-      projectDescShort:
-        "Responsive web design and script for a bilingual website.",
-      projectDescLong:
-        "Provided the initial responsive web design (no-code) according to client requirements and requests, while considering UX concepts. Includes a JS script to show/hide the reveal language-specific navigation bar for a unique multi-lingual feature. \nOne key intention was simplicty as primary users are adults/older adults who may not be tech-savvy. Each page will have a Call-To-Action and clear actionable items to help users achieve business goals. Colour scheme was chosen for clarity of content, and to give off a professional and refreshing impression. ",
-      projectThumbnailPath: "/myWork/sample_project.jpg",
-      projectLink: "/",
-      projectScreenshots: [],
-      isFeatured: false,
-      category: "software",
-    },
-    {
-      projectName: "Coming Soon",
-      projectDescShort: "Example",
-      projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "/myWork/static.gif",
-      projectLink: "/",
-      projectScreenshots: [],
-      isFeatured: false,
-      category: "web",
-    },
-    {
-      projectName: "Coming Soon",
-      projectDescShort: "Example",
-      projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "/myWork/static.gif",
-      projectLink: "/",
-      projectScreenshots: [],
-      isFeatured: false,
-      category: "web",
-    },
-    {
-      projectName: "Coming Soon",
-      projectDescShort: "Example",
-      projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "/myWork/static.gif",
-      projectLink: "/",
-      projectScreenshots: [],
-      isFeatured: false,
-      category: "web",
-    },
-    {
-      projectName: "Coming Soon",
-      projectDescShort: "Example",
-      projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "/myWork/static.gif",
-      projectLink: "/",
-      projectScreenshots: [],
-      isFeatured: false,
-      category: "web",
-    },
-    {
-      projectName: "FEATURED Coming Soon",
-      projectDescShort: "Example",
-      projectDescLong: "This is the long desc.",
-      projectThumbnailPath: "/myWork/static.gif",
-      projectLink: "/",
-      projectScreenshots: [],
-      isFeatured: true,
-      category: "web",
-    },
-  ];
+ 
+
+  
 
   useEffect(() => {
     setSelectedFilter(filterCategories[0].categoryId);

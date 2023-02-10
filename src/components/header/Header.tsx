@@ -5,7 +5,7 @@ import "./Header.scss";
 const Header = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-sm border-blue px-5">
+      <nav className="navbar navbar-dark navbar-expand-md border-blue px-5">
         <div className="container-fluid border-red justify-content-between">
           <a className="brand-logo" href="/">
             CHRIS_Y.DEV
@@ -26,24 +26,29 @@ const Header = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav justify-content-right">
-              <li className="nav-item mx-4">
+              <li className="nav-item mx-3">
                 <a className="nav-link active" aria-current="page" href="#">
                   Home
                 </a>
               </li>
-              <li className="nav-item mx-4">
+              <li className="nav-item mx-3">
                 <a className="nav-link" href="#experience">
                   Experience
                 </a>
               </li>
-              <li className="nav-item mx-4">
+              <li className="nav-item mx-3">
                 <a className="nav-link" href="#expertise">
                   Expertise
                 </a>
               </li>
-              <li className="nav-item mx-4">
+              <li className="nav-item mx-3">
                 <a className="nav-link" href="#myWork">
                   My Work
+                </a>
+              </li>
+              <li className="nav-item mx-3">
+                <a className="nav-link" href="#socials">
+                  Socials
                 </a>
               </li>
             </ul>

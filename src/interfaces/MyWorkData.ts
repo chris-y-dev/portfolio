@@ -1,6 +1,6 @@
 export default interface MyWorkData{
     projectName: string,
-    projectLink: string,
+    projectId: string,
     projectThumbnailPath: string,
     projectDescShort: string,
     projectDescLong: string

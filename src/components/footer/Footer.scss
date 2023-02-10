@@ -11,8 +11,17 @@ $footer-right: rgb(24, 24, 24);
     h3{
         font-weight: 200;
     }
+
+    @media screen and (max-width: 768px) {
+        height: 30vh;
+    }
 }
 
 .second_container{
     background-color:$footer-right;
+    height: 60vh;
+
+    @media screen and (max-width: 768px) {
+        height: 30vh;
+    }
 }
