@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../../App.scss";
 import "./Header.scss";
 
 const Header = () => {
+  const [absolutePath, setAbsolutePath] = useState("");
+  const location = useLocation();
+
+  useEffect(() => {
+    // console.log(location.pathname);
+    determineHref(location.pathname);
+  });
+
+  function determineHref(locationPathname: string): void {
+    const pageName = locationPathname.split("/")[1];
+    console.log(pageName);
+
+    if (pageName === "") {
+      setAbsolutePath("");
+    } else {
+      setAbsolutePath("http://localhost:3000");
+    }
+  }
+
   return (
     <div>
       <nav className="navbar navbar-dark navbar-expand-md border-blue px-5">
@@ -27,27 +47,34 @@ const Header = () => {
           >
             <ul className="navbar-nav justify-content-right">
               <li className="nav-item mx-3">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
+                  href={`${absolutePath}`}
+                >
                   Home
                 </a>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link" href="#experience">
+                <a
+                  className="nav-link"
+                  href={`${absolutePath + "#experience"}`}
+                >
                   Experience
                 </a>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link" href="#expertise">
+                <a className="nav-link" href={`${absolutePath + "#expertise"}`}>
                   Expertise
                 </a>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link" href="#myWork">
+                <a className="nav-link" href={`${absolutePath + "#myWork"}`}>
                   My Work
                 </a>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link" href="#socials">
+                <a className="nav-link" href={`${absolutePath + "#socials"}`}>
                   Socials
                 </a>
               </li>

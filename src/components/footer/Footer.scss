@@ -2,7 +2,9 @@
 $footer-left: #262626;
 $footer-right: rgb(24, 24, 24);
 
-
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
 
 .socials_container{
    background-color: $footer-left;
@@ -12,7 +14,7 @@ $footer-right: rgb(24, 24, 24);
         font-weight: 200;
     }
 
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(md){
         height: 30vh;
     }
 }
@@ -21,7 +23,7 @@ $footer-right: rgb(24, 24, 24);
     background-color:$footer-right;
     height: 60vh;
 
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(md){
         height: 30vh;
     }
 }

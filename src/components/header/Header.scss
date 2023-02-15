@@ -1,5 +1,9 @@
 @import '../../App.scss';
 
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
+
 
 @keyframes colorFade {
     0%{scale: 100%;}
@@ -24,8 +28,4 @@
         animation-duration: 4s;
         animation-iteration-count: infinite;
     }
-}
-
-.navbar-toggler-icon{
-   
 }

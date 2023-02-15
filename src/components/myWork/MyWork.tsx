@@ -1,4 +1,9 @@
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, {
+  ChangeEvent,
+  MutableRefObject,
+  useEffect,
+  useState,
+} from "react";
 import MyWorkData from "../../interfaces/MyWorkData";
 import ProjectBlock from "./ProjectBlock";
 import { ProjectFilterCategory } from "../../interfaces/ProjectFilterCategory";

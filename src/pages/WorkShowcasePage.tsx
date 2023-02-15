@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import workData from "../assets/data/WorkShowcaseData";
 import MyWorkData from "../interfaces/MyWorkData";
 import "../App.scss";
+import Header from "../components/header/Header";
 
 const WorkShowcasePage = () => {
   const [projectData, setProjectData] = useState<MyWorkData | undefined>();
@@ -33,6 +34,7 @@ const WorkShowcasePage = () => {
   } else {
     return (
       <div className="">
+        <Header />
         <div className="container py-5">
           <h1>Work Showcase: {projectData?.projectName}</h1>
           <p>{projectData?.projectDescShort}</p>
