@@ -1,12 +1,14 @@
 export default interface MyWorkData{
-    projectName: string,
     projectId: string,
+    projectName: string,
+    isFeatured: boolean,
+    category: string
     projectThumbnailPath: string,
     projectDescShort: string,
     projectDescLong: string
     projectScreenshots: ProjectScreenshot[],
-    isFeatured: boolean,
-    category: string
+    projectFeatures: string[],
+    projectVideoLink: string
 }
 
 export interface ProjectScreenshot{

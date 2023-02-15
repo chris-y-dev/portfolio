@@ -9,6 +9,10 @@ const MyWork = () => {
 
   const filterCategories: ProjectFilterCategory[] = [
     {
+      categoryName: "All",
+      categoryId: "all",
+    },
+    {
       categoryName: "Software Development",
       categoryId: "software",
     },
@@ -21,11 +25,6 @@ const MyWork = () => {
       categoryId: "mobile",
     },
   ];
-  
-
- 
-
-  
 
   useEffect(() => {
     setSelectedFilter(filterCategories[0].categoryId);
@@ -49,14 +48,12 @@ const MyWork = () => {
               onChange={(categoryId) => toggleFilter(categoryId)}
             >
               {selectedFilter}
-              <option id="all" value="all" selected>
-                All
-              </option>
               {filterCategories.map((category) => {
                 return (
                   <option
                     value={category.categoryId}
                     id={category.categoryId}
+                    key={category.categoryId}
                     className={`filter_item`}
                   >
                     {category.categoryName}
@@ -78,13 +75,19 @@ const MyWork = () => {
                 if (project.isFeatured) {
                   return (
                     <div className="col-lg-8 col-sm-12 border-green order">
-                      <ProjectBlock projectData={project} />
+                      <ProjectBlock
+                        projectData={project}
+                        key={project.projectId}
+                      />
                     </div>
                   );
                 } else {
                   return (
                     <div className="col-lg-4 col-md-6 col-sm-12 border-green order">
-                      <ProjectBlock projectData={project} />
+                      <ProjectBlock
+                        projectData={project}
+                        key={project.projectId}
+                      />
                     </div>
                   );
                 }

@@ -2,21 +2,23 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import workData from "../assets/data/WorkShowcaseData";
 import MyWorkData from "../interfaces/MyWorkData";
+import "../App.scss";
 
 const WorkShowcasePage = () => {
-
   const [projectData, setProjectData] = useState<MyWorkData | undefined>();
   const location = useLocation();
 
   function getProjectId(): string | undefined {
-    console.log(location.pathname)
+    console.log(location.pathname);
 
-    return location.pathname.split("/").pop()
+    return location.pathname.split("/").pop();
   }
 
   function getProjectData(projectId: string | undefined) {
     if (projectId) {
-      setProjectData(workData.find((project) => project.projectId === projectId))
+      setProjectData(
+        workData.find((project) => project.projectId === projectId)
+      );
     } else {
       setProjectData(undefined);
     }
@@ -24,14 +26,28 @@ const WorkShowcasePage = () => {
 
   useEffect(() => {
     getProjectData(getProjectId());
-  }, [])
+  }, []);
 
-  if(projectData===null){
-    return (<div>Project not found</div>)
+  if (projectData === null) {
+    return <div>Project not found</div>;
   } else {
     return (
-      <div>Work Showcase: {projectData!.projectName}</div>
-    )
+      <div className="">
+        <div className="container py-5">
+          <h1>Work Showcase: {projectData?.projectName}</h1>
+          <p>{projectData?.projectDescShort}</p>
+          <img src={"/"} alt={projectData?.projectName}></img>
+          <div>
+            <h3>Product Features</h3>
+            <ul>
+              {projectData?.projectFeatures.map((feature) => {
+                return <li>{feature}</li>;
+              })}
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
   }
 };
 
