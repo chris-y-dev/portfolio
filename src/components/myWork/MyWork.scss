@@ -36,10 +36,12 @@ $option-selected: rgb(42, 54, 165);
     }
 
     img{
-        width: inherit;
-        height: inherit;
+        position: absolute;
+        width: 100%;
+        height: 75%;
         object-fit: cover;
-        object-position: 0% 50%;
+        left: 0;
+        top: 0;
     }
 
     .projectBlock_panel{

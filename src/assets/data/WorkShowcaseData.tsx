@@ -2,14 +2,34 @@ import MyWorkData from "../../interfaces/MyWorkData";
 
 const workData: MyWorkData[] = [
   {
-    projectId: "featured-1",
-    projectName: "FEATURED Coming Soon",
+    projectId: "MyMozartExperience",
+    projectName: "Music-Themed Gift Shop Web Design - MyMozartExperience",
     isFeatured: true,
+    projectDescShort:
+      "Modern, responsive web design for a small e-commerce business. No-code development.",
+    projectDescLong:
+      "Web design for my small music-themed entrepreneurial project. The purpose of the site was to showcase products and digital-art designs to potential customers. The goal was to guide users to interact with the website, view images and read more about our products. Community-building elements were also implemented - the Community Gallery and Downloads sections.",
+    projectThumbnailPath: "/myWork/mme_thumbnail_2.jpg",
+    projectScreenshots: [],
+    category: "web",
+    projectFeatures: [
+      "Attractive elements (images/backgrounds/icons) that sets visual hierarchy",
+      "Strategic placement and design to gradually disclose information and guide user across site",
+      "Clear CTA (call-to-action) across all pages",
+      "Community-building features including Community Gallery and Downloads",
+      "Consistent brand identity using vibrant and fun design imagery",
+    ],
+    projectVideoLink: "",
+  },
+  {
+    projectId: "comingsoon-1",
+    projectName: "Coming Soon",
+    isFeatured: false,
+    category: "web",
     projectDescShort: "Example",
     projectDescLong: "This is the long desc.",
     projectThumbnailPath: "/myWork/static.gif",
     projectScreenshots: [],
-    category: "software",
     projectFeatures: [],
     projectVideoLink: "",
   },
@@ -31,18 +51,6 @@ const workData: MyWorkData[] = [
       "Script that displays the correct navigation menu depending on the selected language (English or Chinese)",
       "",
     ],
-    projectVideoLink: "",
-  },
-  {
-    projectId: "comingsoon-1",
-    projectName: "Coming Soon",
-    isFeatured: false,
-    category: "web",
-    projectDescShort: "Example",
-    projectDescLong: "This is the long desc.",
-    projectThumbnailPath: "/myWork/static.gif",
-    projectScreenshots: [],
-    projectFeatures: [],
     projectVideoLink: "",
   },
   {
