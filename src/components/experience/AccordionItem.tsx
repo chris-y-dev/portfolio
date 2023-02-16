@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AccordionData from "../../interfaces/AccordionData";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faCalendar } from "@fortawesome/free-regular-svg-icons";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import SkillPill from "../expertise/SkillPill";
 import fetchStaticImage from "../../hooks/fetchStaticImage";
 
@@ -39,9 +41,16 @@ const AccordionItem = (props: {
       >
         <div className="row">
           <div className="col-md-9 col-xs-12 d-flex flex-column">
-            <p>
-              {props.item.workType} {props.item.workPeriod}
-            </p>
+            <div className="row mb-4 gy-2">
+              <div className="col-md-3 col-sm-12">
+                <FontAwesomeIcon icon={faBriefcase} className="me-2 " />
+                {props.item.workType}
+              </div>
+              <div className="col-md-9 col-sm-12">
+                <FontAwesomeIcon icon={faCalendar} className="me-2" />
+                {props.item.workPeriod}
+              </div>
+            </div>
             <p> {props.item.description}</p>
             <div className="d-flex flex-row flex-wrap">
               {props.item.technologies.map((tech) => {

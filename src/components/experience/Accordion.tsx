@@ -1,10 +1,4 @@
-import React, {
-  FunctionComponent,
-  PropsWithChildren,
-  useEffect,
-  useState,
-} from "react";
-import { idText } from "typescript";
+import React, { useEffect, useState } from "react";
 import AccordionItem from "./AccordionItem";
 import AccordionData from "../../interfaces/AccordionData";
 
