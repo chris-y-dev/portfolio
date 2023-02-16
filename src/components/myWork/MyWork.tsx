@@ -8,28 +8,12 @@ import MyWorkData from "../../interfaces/MyWorkData";
 import ProjectBlock from "./ProjectBlock";
 import { ProjectFilterCategory } from "../../interfaces/ProjectFilterCategory";
 import workData from "../../assets/data/WorkShowcaseData";
+import projectFilterCategoriesData from "../../assets/data/projectFilterCategoriesData";
 
 const MyWork = () => {
   const [selectedFilter, setSelectedFilter] = useState("");
 
-  const filterCategories: ProjectFilterCategory[] = [
-    {
-      categoryName: "All",
-      categoryId: "all",
-    },
-    {
-      categoryName: "Software Development",
-      categoryId: "software",
-    },
-    {
-      categoryName: "Web Design and Development",
-      categoryId: "web",
-    },
-    {
-      categoryName: "Mobile Development",
-      categoryId: "mobile",
-    },
-  ];
+  const filterCategories: ProjectFilterCategory[] = projectFilterCategoriesData;
 
   useEffect(() => {
     setSelectedFilter(filterCategories[0].categoryId);
@@ -80,19 +64,13 @@ const MyWork = () => {
                 if (project.isFeatured) {
                   return (
                     <div className="col-lg-8 col-sm-12 border-green order">
-                      <ProjectBlock
-                        projectData={project}
-                        key={project.projectId}
-                      />
+                      <ProjectBlock projectData={project} key={project.id} />
                     </div>
                   );
                 } else {
                   return (
                     <div className="col-lg-4 col-md-6 col-sm-12 border-green order">
-                      <ProjectBlock
-                        projectData={project}
-                        key={project.projectId}
-                      />
+                      <ProjectBlock projectData={project} key={project.id} />
                     </div>
                   );
                 }

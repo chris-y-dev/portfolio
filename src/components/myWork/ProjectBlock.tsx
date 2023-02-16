@@ -8,12 +8,10 @@ const ProjectBlock = (props: { projectData: MyWorkData }) => {
 
   return (
     <div className="projectBlock d-flex flex-column">
-      <a href={"/work-showcase/" + props.projectData.projectId}>
-        <img src={img} alt={props.projectData.projectName} />
+      <a href={"/work-showcase/" + props.projectData.id}>
+        <img src={img} alt={props.projectData.name} />
 
-        <div className="projectBlock_panel pt-3">
-          {props.projectData.projectName}
-        </div>
+        <div className="projectBlock_panel pt-3">{props.projectData.name}</div>
       </a>
     </div>
   );

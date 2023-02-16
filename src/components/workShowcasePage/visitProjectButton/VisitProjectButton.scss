@@ -1,0 +1,51 @@
+.visitProjectButton_container{
+
+  width: 150px;
+
+  a{
+    text-decoration: none;
+  }
+
+  .visitProjectButton{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+
+  &:hover{
+    text-decoration: none;
+    
+    .visitProjectButton{
+      background-color: white;
+      color: black;
+    }
+
+    .icon {
+      * {
+        color: rgb(56, 56, 56);
+      }
+
+      animation-name: spinningArrow;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+
+@keyframes spinningArrow {
+  0%{
+    transform: rotate(0deg) scale(100%);
+  }
+
+  50%{
+    transform: rotate(180deg) scale(170%);
+  }
+
+  100%{
+    transform: rotate(360deg) scale(100%);
+  }
+  
+}

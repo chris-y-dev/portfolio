@@ -1,17 +1,22 @@
 export default interface MyWorkData{
-    projectId: string,
-    projectName: string,
+    id: string,
+    name: string,
+    clientName: string,
     isFeatured: boolean,
     category: string
     projectThumbnailPath: string,
-    projectDescShort: string,
-    projectDescLong: string
-    projectScreenshots: ProjectScreenshot[],
-    projectFeatures: string[],
-    projectVideoLink: string
+    descShort: string,
+    descLong: string,
+    titleImagePath: string,
+    projectGallery: ProjectGalleryImageData[],
+    features: string[],
+    videoLink: string,
+    projectUrl: string,
+    technologies: string[],
+    designPrinciples: string[]
 }
 
-export interface ProjectScreenshot{
+export interface ProjectGalleryImageData{
     imagePath: string,
     imageDescription: string
 }
