@@ -2,43 +2,45 @@ import React from "react";
 import "./Achievements.scss";
 import "../../App.scss";
 
-import { faMedal } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import eventData from "../../assets/data/EventsData";
+import EventBlock from "./EventBlock";
 
 const Achievements = () => {
-  function getIconUsingEventType(eventType: string) {
-    switch (eventType) {
-      case "Event":
-        return faCalendarCheck;
-      case "Certification":
-        return faGraduationCap;
-      case "Win":
-        return faMedal;
-      default:
-        return faCalendarCheck;
-    }
-  }
-
   return (
-    <div className="py-5" id="#achievements">
-      <div className="container border-red">
+    <div className="py-5 mb-5" id="achievements">
+      <div className="container border-red mb-5">
         <h2 className="section-heading">Achievements</h2>
-        <div className="inner-container border-green">
-          <div className="py-2 px-3 achievement_row d-flex flex-row align-items-center border-blue">
-            <div className="icon_container">
-              <FontAwesomeIcon icon={faMedal} size="2x" className="me-3" />
-            </div>
-            <div className="d-flex flex-column">
-              <div className="">Hackathon 1st Place - UniHack</div>
-              <div className="">July 2022</div>
-            </div>
-          </div>
+        <div className="border-green row gy-2 gx-2">
+          {eventData
+            .filter((event) => {
+              return (
+                event.eventType.type === "Hackathon" &&
+                event.eventType.isWinner === true
+              );
+            })
+            .map((event) => (
+              <div className="col-md-6 col-sm-12">
+                <EventBlock eventData={event} />
+              </div>
+            ))}
         </div>
       </div>
       <div className="container border-red">
         <h2 className="section-heading">Certifications & Events</h2>
+        <div className="row gx-2 gy-2 border-green">
+          {eventData
+            .filter((event) => {
+              return (
+                event.eventType.type !== "Hackathon" &&
+                event.eventType.isWinner === false
+              );
+            })
+            .map((event) => (
+              <div className="col-md-6 col-sm-12">
+                <EventBlock eventData={event} />
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );

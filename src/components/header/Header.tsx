@@ -64,6 +64,14 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item mx-3">
+                <a
+                  className="nav-link"
+                  href={`${absolutePath + "#achievements"}`}
+                >
+                  Achievements
+                </a>
+              </li>
+              <li className="nav-item mx-3">
                 <a className="nav-link" href={`${absolutePath + "#expertise"}`}>
                   Expertise
                 </a>

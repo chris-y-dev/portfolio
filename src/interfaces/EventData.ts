@@ -1,7 +1,8 @@
-export default interface AchievementData{
+export default interface EventData{
     eventType: EventType,
     title: string,
     date: string,
+    link: string | undefined
 
 }
 
@@ -10,3 +11,4 @@ interface EventType{
     isWinner: boolean,
     place: number
 }
+

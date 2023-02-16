@@ -1,9 +1,105 @@
-.achievement_row{
-    background-color: grey;
+@import "../expertise/Expertise.scss";
+$link-hover-color: orange;
+
+@keyframes linkArrowSlide {
+    0%{
+        transform: translateX(-2rem);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(5px);
+    }
+}
+
+.eventBlock_link{
+    text-decoration: none;
+    
+
+    &.--link_active:hover{
+        .eventBlock_container{
+            transform: translateY(-10px);
+            transition-duration: 0.2s;
+            box-shadow: 0 5px 10px 4px rgba($color: #000000, $alpha: 0.5);
+
+            .--event-title{
+                color: $link-hover-color !important;
+            }
+        }
+
+        .--show_icon{
+            animation-name: linkArrowSlide;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+
+            transform: scale(130%);
+
+            *{
+                color: $link-hover-color;
+            }
+        }
+    }
+}
+
+.eventBlock_container{
+    background-color: rgb(46, 46, 46);
     border-radius: 0.3rem;
-    width: 50%;
+    height: 100%;
+    position: relative;
 
     .icon_container{
        width: 3rem !important;
     }
+
+    .--show_icon{
+        display: block;
+    }
+
+    .--hide_icon{
+        display: none;
+    }
+
+    .--event-title{
+        font-size: 1rem;
+    }
+    
+    .--event-date{
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    .--firstPlace{
+        *{
+            color: $expert-gold;
+        }
+    }
+    
+    .--secondPlace{
+        *{
+            color: $proficient-silver;
+        }
+    
+    }
+    
+    .--thirdPlace{
+        *{
+            color: $intermediate-bronze;
+        }
+    }
+    
+    .--completion{
+        *{
+            color: rgb(229, 229, 229);
+        }
+    }
+    
+    .--certification{
+        *{
+            color: $softSkills-green;
+        }
+    }
 }
+
+
+
