@@ -1,5 +1,6 @@
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import Achievements from "../components/achievements/Achievements";
 import Experience from "../components/experience/Experience";
 import Expertise from "../components/expertise/Expertise";
 import Footer from "../components/footer/Footer";
@@ -33,6 +34,7 @@ const Home = () => {
       <Header />
       <Hero />
       <Experience />
+      <Achievements />
       <Expertise />
       <MyWork />
       <Footer />
