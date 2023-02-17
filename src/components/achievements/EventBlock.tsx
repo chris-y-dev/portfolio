@@ -67,7 +67,7 @@ const EventBlock = (props: { eventData: EventData }) => {
       href={props.eventData.link}
       className={`eventBlock_link ${generateLinkClass(props.eventData.link)}`}
     >
-      <div className="eventBlock_container d-flex flex-row align-items-center py-2 px-2">
+      <div className="eventBlock_container d-flex flex-row align-items-center py-3 px-3">
         <div className="icon_container">
           <FontAwesomeIcon
             icon={getIconUsingEventType(props.eventData)}
@@ -75,7 +75,7 @@ const EventBlock = (props: { eventData: EventData }) => {
             className={`me-3 ${getClassNameUsingEventType(props.eventData)}`}
           />
         </div>
-        <div className="d-flex flex-column me-1">
+        <div className="d-flex flex-column ms-2 me-1">
           <div className="--event-title">{props.eventData.title}</div>
           <div className="--event-date">{props.eventData.date}</div>
         </div>

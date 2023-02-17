@@ -34,6 +34,7 @@ const Home = () => {
       <Header />
       <Hero />
       <Experience />
+      {/* <div id="experience-bg" className="p-5"></div> */}
       <Achievements />
       <Expertise />
       <MyWork />

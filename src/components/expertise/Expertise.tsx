@@ -81,7 +81,7 @@ const Expertise = () => {
   }, []);
 
   return (
-    <div className="border-blue py-5" id="expertise">
+    <div className="border-blue py-5 --section-margin-lg" id="expertise">
       <div className="container">
         <h2 className="section-heading">EXPERTISE</h2>
 
@@ -99,8 +99,8 @@ const Expertise = () => {
         </div>
 
         {/* Tiered Skills */}
-        <div className="inner-container text-center border-red">
-          <div className="row gy-4">
+        <div className="inner-container text-center border-red mt-4">
+          <div className="row g-3">
             {hardAndSoftSkillData.map((skillData) => {
               return (
                 <div className="col-md-6 col-sm-12 border-green">

@@ -1,7 +1,8 @@
-$accordion-button-glow: rgb(15, 30, 97);
-$accordion-button-active: #1e5da0;
-$accordion-button-inactive: #535c75;
-$accordion-panel: #414361;
+@import "../../App.scss";
+$blue-shade: rgb(49, 80, 149);
+
+$accordion-button-inactive: #34353a;
+$accordion-panel: #2b3448;
 
 
 #experience{
@@ -15,18 +16,19 @@ $accordion-panel: #414361;
     border: none;
     color: white;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 300;
-}
-    
-.--btn-active{
-    background-color: $accordion-button-active;
-    box-shadow: inset 0 0 10px 0px rgba($color: $accordion-button-glow, $alpha: 0.5);
-    
-}
 
-.--btn-inactive{
-    background-color: $accordion-button-inactive;
+    &.--btn-active{
+        transition: 0.6s;
+        background-color: $light-blue;
+        box-shadow: inset 0 0 10px 0px rgba($color: $blue-shade, $alpha: 0.5);   
+    }
+
+    &.--btn-inactive{
+        transition: 0.2s;
+        background-color: $accordion-button-inactive;
+    }
 }
 
 @keyframes openingIcon {
@@ -68,15 +70,27 @@ $accordion-panel: #414361;
     min-height: 10rem;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(black, 0.5);
-    
+    font-size: 1.2rem;
+    font-weight: 300;
+
     .companyLogo{
         max-width: 70%;
         max-height: 180px;
-        top: 50%;
 
-        @media screen and (min-width: 768px) {
+        @include media-breakpoint-up(md){
             max-width: 100%;
         }
+    }
+
+    
+    &.--showAccordion{
+        animation-name: panelFadeIn;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+    }
+
+    &.--hideAccordion{
+        display: none !important;
     }
 }
 
@@ -89,14 +103,4 @@ $accordion-panel: #414361;
         translate: 0%;
     }
     
-}
-
-.--showAccordion{
-    animation-name: panelFadeIn;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
-}
-
-.--hideAccordion{
-    display: none !important;
 }

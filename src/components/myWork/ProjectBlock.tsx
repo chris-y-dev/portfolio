@@ -11,7 +11,9 @@ const ProjectBlock = (props: { projectData: MyWorkData }) => {
       <a href={"/work-showcase/" + props.projectData.id}>
         <img src={img} alt={props.projectData.name} />
 
-        <div className="projectBlock_panel pt-3">{props.projectData.name}</div>
+        <div className="projectBlock_panel px-3 py-2">
+          {props.projectData.name}
+        </div>
       </a>
     </div>
   );

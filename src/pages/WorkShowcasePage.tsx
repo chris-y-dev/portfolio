@@ -54,14 +54,16 @@ const WorkShowcasePage = () => {
         <div className="container py-5">
           {/* Title Section */}
 
-          <h5>{projectCategory?.categoryName}</h5>
+          <h5 className="work-category mb-5">
+            {projectCategory?.categoryName}
+          </h5>
           <h1 className="mt-4 mb-5">{projectData?.name}</h1>
 
           <div className="row my-4">
             <div className="border-red col-md-8 col-sm-12">
               <p>{projectData?.descShort}</p>
             </div>
-            <div className="border-red col-md-4 col-sm-12">
+            <div className="border-red col-md-4 col-sm-12 client_container">
               <h5 className="mb-3">Client</h5>
               <p>{projectData?.clientName}</p>
             </div>
@@ -79,28 +81,32 @@ const WorkShowcasePage = () => {
             <h2 className="mt-5 mb-4">Features</h2>
             <ul>
               {projectData?.features.map((feature) => {
-                return <li>{feature}</li>;
+                return <li className="my-3">{feature}</li>;
               })}
             </ul>
           </div>
 
           {/* Tech and Principles */}
-          <div className="my-4">
-            <div className="row my-4">
+          <div className="">
+            <div className="row gx-2 gy-3">
               <div className="border-red col-md-6 col-sm-12">
-                <h5 className="mb-3">Technologies</h5>
-                <div className="d-flex flex-row flex-wrap">
-                  {projectData?.technologies.map((technology) => (
-                    <SkillPill pill={technology} />
-                  ))}
+                <div className=" pill_container p-3">
+                  <h4 className="mb-4">Technologies</h4>
+                  <div className="d-flex flex-row flex-wrap">
+                    {projectData?.technologies.map((technology) => (
+                      <SkillPill pill={technology} />
+                    ))}
+                  </div>
                 </div>
               </div>
               <div className="border-red col-md-6 col-sm-12">
-                <h5 className="mb-3">Dev Strategies</h5>
-                <div className="d-flex flex-row flex-wrap">
-                  {projectData?.designPrinciples.map((technology) => (
-                    <SkillPill pill={technology} />
-                  ))}
+                <div className=" pill_container p-3">
+                  <h4 className="mb-4">Dev Strategies</h4>
+                  <div className="d-flex flex-row flex-wrap">
+                    {projectData?.designPrinciples.map((technology) => (
+                      <SkillPill pill={technology} />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

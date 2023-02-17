@@ -25,8 +25,8 @@ const MyWork = () => {
   }
 
   return (
-    <div className="border-blue py-5" id="myWork">
-      <div className="container overflow-hidden">
+    <div className="border-blue py-5 --section-margin-lg" id="myWork">
+      <div className="container">
         <h2 className="section-heading">MY WORK</h2>
         <div className="inner-container text-center border-red">
           <div className="d-flex flex-row filter_container justify-content-center align-items-center">
@@ -51,7 +51,7 @@ const MyWork = () => {
               })}
             </select>
           </div>
-          <div className="row gy-5 gx-5 pb-5">
+          <div className="row gy-4 gx-3 pb-5 mt-4">
             {workData
               .filter((project) => {
                 if (selectedFilter === "all") {

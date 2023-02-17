@@ -40,13 +40,13 @@ const AccordionItem = (props: {
         }`}
       >
         <div className="row">
-          <div className="col-md-9 col-xs-12 d-flex flex-column">
+          <div className="col-lg-9 col-md-8 col-xs-12 d-flex flex-column">
             <div className="row mb-4 gy-2">
               <div className="col-md-3 col-sm-12">
                 <FontAwesomeIcon icon={faBriefcase} className="me-2 " />
                 {props.item.workType}
               </div>
-              <div className="col-md-9 col-sm-12">
+              <div className="col-lg-9 col-md-8 col-sm-12">
                 <FontAwesomeIcon icon={faCalendar} className="me-2" />
                 {props.item.workPeriod}
               </div>
@@ -58,7 +58,7 @@ const AccordionItem = (props: {
               })}
             </div>
           </div>
-          <div className="col-md-3 col-xs-12 order-md-last order-first text-center">
+          <div className="col-lg-3 col-md-4 col-xs-12 order-md-last order-first text-center">
             <img
               className="companyLogo py-3"
               src={companyLogo}

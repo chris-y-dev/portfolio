@@ -1,24 +1,39 @@
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
+@import "../App.scss";
+
+$panel-block: rgb(37, 37, 37);
 
 
 .workShowcasePage{
     
+    h1{
+        font-size: 3rem;
+        margin-bottom: 5rem !important;
+    }
 
-    .gallery-image_container{
-        p{
-            font-weight: 300;
-        }
+    p, li{
+        font-weight: 300;
+        font-size: 1.1rem;
     }
 
     img{
         width: 100%;
-        // max-width: 700px;
     }
 
-    .featured-image{
-        display: block;
-        margin: auto;
+    .work-category{
+        font-weight: 300;
+    }
+
+    .client_container{
+        // border: 1px solid white;
+        padding-left: 6%;
+    }
+
+    .pill_container{
+        background-color: $panel-block;
+        border-radius: 0.6rem;
+        height: 100%;
     }
 }

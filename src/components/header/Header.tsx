@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-dark navbar-expand-md border-blue px-5">
+      <nav className="navbar navbar-dark navbar-expand-lg border-blue px-5 pt-5 pb-3">
         <div className="container-fluid border-red justify-content-between">
           <a className="brand-logo" href="/">
             CHRIS_Y.DEV
@@ -46,7 +46,7 @@ const Header = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav justify-content-right">
-              <li className="nav-item mx-3">
+              <li className="nav-item">
                 <a
                   className="nav-link active"
                   aria-current="page"
@@ -55,7 +55,7 @@ const Header = () => {
                   Home
                 </a>
               </li>
-              <li className="nav-item mx-3">
+              <li className="nav-item px-2">
                 <a
                   className="nav-link"
                   href={`${absolutePath + "#experience"}`}
@@ -63,7 +63,7 @@ const Header = () => {
                   Experience
                 </a>
               </li>
-              <li className="nav-item mx-3">
+              <li className="nav-item px-2">
                 <a
                   className="nav-link"
                   href={`${absolutePath + "#achievements"}`}
@@ -71,17 +71,17 @@ const Header = () => {
                   Achievements
                 </a>
               </li>
-              <li className="nav-item mx-3">
+              <li className="nav-item px-2">
                 <a className="nav-link" href={`${absolutePath + "#expertise"}`}>
                   Expertise
                 </a>
               </li>
-              <li className="nav-item mx-3">
+              <li className="nav-item px-2">
                 <a className="nav-link" href={`${absolutePath + "#myWork"}`}>
                   My Work
                 </a>
               </li>
-              <li className="nav-item mx-3">
+              <li className="nav-item px-2">
                 <a className="nav-link" href={`${absolutePath + "#socials"}`}>
                   Socials
                 </a>

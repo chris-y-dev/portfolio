@@ -7,9 +7,9 @@ import EventBlock from "./EventBlock";
 
 const Achievements = () => {
   return (
-    <div className="py-5 mb-5" id="achievements">
+    <div className="py-5 mb-5 --section-margin-lg" id="achievements">
       <div className="container border-red mb-5">
-        <h2 className="section-heading">Achievements</h2>
+        <h2 className="section-heading">ACHIEVEMENTS</h2>
         <div className="border-green row gy-2 gx-2">
           {eventData
             .filter((event) => {
@@ -25,8 +25,8 @@ const Achievements = () => {
             ))}
         </div>
       </div>
-      <div className="container border-red">
-        <h2 className="section-heading">Certifications & Events</h2>
+      <div className="container border-red pt-5">
+        <h2 className="section-heading">CERTIFICATIONS & EVENTS</h2>
         <div className="row gx-2 gy-2 border-green">
           {eventData
             .filter((event) => {

@@ -1,4 +1,6 @@
 @import "../../App.scss";
+@import "../achievements/Achievements.scss";
+
 $footer-left: #262626;
 $footer-right: rgb(24, 24, 24);
 
@@ -9,11 +11,7 @@ $footer-right: rgb(24, 24, 24);
 .socials_container{
    background-color: $footer-left;
 
-    @include media-breakpoint-down(md){
-        height: 30vh;
-    }
-
-    h3{
+    h2{
         font-weight: 200;
     }
 
@@ -23,17 +21,21 @@ $footer-right: rgb(24, 24, 24);
 
     li{
         list-style: none;
+        
+        &:hover{
+            a{
+                color: $light-blue-link;
+            }
+            transform: translateX(10px);
+            // transition-duration: 0.5s;
+        }
     }
 
     a{
         text-decoration: none;
         color: white;
         font-weight: 200;
-        font-size: 1.2rem;
-
-        &:hover{
-            color: orange;
-        }
+        font-size: 1.5rem;
     }
 }
 
@@ -43,16 +45,24 @@ $footer-right: rgb(24, 24, 24);
 }
 
 .footer-containers_sizing{
-
     height: 60vh;
 
     @include media-breakpoint-down(md){
-        height: 30vh;
+        padding-top: 5rem !important;
+        height: 40vh;
+    }
+
+    @include media-breakpoint-up(lg){
+        padding-top: 5rem !important;
+       
     }
 
     @include media-breakpoint-up(xl){
-        padding-top: 5rem !important;
         padding-left: 7rem !important;
+    }
+
+    @include media-breakpoint-up(xxl){
+        padding-left: 8% !important;
     }
 
 }

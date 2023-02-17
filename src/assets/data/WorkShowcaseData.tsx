@@ -2,10 +2,38 @@ import MyWorkData from "../../interfaces/MyWorkData";
 
 const workData: MyWorkData[] = [
   {
+    id: "portfolio",
+    name: "My Software Engineering Portfolio",
+    clientName: "Personal Project",
+    isFeatured: true,
+    category: "software",
+    descShort: "Developed my personal portfolio from scratch using React.js.",
+    descLong: "This is the long desc.",
+    projectThumbnailPath: "/myWork/portfolio_thumbnail.jpg",
+    titleImagePath: "/myWork/mme_thumbnail_1.jpg",
+    projectGallery: [],
+    features: [
+      "Fully responsive site for all devices",
+      "Visual feedback implemented for all actionable content",
+      "Intentional UI design and layout to maximise readability and user engagement",
+      "Filterable Work/Projects",
+      "Engaging design elements (animations, transitions) using CSS/JS techniques",
+      "Non-static data allows easy maintenance of content",
+    ],
+    videoLink: "",
+    projectUrl: "/",
+    technologies: ["TypeScript", "React", "SCSS"],
+    designPrinciples: [
+      "DRY (Don't Repeat Yourself)",
+      "Reusable Hooks",
+      "Mobile-first Development",
+    ],
+  },
+  {
     id: "MyMozartExperience",
     name: "Music-Themed Gift Shop Web Design - MyMozartExperience",
     clientName: "My Mozart Experience",
-    isFeatured: true,
+    isFeatured: false,
     descShort:
       "Modern, responsive web design for a small e-commerce business. No-code development.",
     descLong:
@@ -55,23 +83,6 @@ const workData: MyWorkData[] = [
       "Showcase Personality",
       "Consistent & Purposeful Call-to-action",
     ],
-  },
-  {
-    id: "comingsoon-1",
-    name: "Coming Soon",
-    clientName: "Personal Project",
-    isFeatured: false,
-    category: "web",
-    descShort: "Example",
-    descLong: "This is the long desc.",
-    projectThumbnailPath: "/myWork/static.gif",
-    titleImagePath: "/myWork/mme_thumbnail_1.jpg",
-    projectGallery: [],
-    features: [],
-    videoLink: "",
-    projectUrl: "",
-    technologies: [],
-    designPrinciples: [],
   },
   {
     id: "bilingual-music-therapy-website",
