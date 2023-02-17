@@ -1,5 +1,6 @@
-.visitProjectButton_container{
+@import "../../../App.scss";
 
+.visitProjectButton_container{
   width: 150px;
 
   a{
@@ -9,43 +10,40 @@
   .visitProjectButton{
     background-color: transparent;
     border: 1px solid white;
-    color: white;
+    color: $white;
     border-radius: 0.5rem;
     width: 100%;
   }
 
   &:hover{
-    text-decoration: none;
     
     .visitProjectButton{
-      background-color: white;
-      color: black;
+      color: $light-blue-link;
+      transform: scale(110%);
+      transition-duration: 0.2s;
+      border-color: $light-blue-link;
     }
 
     .icon {
       * {
-        color: rgb(56, 56, 56);
+        color: $light-blue-link;
       }
 
-      animation-name: spinningArrow;
-      animation-duration: 0.5s;
+      animation-name: arrowSlideRight;
+      animation-duration: 0.2s;
       animation-timing-function: linear;
+      animation-fill-mode: forwards;
     }
   }
 }
 
 
-@keyframes spinningArrow {
+@keyframes arrowSlideRight {
   0%{
-    transform: rotate(0deg) scale(100%);
-  }
-
-  50%{
-    transform: rotate(180deg) scale(170%);
+    transform: translateX(-1rem);
   }
 
   100%{
-    transform: rotate(360deg) scale(100%);
-  }
-  
+    transform: translateX(0rem);
+  } 
 }

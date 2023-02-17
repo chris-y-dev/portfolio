@@ -59,13 +59,13 @@ const WorkShowcasePage = () => {
           </h5>
           <h1 className="mt-4 mb-5">{projectData?.name}</h1>
 
-          <div className="row my-4">
-            <div className="border-red col-md-8 col-sm-12">
+          <div className="row mb-5">
+            <div className="border-red col-md-8 col-sm-12 order-md-1 order-2">
               <p>{projectData?.descShort}</p>
             </div>
-            <div className="border-red col-md-4 col-sm-12 client_container">
-              <h5 className="mb-3">Client</h5>
-              <p>{projectData?.clientName}</p>
+            <div className="border-red col-md-4 col-sm-12 client_container order-md-2 order-1">
+              <h5 className="mb-2">Client</h5>
+              <p className="">{projectData?.clientName}</p>
             </div>
           </div>
 

@@ -11,6 +11,11 @@ $panel-block: rgb(37, 37, 37);
     h1{
         font-size: 3rem;
         margin-bottom: 5rem !important;
+        word-wrap: break-word;
+
+        @include media-breakpoint-down(md){
+            margin-bottom: 4rem !important;
+        }
     }
 
     p, li{
@@ -27,8 +32,18 @@ $panel-block: rgb(37, 37, 37);
     }
 
     .client_container{
-        // border: 1px solid white;
         padding-left: 6%;
+
+        @include media-breakpoint-down(md){
+            padding-left: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        h5{
+            text-decoration: underline;
+            text-decoration-color: $light-blue;
+            text-decoration-thickness: 4px;
+        }
     }
 
     .pill_container{
