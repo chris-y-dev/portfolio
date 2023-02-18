@@ -2,11 +2,16 @@
 @import "../achievements/Achievements.scss";
 
 $footer-left: #262626;
-$footer-right: rgb(24, 24, 24);
+$footer-right: rgb(18, 18, 18);
 
 @import '../../../node_modules/bootstrap/scss/functions';
 @import '../../../node_modules/bootstrap/scss/variables';
 @import '../../../node_modules/bootstrap/scss/mixins';
+
+#socials{
+    height: 40rem;
+    width: 100%;
+}
 
 .socials_container{
    background-color: $footer-left;
@@ -41,15 +46,31 @@ $footer-right: rgb(24, 24, 24);
 
 .second_container{
     background-color:$footer-right;
+
+    .image_frame{
+        border-radius: 50%;
+        overflow: hidden;
+        width: 10rem;
+        height: 10rem;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .typography{
+        width:100%;
+        max-width: 30rem;
+    }
    
 }
 
 .footer-containers_sizing{
-    height: 60vh;
+    height: 100%;
 
     @include media-breakpoint-down(md){
         padding-top: 5rem !important;
-        height: 40vh;
+        // min-height: 40vh;
     }
 
     @include media-breakpoint-up(lg){
