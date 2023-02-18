@@ -46,6 +46,10 @@ $container-heading-size: 2rem;
         padding: 1rem 2.5em; 
     }
 
+    @include media-breakpoint-down(sm){
+        padding: 1rem 1.5em; 
+    }
+
     h3,
     h4,
     p{

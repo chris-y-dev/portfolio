@@ -39,7 +39,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className="p-5 second_container footer-containers_sizing col-md-7 col-sm-12 d-flex flex-column justify-content-between">
-        <div className="profile_container d-flex flex-row">
+        <div className="profile_container d-flex flex-row flex-wrap">
           <div className="profile-message_container">
             <div className="profile-message_image-container">
               <img src={fetchStaticImage("/footer/profile-pic.jpg")} />

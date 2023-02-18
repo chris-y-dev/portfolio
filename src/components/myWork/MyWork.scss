@@ -31,7 +31,15 @@ $option-selected: rgb(42, 54, 165);
 }
 
 #myWork{
-    margin-bottom: 3rem;
+  margin-bottom: 5rem !important;
+
+  label{
+    font-weight: 200;
+    
+    @include media-breakpoint-down(sm){
+        margin-left: 0rem !important;
+    }
+}
 }
 
 .projectBlock{
@@ -97,6 +105,10 @@ $option-selected: rgb(42, 54, 165);
     @include media-breakpoint-up(lg){
         height: 18rem;
     }
+
+    @include media-breakpoint-down(sm){
+        height: 18rem;
+    }
 }
 
 #projectFilter{
@@ -121,6 +133,3 @@ $option-selected: rgb(42, 54, 165);
     }
 }
 
-label{
-    font-weight: 200;
-}

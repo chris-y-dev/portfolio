@@ -33,3 +33,13 @@
 .subtitle{
     font-size: 2rem;
 }
+
+@include media-breakpoint-down(sm){
+    .title{
+        font-size: 4rem;
+    }
+    
+    .subtitle{
+        font-size: 1.6rem;
+    }
+}
