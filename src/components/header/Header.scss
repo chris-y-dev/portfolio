@@ -5,26 +5,39 @@
 @import '../../../node_modules/bootstrap/scss/mixins';
 
 
-@keyframes colorFade {
+@keyframes sizeIncrease {
     0%{scale: 100%;}
-    25%{
-       
-    }
     50% { 
         scale: 120%;}
     100%{ 
         scale: 100%;}
 }
 
+@keyframes glowingLogo {
+    0%{
+        text-shadow: 0 0px 5px rgba($color: $light-blue-link, $alpha: 1.0);
+    }
+    50%{
+        text-shadow: 0 0px 20px rgba($color: $light-blue-link, $alpha: 1.0);
+    }
+    100%{
+        text-shadow: 0 0px 5px rgba($color: $light-blue-link, $alpha: 1.0);
+    }
+}
+
 .brand-logo{
     text-decoration: none;
     font-size: 1.6rem;
-    font-weight: 200;
+    font-weight: 300;
     color: white;
+    text-shadow: 0 0px 5px rgba($color: $light-blue, $alpha: 1.0);
+    animation-name: glowingLogo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 
         &:hover{
-            color: white;
-            animation-name: colorFade;
+            color: $light-blue-link;
+            animation-name: sizeIncrease;
             animation-duration: 4s;
             animation-iteration-count: infinite;
         }
