@@ -1,17 +1,15 @@
-import React, {
-  ChangeEvent,
-  MutableRefObject,
-  useEffect,
-  useState,
-} from "react";
-import MyWorkData from "../../interfaces/MyWorkData";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import ProjectBlock from "./ProjectBlock";
 import { ProjectFilterCategory } from "../../interfaces/ProjectFilterCategory";
 import workData from "../../assets/data/WorkShowcaseData";
 import projectFilterCategoriesData from "../../assets/data/projectFilterCategoriesData";
+import { motion } from "framer-motion";
+
+import "../../App.scss";
 
 const MyWork = () => {
   const [selectedFilter, setSelectedFilter] = useState("");
+  // const [elementsForAnimation, setElementsForAnimation] = useState<any>([]);
 
   const filterCategories: ProjectFilterCategory[] = projectFilterCategoriesData;
 
@@ -60,18 +58,30 @@ const MyWork = () => {
                   return project.category === selectedFilter;
                 }
               })
-              .map((project) => {
+              .map((project, index) => {
                 if (project.isFeatured) {
                   return (
-                    <div className="col-lg-8 col-sm-12 border-green order">
+                    <motion.div
+                      className="col-lg-8 col-sm-12 border-green order"
+                      initial={{ y: "9rem" }}
+                      whileInView={{ y: "0rem" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6 + index * 0.1 }}
+                    >
                       <ProjectBlock projectData={project} key={project.id} />
-                    </div>
+                    </motion.div>
                   );
                 } else {
                   return (
-                    <div className="col-lg-4 col-md-6 col-sm-12 border-green order">
+                    <motion.div
+                      className="col-lg-4 col-md-6 col-sm-12 border-green order"
+                      initial={{ y: "9rem" }}
+                      whileInView={{ y: "0rem" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6 + index * 0.1 }}
+                    >
                       <ProjectBlock projectData={project} key={project.id} />
-                    </div>
+                    </motion.div>
                   );
                 }
               })}

@@ -7,6 +7,7 @@ import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
 import MyWork from "../components/myWork/MyWork";
+import setEntranceObserver from "../hooks/setEntranceObserver";
 
 const Home = () => {
   const location = useLocation();
@@ -15,19 +16,22 @@ const Home = () => {
     null
   );
 
-  const selectAndScrollToElementByHash = () => {
-    var element: HTMLElement | null = document.getElementById(
-      location.hash.slice(1)
-    );
-
-    setScrollToElement(element);
-
-    scrollToElement?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   useEffect(() => {
+    function selectAndScrollToElementByHash() {
+      var element: HTMLElement | null = document.getElementById(
+        location.hash.slice(1)
+      );
+
+      console.log("Scroll function");
+
+      setScrollToElement(element!);
+      if (element) {
+        scrollToElement?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
     selectAndScrollToElementByHash();
-  }, [scrollToElement]);
+  }, [scrollToElement, location.hash]);
 
   return (
     <div className="text-white vh-100 backgorund-primary">

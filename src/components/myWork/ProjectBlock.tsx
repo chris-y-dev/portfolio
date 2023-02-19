@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import fetchStaticImage from "../../hooks/fetchStaticImage";
 import MyWorkData from "../../interfaces/MyWorkData";
 import "./MyWork.scss";
+// import "../../App.scss";
 
 const ProjectBlock = (props: { projectData: MyWorkData }) => {
   const img = fetchStaticImage(props.projectData.projectThumbnailPath);

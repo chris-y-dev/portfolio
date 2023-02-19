@@ -1,9 +1,10 @@
-import React from "react";
+import React, { MutableRefObject } from "react";
 import "./Achievements.scss";
 import "../../App.scss";
 
 import eventData from "../../assets/data/EventsData";
 import EventBlock from "./EventBlock";
+import { motion } from "framer-motion";
 
 const Achievements = () => {
   return (
@@ -18,10 +19,16 @@ const Achievements = () => {
                 event.eventType.isWinner === true
               );
             })
-            .map((event) => (
-              <div className="col-md-6 col-sm-12">
+            .map((event, i) => (
+              <motion.div
+                className="col-md-6 col-sm-12"
+                initial={{ y: "9rem" }}
+                whileInView={{ y: "0rem" }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 + i * 0.2 }}
+              >
                 <EventBlock eventData={event} />
-              </div>
+              </motion.div>
             ))}
         </div>
       </div>
@@ -35,10 +42,16 @@ const Achievements = () => {
                 event.eventType.isWinner === false
               );
             })
-            .map((event) => (
-              <div className="col-md-6 col-sm-12">
+            .map((event, i) => (
+              <motion.div
+                className="col-md-6 col-sm-12 entrance"
+                initial={{ y: "9rem" }}
+                whileInView={{ y: "0rem" }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 + i * 0.2 }}
+              >
                 <EventBlock eventData={event} />
-              </div>
+              </motion.div>
             ))}
         </div>
       </div>

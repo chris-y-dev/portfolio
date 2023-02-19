@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AccordionItem from "./AccordionItem";
 import AccordionData from "../../interfaces/AccordionData";
+import { motion } from "framer-motion";
 
 const Accordion = () => {
   const items: AccordionData[] = [
@@ -64,14 +65,22 @@ const Accordion = () => {
 
   return (
     <div className="d-flex flex-column align-items-center w-100">
-      {items.map((item) => {
+      {items.map((item, index) => {
         return (
-          <AccordionItem
-            item={item}
-            key={item.id}
-            isOpen={openedAccordion === item.id ? true : false}
-            toggleAccordion={toggleAccordion}
-          />
+          <motion.div
+            className="w-100"
+            initial={{ y: "9rem" }}
+            whileInView={{ y: "0rem" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 + index * 0.1 }}
+          >
+            <AccordionItem
+              item={item}
+              key={item.id}
+              isOpen={openedAccordion === item.id ? true : false}
+              toggleAccordion={toggleAccordion}
+            />
+          </motion.div>
         );
       })}
     </div>

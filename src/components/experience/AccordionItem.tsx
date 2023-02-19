@@ -5,6 +5,8 @@ import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import SkillPill from "../expertise/SkillPill";
 import fetchStaticImage from "../../hooks/fetchStaticImage";
+import "../../App.scss";
+import { motion } from "framer-motion";
 
 const AccordionItem = (props: {
   item: AccordionData;
@@ -19,7 +21,13 @@ const AccordionItem = (props: {
   }
 
   return (
-    <div className="w-100">
+    <motion.div
+      className="w-100 entrance"
+      initial={{ y: "9rem" }}
+      whileInView={{ y: "0rem" }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <button
         className={`accordionButton ${
           props.isOpen ? "--btn-active" : "--btn-inactive"
@@ -67,7 +75,7 @@ const AccordionItem = (props: {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

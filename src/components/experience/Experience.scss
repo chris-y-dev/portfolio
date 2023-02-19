@@ -82,7 +82,6 @@ $accordion-panel: #2b3448;
         }
     }
 
-    
     &.--showAccordion{
         animation-name: panelFadeIn;
         animation-duration: 0.6s;
@@ -97,10 +96,11 @@ $accordion-panel: #2b3448;
 @keyframes panelFadeIn {
     from {
         opacity: 50%;
-        translate: 0 -20%;
+        translate: 0 -4rem;
     } to {
         opacity: 100%;
         translate: 0%;
     }
     
 }
+  

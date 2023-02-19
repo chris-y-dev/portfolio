@@ -18,17 +18,14 @@ $option-selected: rgb(42, 54, 165);
     }
 }
 
-@keyframes linkArrowSlide {
-    0%{
-        transform: translateX(-3rem);
-    }
-    50%{
-        transform: translateX(0px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
+// @keyframes linkArrowSlide {
+//     0%{
+//         transform: translateX(-3rem);
+//     }
+//     100%{
+//         transform: translateX(0px);
+//     }
+// }
 
 #myWork{
   margin-bottom: 5rem !important;
@@ -75,7 +72,7 @@ $option-selected: rgb(42, 54, 165);
 
         .projectBlock_arrow{
             visibility: hidden;
-            transform: translateX(-50px);
+            transform: translateX(-1.5rem);
             *{
                 color: $light-blue-link;
             }
@@ -96,9 +93,8 @@ $option-selected: rgb(42, 54, 165);
 
         .projectBlock_arrow{
                 visibility: visible;
-                animation-name: linkArrowSlide;
-                animation-duration: 0.5s;
-                animation-fill-mode: forwards;
+                transform: translateX(0px);
+                transition-duration: 0.4s;
         }
     }
 

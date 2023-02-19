@@ -101,3 +101,23 @@ body,
   background-size: 80%;
   background-position: 50% 100%;
 }
+
+
+@keyframes wipe-enter {
+	0% {
+		transform: translateY(8rem);
+	}
+	50% {
+		transform: translateY(0rem);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .entrance{
+        // visibility: hidden;
+    }
+    
+    .entrance-animation {
+      animation: wipe-enter 2s 1 !important;
+    }
+  }

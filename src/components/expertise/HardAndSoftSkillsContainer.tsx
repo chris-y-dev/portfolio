@@ -14,7 +14,7 @@ const HardAndSoftSkillsContainer = (props: {
 
   return (
     <div
-      className={`skillContainer py-3 px-4 ${
+      className={`skillContainer entrance py-3 px-4 ${
         skillType_styling[props.skillData.proficiencyTitle]
       }`}
     >

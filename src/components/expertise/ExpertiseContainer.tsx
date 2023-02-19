@@ -1,4 +1,5 @@
 import React from "react";
+import "../../App.scss";
 import fetchStaticImage from "../../hooks/fetchStaticImage";
 import ExpertiseData from "../../interfaces/ExpertiseData";
 

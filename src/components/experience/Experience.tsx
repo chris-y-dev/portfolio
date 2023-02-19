@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MutableRefObject } from "react";
 import "./Experience.scss";
 import "../../App.scss";
 import Accordion from "./Accordion";
