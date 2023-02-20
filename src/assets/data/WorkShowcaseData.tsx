@@ -211,7 +211,7 @@ const workData: MyWorkData[] = [
   },
   {
     id: "discountAndCurrency",
-    name: "Mobile Currency Converter and Discount Calculator",
+    name: "Mobile Currency Converter & Discount Calculator",
     clientName: "Personal Project",
     descShort:
       "Developed upon mum's request. This mobile app (on GooglePlay Store) calls a Currency Exchange API and converts any amount provided by user. There is also a discount calculator feature which that calculates post-discount prices when shopping (eg 15% off $99 = $84.15).",
