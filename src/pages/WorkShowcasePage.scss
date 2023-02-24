@@ -3,6 +3,26 @@
 @import '../../node_modules/bootstrap/scss/mixins';
 @import "../App.scss";
 
+@mixin visitProjectButtonHover(){
+    .visitProjectButton{
+        color: $light-blue-link;
+        transform: scale(110%);
+        transition-duration: 0.2s;
+        border-color: $light-blue-link;
+      }
+  
+      .icon {
+        * {
+          color: $light-blue-link;
+        }
+  
+        animation-name: arrowSlideRight;
+        animation-duration: 0.2s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+}
+
 $panel-block: rgb(37, 37, 37);
 
 
@@ -55,4 +75,14 @@ $panel-block: rgb(37, 37, 37);
         border-radius: 0.6rem;
         height: 100%;
     }
+
+    .image_and_button_container{
+        .title_image_link:hover + .visitProjectButton_container{
+
+            // Copied from visitProjectButton.scss
+            @include visitProjectButtonHover();
+        }
+    }
 }
+
+.empty{}

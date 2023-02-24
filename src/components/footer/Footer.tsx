@@ -10,9 +10,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   const socialData: SocialData[] = [
-    { name: "LinkedIn", icon: faLinkedin as IconDefinition, link: "/" },
-    { name: "Github", icon: faGithub as IconDefinition, link: "/" },
-    { name: "Leetcode", icon: faCode as IconDefinition, link: "/" },
+    {
+      name: "LinkedIn",
+      icon: faLinkedin as IconDefinition,
+      link: "https://www.linkedin.com/in/chris-y-dev/",
+    },
+    {
+      name: "Github",
+      icon: faGithub as IconDefinition,
+      link: "https://github.com/chris-y-dev",
+    },
+    {
+      name: "Leetcode",
+      icon: faCode as IconDefinition,
+      link: "https://leetcode.com/chris-y-dev/",
+    },
   ];
 
   const footerMessage =
@@ -47,7 +59,7 @@ const Footer = () => {
           </div>
           <p className="profile-message_message ms-4">{footerMessage}</p>
         </div>
-        <a href="/">
+        <a href="https://www.linkedin.com/in/chris-y-dev/">
           <img
             src={fetchStaticImage("/footer/connect-with-me_crop.gif")}
             alt="Connect with me"

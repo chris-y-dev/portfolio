@@ -7,10 +7,11 @@ import "../App.scss";
 import Header from "../components/header/Header";
 import { ProjectFilterCategory } from "../interfaces/ProjectFilterCategory";
 import fetchStaticImage from "../hooks/fetchStaticImage";
-import "./WorkShowcasePage.scss";
-import "../App.scss";
 import VisitProjectButton from "../components/workShowcasePage/visitProjectButton/VisitProjectButton";
 import SkillPill from "../components/expertise/SkillPill";
+import "./WorkShowcasePage.scss";
+import "../App.scss";
+import "../components/workShowcasePage/visitProjectButton/VisitProjectButton.scss";
 
 const WorkShowcasePage = () => {
   const [projectData, setProjectData] = useState<MyWorkData | undefined>();
@@ -69,12 +70,16 @@ const WorkShowcasePage = () => {
             </div>
           </div>
 
-          <VisitProjectButton projectUrl={projectData?.projectUrl} />
-          <img
-            src={fetchStaticImage(projectData?.titleImagePath)}
-            alt={projectData?.name}
-            className="my-3 featured-image"
-          ></img>
+          <div className="image_and_button_container d-flex flex-column flex-column-reverse">
+            <a href={projectData?.projectUrl} className="title_image_link">
+              <img
+                src={fetchStaticImage(projectData?.titleImagePath)}
+                alt={projectData?.name}
+                className="my-3 title_image"
+              ></img>
+            </a>
+            <VisitProjectButton projectUrl={projectData?.projectUrl} />
+          </div>
 
           {/* Features */}
           <div className="my-5">

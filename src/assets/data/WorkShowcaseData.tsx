@@ -2,15 +2,110 @@ import MyWorkData from "../../interfaces/MyWorkData";
 
 const workData: MyWorkData[] = [
   {
+    id: "api_lambda_s3",
+    name: "Auto Image Processing with Dotnet, AWS S3, Lambda",
+    clientName: "Personal Project",
+    isFeatured: true,
+    category: "software",
+    descShort:
+      "A containerised application that generates an uploaded image into 4 different sized thumbnails (small, medium, large, xlarge). Invovles a locally hosted Dotnet API, S3 Bucket, and Lambda Function.",
+    descLong: "This is the long desc.",
+    projectThumbnailPath: "/myWork/thumbnailapi_program_workflow.jpg",
+    titleImagePath: "/myWork/thumbnailapi_program_workflow.jpg",
+    projectGallery: [
+      {
+        imagePath: "/myWork/thumbnailapi_documentation.jpg",
+        imageDescription:
+          "Clear Documentation - Try running the application on your computer",
+      },
+      {
+        imagePath: "/myWork/thumbnailapi_swagger.jpg",
+        imageDescription: "API Swagger - Upload your image here",
+      },
+      {
+        imagePath: "/myWork/thumbnailapi_output.jpg",
+        imageDescription:
+          "Lambda Function will process your image and upload the re-sized thumbnails to the 'output' bucket, which you can download",
+      },
+    ],
+    features: [
+      "Containerised environment using Docker",
+      "Localstack to emulate AWS",
+      "Dotnet API validates file and uploads to AWS (localstack)",
+      "Lambda Function written in TypeScript",
+      "Script that creates S3 buckets, Lambda Function, IAM Policy, IAM Role, and Notification configuration that sets Lambda trigger",
+    ],
+    videoLink: "",
+    projectUrl: "https://github.com/chrisyuen976/image_lambda_processing",
+    technologies: [
+      "C#",
+      "Dotnet",
+      "TypeScript",
+      "Docker",
+      "AWS",
+      "S3",
+      "Lambda Function",
+    ],
+    designPrinciples: [
+      "CLEAN Architecture",
+      "Dependency Injection",
+      "Clear Documentation",
+    ],
+  },
+
+  {
+    id: "edjourney",
+    name: "Edu-Tech Platform - EdJourney (Hackathon Project)",
+    clientName: "Hackathon Project",
+    descShort:
+      "EdJourney is an online platform where students can share a topic (also called a Journey) and learn form Journeys shared by others. Each Journey will have step-by-step milestones that guides users to achieve a learning outcome. Users can also mark their learning progress with the progress bar feature.",
+    isFeatured: false,
+    category: "software",
+    descLong: "This is the long desc.",
+    projectThumbnailPath: "/myWork/edjourney_home.jpg",
+    titleImagePath: "/myWork/edjourney_home_2.jpg",
+    projectGallery: [
+      {
+        imagePath: "/myWork/edjourney_form.jpg",
+        imageDescription: "Dynamic form to create milestones in a journey",
+      },
+      {
+        imagePath: "/myWork/edjourney_progress.jpg",
+        imageDescription:
+          "Progress bar visualising progress and milestones to help users plan their learning",
+      },
+      {
+        imagePath: "/myWork/edjourney_login.jpg",
+        imageDescription:
+          "User login and authentication feature to create/save Journeys",
+      },
+    ],
+    features: [
+      "User login and authentication",
+      "Search uploaded Learning Journeys",
+      "Create a new learning topic by using the dynamic input-form to add any amount of steps/milestones",
+      "Save learning progress to database",
+      "Dynamic progress bar to visualise learning progress",
+    ],
+    videoLink: "",
+    projectUrl: "https://devpost.com/software/ed-journey",
+    technologies: ["React.js", "MongoDB", "Express.js", "Node.js", "Chakra-UI"],
+    designPrinciples: [
+      "Must-haves VS Nice-to-haves management",
+      "Task prioritisation (time constraints)",
+    ],
+  },
+
+  {
     id: "portfolio",
     name: "My Software Engineering Portfolio",
     clientName: "Personal Project",
-    isFeatured: true,
+    isFeatured: false,
     category: "software",
     descShort: "Developed my personal portfolio from scratch using React.js.",
     descLong: "This is the long desc.",
     projectThumbnailPath: "/myWork/portfolio_thumbnail.jpg",
-    titleImagePath: "/myWork/mme_thumbnail_1.jpg",
+    titleImagePath: "/portfolio_thumbnail.jpg",
     projectGallery: [],
     features: [
       "Fully responsive site for all devices",
@@ -29,6 +124,7 @@ const workData: MyWorkData[] = [
       "Mobile-first Development",
     ],
   },
+
   {
     id: "MyMozartExperience",
     name: "Music-Themed E-commerce Web Design - MyMozartExperience",
@@ -130,54 +226,13 @@ const workData: MyWorkData[] = [
       "Focus on Users (Parents/Older Adults)",
     ],
   },
+
   {
-    id: "edjourney",
-    name: "Edu-Tech Platform - EdJourney (Hackathon Project)",
-    clientName: "Hackathon Project",
+    id: "buildmyboat",
+    name: "COMING SOON - 3D Boat Model E-Commerce App",
+    clientName: "Telwater Pty Ltd",
     descShort:
-      "EdJourney is an online platform where students can share a topic (also called a Journey) and learn form Journeys shared by others. Each Journey will have step-by-step milestones that guides users to achieve a learning outcome. Users can also mark their learning progress with the progress bar feature.",
-    isFeatured: false,
-    category: "software",
-    descLong: "This is the long desc.",
-    projectThumbnailPath: "/myWork/edjourney_home.jpg",
-    titleImagePath: "/myWork/edjourney_home_2.jpg",
-    projectGallery: [
-      {
-        imagePath: "/myWork/edjourney_form.jpg",
-        imageDescription: "Dynamic form to create milestones in a journey",
-      },
-      {
-        imagePath: "/myWork/edjourney_progress.jpg",
-        imageDescription:
-          "Progress bar visualising progress and milestones to help users plan their learning",
-      },
-      {
-        imagePath: "/myWork/edjourney_login.jpg",
-        imageDescription:
-          "User login and authentication feature to create/save Journeys",
-      },
-    ],
-    features: [
-      "User login and authentication",
-      "Search uploaded Learning Journeys",
-      "Create a new learning topic by using the dynamic input-form to add any amount of steps/milestones",
-      "Save learning progress to database",
-      "Dynamic progress bar to visualise learning progress",
-    ],
-    videoLink: "",
-    projectUrl: "https://devpost.com/software/ed-journey",
-    technologies: ["React.js", "MongoDB", "Express.js", "Node.js", "Chakra-UI"],
-    designPrinciples: [
-      "Must-haves VS Nice-to-haves management",
-      "Task prioritisation (time constraints)",
-    ],
-  },
-  {
-    id: "thumbnailLambda",
-    name: "Thumnail transforming Lambda Function - Coming Soon",
-    clientName: "Personal Project",
-    descShort:
-      "A Lambda Function that resizes thumbnail images, triggered by uploading an image through an API.",
+      "COMING SOON - A SPA (single-page-app) that enables potential customers to customise their own boat and preview changes as a 3D-model. When sharing the URL with others, the user's selected customisation will also be rendered.",
     isFeatured: false,
     category: "software",
     descLong: "This is the long desc.",
@@ -185,33 +240,20 @@ const workData: MyWorkData[] = [
     titleImagePath: "/myWork/mme_thumbnail_1.jpg",
     projectGallery: [],
     features: [
-      "Hosted locally using Docker containers",
-      "Localstack mimics real AWS Lambda and S3",
-      "Validate uploaded file is in an acceptable format (jpg, png, svg)",
-      "Lambda function automatically triggered after uploading image via API",
-      "API accepts file upload",
-      "Use of TypeScript to make Lambda Function code more readable and maintainable",
+      "Interactive 3D Boat Models (colours, wraps, accessories)",
+      "URL Variables stores customisation data - renders selection when URL is shared with others",
+      "Captures selection data in form format for company/dealers at final step",
+      "SPA with step-by-step selection panels and a progress bar",
+      "Exciting and engaging retail tool to prompt user interest",
     ],
     videoLink: "",
     projectUrl: "",
-    technologies: [
-      "C#",
-      "Dotnet",
-      "Docker",
-      "AWS",
-      "Lambda Function",
-      "S3 Bucket",
-      "TypeScript",
-    ],
-    designPrinciples: [
-      "CLEAN Architecture",
-      "SOLID Principles",
-      "Dependency Injection",
-    ],
+    technologies: ["Angular", "TypeScript", "SCSS", "Vectary", "Azure"],
+    designPrinciples: ["Dependency Injection", " Don't Repeat Yourself (DRY)"],
   },
   {
     id: "discountAndCurrency",
-    name: "Mobile Currency Converter & Discount Calculator",
+    name: "COMING SOON - Mobile Currency & Discount Calculator",
     clientName: "Personal Project",
     descShort:
       "Developed upon mum's request. This mobile app (on GooglePlay Store) calls a Currency Exchange API and converts any amount provided by user. There is also a discount calculator feature which that calculates post-discount prices when shopping (eg 15% off $99 = $84.15).",

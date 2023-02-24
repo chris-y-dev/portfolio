@@ -6,15 +6,18 @@ import projectFilterCategoriesData from "../../assets/data/projectFilterCategori
 import { motion } from "framer-motion";
 
 import "../../App.scss";
+import MyWorkData from "../../interfaces/MyWorkData";
+import orderProjectsByCategory from "../../hooks/orderProjectsByCategory";
 
 const MyWork = () => {
   const [selectedFilter, setSelectedFilter] = useState("");
-  // const [elementsForAnimation, setElementsForAnimation] = useState<any>([]);
+  const [sortedWorkData, setSortedWorkData] = useState<MyWorkData[]>([]);
 
   const filterCategories: ProjectFilterCategory[] = projectFilterCategoriesData;
 
   useEffect(() => {
     setSelectedFilter(filterCategories[0].categoryId);
+    setSortedWorkData(orderProjectsByCategory(workData));
   }, []);
 
   function toggleFilter(event: ChangeEvent<HTMLSelectElement>) {
@@ -50,7 +53,7 @@ const MyWork = () => {
             </select>
           </div>
           <div className="row gy-4 gx-3 pb-5 mt-4">
-            {workData
+            {sortedWorkData
               .filter((project) => {
                 if (selectedFilter === "all") {
                   return project;
