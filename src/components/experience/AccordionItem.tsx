@@ -22,7 +22,7 @@ const AccordionItem = (props: {
 
   return (
     <motion.div
-      className="w-100 entrance"
+      className="w-100"
       initial={{ y: "9rem" }}
       whileInView={{ y: "0rem" }}
       viewport={{ once: true }}

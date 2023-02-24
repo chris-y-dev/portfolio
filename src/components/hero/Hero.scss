@@ -8,7 +8,7 @@
 }
 
 .hero-container{
-    background-image: url(../../assets/sample3.gif);
+    background-image: url(../../assets/typography-2.gif);
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,6 +23,12 @@
     @media screen and (min-width: 1700px) {
         background-size: contain;
       }
+
+    h1,
+    h3,
+    p{
+        text-shadow: 3px 5px 10px rgba(0,0,0, 1);
+    }
 }
 
 .title{
@@ -32,6 +38,16 @@
 
 .subtitle{
     font-size: 2rem;
+}
+
+.introText_container{
+
+    margin-top: 16rem;
+    max-width: 700px;
+    .introText{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
 }
 
 @include media-breakpoint-down(sm){

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../../App.scss";
+import BackToTopButton from "../backToTop/BackToTopButton";
 import "./Header.scss";
 
 const Header = () => {
@@ -90,6 +91,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+      <BackToTopButton />
     </div>
   );
 };
