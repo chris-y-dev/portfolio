@@ -13,6 +13,13 @@ const ProjectBlock = (props: { projectData: MyWorkData }) => {
     <div className="projectBlock d-flex flex-column">
       <a href={"/work-showcase/" + props.projectData.id}>
         <img src={img} alt={props.projectData.name} />
+        <div
+          className={`featured_badge py-2 px-4 ${
+            props.projectData.isFeatured ? "--isFeatured" : ""
+          }`}
+        >
+          Featured
+        </div>
 
         <div className="projectBlock_panel d-flex flex-row justify-content-between align-items-center px-3 py-2">
           <div className="projectBlock_name">{props.projectData.name}</div>
