@@ -20,7 +20,7 @@ const Header = () => {
     if (pageName === "") {
       setAbsolutePath("");
     } else {
-      setAbsolutePath("http://localhost:3000");
+      setAbsolutePath("https://chris-y.pages.dev/");
     }
   }
 
