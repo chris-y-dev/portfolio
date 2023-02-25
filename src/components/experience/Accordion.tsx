@@ -22,7 +22,7 @@ const Accordion = () => {
       workType: "Part-time",
       description:
         "Developing SPA for large retail businesses. Includes customisable 3D models of products before users make an order. Also invovled developing UI for admin/internal business use. Majority of development invovled TypeScript, JavaScript and JS frameworks.",
-      companyImagePath: "/experience/pegboardco_logo_2.png",
+      companyImagePath: "/experience/pegboardco_logo.png",
       technologies: [
         "TypeScript",
         "Angular",

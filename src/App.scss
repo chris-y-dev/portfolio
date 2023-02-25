@@ -88,18 +88,6 @@ body,
   }
 }
 
-#experience-bg{
-  height: 12rem !important;
-  background-color: $bg-primary;
-  background-image: linear-gradient(to bottom, rgba($bg-primary, 0.3),  $bg-primary),
-  linear-gradient(to top, rgba($bg-primary, 0.3),  $bg-primary), 
-     
-      url("./assets/images/background/sample.jpg");
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: 50% 100%;
-}
-
 @keyframes wipe-enter {
 	0% {
 		transform: translateY(8rem);

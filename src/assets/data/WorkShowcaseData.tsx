@@ -236,8 +236,8 @@ const workData: MyWorkData[] = [
     isFeatured: false,
     category: "software",
     descLong: "This is the long desc.",
-    projectThumbnailPath: "/myWork/static.gif",
-    titleImagePath: "/myWork/mme_thumbnail_1.jpg",
+    projectThumbnailPath: "/myWork/coming-soon_thumbnail.jpg",
+    titleImagePath: "/myWork/coming-soon.jpg",
     projectGallery: [],
     features: [
       "Interactive 3D Boat Models (colours, wraps, accessories)",
@@ -260,8 +260,8 @@ const workData: MyWorkData[] = [
     isFeatured: false,
     category: "mobile",
     descLong: "This is the long desc.",
-    projectThumbnailPath: "/myWork/static.gif",
-    titleImagePath: "/myWork/mme_thumbnail_1.jpg",
+    projectThumbnailPath: "/myWork/coming-soon_thumbnail.jpg",
+    titleImagePath: "/myWork/coming-soon.jpg",
     projectGallery: [],
     features: [
       "Real-time currency prices enables accurate and updated converstion",

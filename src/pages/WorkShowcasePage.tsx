@@ -118,23 +118,26 @@ const WorkShowcasePage = () => {
           </div>
 
           {/* Gallery */}
-
-          <div className="project_gallery">
-            <h2 className="mt-5 mb-3">Gallery</h2>
-            {projectData?.projectGallery.map((image) => (
-              <div
-                className="gallery-image_container"
-                key={image.imageDescription}
-              >
-                <img
-                  src={fetchStaticImage(image.imagePath)}
-                  alt={image.imageDescription}
-                  className="mt-5 mb-3"
-                />
-                <p className="mb-5">{image.imageDescription}</p>
-              </div>
-            ))}
-          </div>
+          {projectData?.projectGallery.length! > 0 ? (
+            <div className="project_gallery">
+              <h2 className="mt-5 mb-3">Gallery</h2>
+              {projectData?.projectGallery.map((image) => (
+                <div
+                  className="gallery-image_container"
+                  key={image.imageDescription}
+                >
+                  <img
+                    src={fetchStaticImage(image.imagePath)}
+                    alt={image.imageDescription}
+                    className="mt-5 mb-3"
+                  />
+                  <p className="mb-5">{image.imageDescription}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
     );
