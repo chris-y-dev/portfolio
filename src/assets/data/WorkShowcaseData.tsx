@@ -36,7 +36,7 @@ const workData: MyWorkData[] = [
       "Script that creates S3 buckets, Lambda Function, IAM Policy, IAM Role, and Notification configuration that sets Lambda trigger",
     ],
     videoLink: "",
-    projectUrl: "https://github.com/chrisyuen976/image_lambda_processing",
+    projectUrl: "https://github.com/chris-y-dev/image_lambda_processing",
     technologies: [
       "C#",
       "Dotnet",
@@ -102,16 +102,31 @@ const workData: MyWorkData[] = [
     clientName: "Personal Project",
     isFeatured: false,
     category: "software",
-    descShort: "Developed my personal portfolio from scratch using React.js.",
+    descShort:
+      "Developed my personal portfolio from scratch using React.js. This portfolio aims to showcase my experiences and skills in a modern and engaging way.",
     descLong: "This is the long desc.",
     projectThumbnailPath: "/myWork/portfolio_thumbnail.jpg",
-    titleImagePath: "/portfolio_thumbnail.jpg",
-    projectGallery: [],
+    titleImagePath: "/myWork/portfolio_thumbnail.jpg",
+    projectGallery: [
+      {
+        imageDescription:
+          "Custom client-side sorting algorithm that orders project by filter category",
+        imagePath: "/myWork/portfolio_projects.jpg",
+      },
+      {
+        imageDescription: "Fully responsive layout for all devices",
+        imagePath: "/myWork/portfolio_responsive_example.jpg",
+      },
+      {
+        imageDescription: "Modern entry & hover animations across website",
+        imagePath: "/myWork/portfolio_animations_example.jpg",
+      },
+    ],
     features: [
       "Fully responsive site for all devices",
-      "Visual feedback implemented for all actionable content",
-      "Intentional UI design and layout to maximise readability and user engagement",
+      "Custom sorting algorithm to sort project ordering (featued -> software -> mobile -> web)",
       "Filterable Work/Projects",
+      "Intentional UI design and layout to maximise readability",
       "Engaging design elements (animations, transitions) using CSS/JS techniques",
       "Non-static data allows easy maintenance of content",
     ],

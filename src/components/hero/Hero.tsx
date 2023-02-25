@@ -39,7 +39,7 @@ const Hero = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
           >
-            Welcome to my portoflio, developed using React.js
+            Welcome to my portoflio, developed using React.js.
           </motion.p>
           <motion.p
             className="introText my-5"
@@ -48,8 +48,10 @@ const Hero = () => {
             viewport={{ once: true }}
             transition={{ duration: 1.0 }}
           >
-            I also like to dabble in graphic design, digital drawing, and 3D
-            modelling using Blender
+            A <span className="mt_font">Music Therapist</span> - turned -{" "}
+            <span className="swe_font">Software Developer</span>. In my free
+            time, I also like to dabble in graphic design, digital
+            illustrations, and 3D modelling!
           </motion.p>
         </div>
         {/* <div id="scroll_prompt_container" className="text-center">

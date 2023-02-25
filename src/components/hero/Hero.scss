@@ -1,6 +1,10 @@
 @import '../../../node_modules/bootstrap/scss/functions';
 @import '../../../node_modules/bootstrap/scss/variables';
 @import '../../../node_modules/bootstrap/scss/mixins';
+@import "../../App.scss";
+
+$mt_font: rgb(255, 147, 135);
+$swe_font: $light-blue-link;
 
 #home{
     margin-bottom: 3rem;
@@ -29,6 +33,14 @@
     h3,
     p{
         text-shadow: 3px 5px 10px rgba(0,0,0, 1);
+    }
+
+    .mt_font{
+        color: $mt_font;
+    }
+
+    .swe_font{
+        color: $swe_font;
     }
 }
 
