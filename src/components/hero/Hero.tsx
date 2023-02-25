@@ -10,7 +10,7 @@ const Hero = () => {
 
   return (
     <div className="hero-container py-5" id="home">
-      <div className="container">
+      <div className="container d-flex flex-column">
         <motion.h1
           className="title text-shadow"
           aria-label={nameTitle}
@@ -39,7 +39,7 @@ const Hero = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
           >
-            WELCOME TO MY PORTFOLIO, DEVELOPED USING REACT
+            Welcome to my portoflio, developed using React.js
           </motion.p>
           <motion.p
             className="introText my-5"
@@ -48,10 +48,13 @@ const Hero = () => {
             viewport={{ once: true }}
             transition={{ duration: 1.0 }}
           >
-            I ALSO LIKE TO DABBLE IN GRAPHIC DESIGN, DIGITAL DRAWING, AND 3D
-            MODELLING USING BLENDER!
+            I also like to dabble in graphic design, digital drawing, and 3D
+            modelling using Blender
           </motion.p>
         </div>
+        {/* <div id="scroll_prompt_container" className="text-center">
+          Scroll Down
+        </div> */}
       </div>
     </div>
   );

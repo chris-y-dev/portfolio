@@ -5,6 +5,7 @@
 #home{
     margin-bottom: 3rem;
     margin-top: 2rem;
+    position: relative;
 }
 
 .hero-container{
@@ -42,7 +43,7 @@
 
 .introText_container{
 
-    margin-top: 16rem;
+    margin-top: 12rem;
     max-width: 700px;
     .introText{
         font-size: 1.5rem;
@@ -58,4 +59,19 @@
     .subtitle{
         font-size: 1.6rem;
     }
+
+    .introText_container{
+        margin-top: 10rem;
+        .introText{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+#scroll_prompt_container{
+    align-self: center !important;
+    background-color: red;
+    width: 4rem;
+    position: absolute;
+    bottom: 0;
 }

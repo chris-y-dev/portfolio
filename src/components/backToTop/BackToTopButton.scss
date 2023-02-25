@@ -1,29 +1,50 @@
 
 @import "../../App.scss";
+
+$small-button-size: 4rem;
+$mobile-bottom: 20px;
+$other-bottom: 3rem;
+
+@keyframes showBtn_mobile{
+  0%{
+   bottom: 4rem;
+  } 100%{
+    bottom: 1rem;
+  }
+}
+
+@keyframes showBtn_others{
+  0%{
+   bottom: 5rem;
+  } 100%{
+    bottom: 3rem;
+  }
+}
+
 .backToTopButton{
-    // display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
+  visibility: hidden;
+  position: fixed;
+  z-index: 99; 
+  border: none;
+  outline: none; 
+  background-color: rgba(0,0,0,0.3);
+  font-size: 1.5rem;
+  border-radius: 50%; 
+ 
+  width: $small-button-size;
+  height: $small-button-size;
   bottom: 3rem;
   right: 3rem; 
-  z-index: 99; 
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: rgba(0,0,0,0.3); /* Set a background color */
- 
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
 
   .backToTop_icon{
     *{
-        color: grey; /* Text color */
+        color: grey;
     }
   }
 
   @include media-breakpoint-down(sm){
-    bottom: 20px;
-    right: 10px; 
+    bottom: 1.2rem;
+    right: 1rem; 
     width: 3rem;
     height: 3rem;
   }
@@ -31,6 +52,21 @@
   @include media-breakpoint-up(lg){
     bottom: 3rem;
     right: 3rem; 
+  }
+
+  &.--display_btn{
+    visibility: visible;
+   
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    @include media-breakpoint-down(sm){
+      animation-name: showBtn_mobile;
+    }
+
+    @include media-breakpoint-up(sm){
+      animation-name: showBtn_others;
+    }
   }
 
   &:hover{
@@ -44,8 +80,11 @@
       }
   }
 
+  &:focus,
   &:active{
     background-color: black;
   }
+
+ 
 }
 
