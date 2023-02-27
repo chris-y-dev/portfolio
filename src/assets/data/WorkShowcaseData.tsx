@@ -268,25 +268,41 @@ const workData: MyWorkData[] = [
   },
   {
     id: "discountAndCurrency",
-    name: "COMING SOON - Mobile Currency & Discount Calculator",
+    name: "Mobile Currency & Discount Calculator",
     clientName: "Personal Project",
     descShort:
-      "Developed upon mum's request. This mobile app (on GooglePlay Store) calls a Currency Exchange API and converts any amount provided by user. There is also a discount calculator feature which that calculates post-discount prices when shopping (eg 15% off $99 = $84.15).",
+      "Developed upon mum's request. This mobile app (deployed on GooglePlay Store) calls a Currency API and converts the amount provided by the user. There is also a discount calculator feature which calculates discounted prices to help users when shopping (eg 15% off $99 = $84.15).",
     isFeatured: false,
     category: "mobile",
     descLong: "This is the long desc.",
-    projectThumbnailPath: "/myWork/coming-soon_thumbnail.jpg",
-    titleImagePath: "/myWork/coming-soon.jpg",
-    projectGallery: [],
+    projectThumbnailPath: "/myWork/currencyDiscountCalc_convert_screen.jpg",
+    titleImagePath: "/myWork/currencyDiscountCalc_home_screen.jpg",
+    projectGallery: [
+      {
+        imagePath: "/myWork/currencyDiscountCalc_home_screen.jpg",
+        imageDescription: "Landing page with navigation buttons",
+      },
+      {
+        imagePath: "/myWork/currencyDiscountCalc_convert_screen.jpg",
+        imageDescription:
+          "Currency Converter screen to select desired currencies and input amount",
+      },
+      {
+        imagePath: "/myWork/currencyDiscountCalc_discount_screen.jpg",
+        imageDescription:
+          "Discount Calculator screen with a simple UI to input discount and price",
+      },
+    ],
     features: [
-      "Real-time currency prices enables accurate and updated converstion",
-      "Various currencies available as requested by mum",
       "Deployed to Play Store for Android users",
-      "Clear UI implemented to maximise ease of use",
+      "Real-time currency API to provide accurate conversion",
+      "v2.0 has been converted to TypeScript for easier maintenance and feature adding",
+      "NEXT UPDATE: Will implement Currency searching instead of limited currencies",
+      "Clear navigation and UI to maximise ease of use",
     ],
     videoLink: "",
     projectUrl: "",
-    technologies: ["React Native", "API"],
+    technologies: ["React Native", "TypeScript", "Expo"],
     designPrinciples: ["KISS"],
   },
 ];

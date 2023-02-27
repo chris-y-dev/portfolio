@@ -17,7 +17,7 @@ const Accordion = () => {
     },
     {
       id: "item2",
-      buttonLabel: "Frontend Developer @ Pegboard",
+      buttonLabel: "Frontend Developer @ Pegboard Software",
       workPeriod: "July 2022 - Ongoing",
       workType: "Part-time",
       description:
@@ -34,7 +34,7 @@ const Accordion = () => {
     },
     {
       id: "item3",
-      buttonLabel: "Web Desginer and Developer @ BerniesMusicLand",
+      buttonLabel: "Web Desginer and Developer @ Bernies Music Land",
       workType: "Part-time",
       workPeriod: "May 2022 - Ongoing",
       description:

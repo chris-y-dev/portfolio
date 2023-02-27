@@ -14,7 +14,7 @@ const Hero = () => {
         <motion.h1
           className="title text-shadow"
           aria-label={nameTitle}
-          initial={{ y: "4rem" }}
+          initial={{ y: "5rem" }}
           whileInView={{ y: "0rem" }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -24,7 +24,7 @@ const Hero = () => {
         <motion.h3
           className="subtitle text-shadow"
           aria-label={subheading}
-          initial={{ y: "4rem" }}
+          initial={{ y: "5rem" }}
           whileInView={{ y: "0rem" }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -32,15 +32,6 @@ const Hero = () => {
           {subheading}
         </motion.h3>
         <div className="introText_container">
-          <motion.p
-            className="introText"
-            initial={{ y: "3rem" }}
-            whileInView={{ y: "0rem" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
-          >
-            Welcome to my portoflio, developed using React.js.
-          </motion.p>
           <motion.p
             className="introText my-5"
             initial={{ y: "3rem" }}
