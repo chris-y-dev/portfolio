@@ -1,4 +1,4 @@
-import MyWorkData from "../interfaces/MyWorkData";
+import MyWorkData from "../interfaces/IWorkData";
 
 export default function orderProjectsByCategory(
   workShowcaseData: MyWorkData[]

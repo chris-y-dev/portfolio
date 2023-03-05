@@ -1,7 +1,7 @@
 import React from "react";
 import "../../App.scss";
 import fetchStaticImage from "../../hooks/fetchStaticImage";
-import ExpertiseData from "../../interfaces/ExpertiseData";
+import ExpertiseData from "../../interfaces/IExpertiseData";
 
 const ExpertiseContainer = (props: { data: ExpertiseData }) => {
   var icon = fetchStaticImage(props.data.graphicPath);

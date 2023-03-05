@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import AccordionData from "../../interfaces/AccordionData";
+import AccordionData from "../../interfaces/IExperienceAccordion";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";

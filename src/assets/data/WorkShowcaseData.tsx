@@ -1,6 +1,6 @@
-import MyWorkData from "../../interfaces/MyWorkData";
+import IWorkData from "../../interfaces/IWorkData";
 
-const workData: MyWorkData[] = [
+const WorkShowcaseData: IWorkData[] = [
   {
     id: "api_lambda_s3",
     name: "Auto Image Processing with Dotnet, AWS S3, Lambda",
@@ -301,10 +301,11 @@ const workData: MyWorkData[] = [
       "Clear navigation and UI to maximise ease of use",
     ],
     videoLink: "",
-    projectUrl: "",
-    technologies: ["React Native", "TypeScript", "Expo"],
+    projectUrl:
+      "https://play.google.com/store/apps/details?id=com.chrisydev.currencyAndPriceCalculator&pli=1",
+    technologies: ["React Native", "TypeScript", "Expo", "Encryption"],
     designPrinciples: ["KISS"],
   },
 ];
 
-export default workData;
+export default WorkShowcaseData;

@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import workData from "../assets/data/WorkShowcaseData";
-import MyWorkData, { ProjectGalleryImageData } from "../interfaces/MyWorkData";
-import projectFilterCategoriesData from "../assets/data/projectFilterCategoriesData";
+import ProjectFilterCategoriesData from "../assets/data/ProjectFilterCategoriesData";
 import "../App.scss";
 import Header from "../components/header/Header";
-import { ProjectFilterCategory } from "../interfaces/ProjectFilterCategory";
+import { IProjectFilterCategory } from "../interfaces/IProjectFilterCategory";
 import fetchStaticImage from "../hooks/fetchStaticImage";
 import VisitProjectButton from "../components/workShowcasePage/visitProjectButton/VisitProjectButton";
 import SkillPill from "../components/expertise/SkillPill";
 import "./WorkShowcasePage.scss";
 import "../App.scss";
 import "../components/workShowcasePage/visitProjectButton/VisitProjectButton.scss";
+import IWorkData from "../interfaces/IWorkData";
+import WorkShowcaseData from "../assets/data/WorkShowcaseData";
 
 const WorkShowcasePage = () => {
-  const [projectData, setProjectData] = useState<MyWorkData | undefined>();
+  const [projectData, setProjectData] = useState<IWorkData | undefined>();
   const [projectCategory, setProjectCategory] =
-    useState<ProjectFilterCategory>();
+    useState<IProjectFilterCategory>();
   const location = useLocation();
 
   function getProjectId(): string | undefined {
@@ -27,10 +27,12 @@ const WorkShowcasePage = () => {
 
   function getProjectData(projectId: string | undefined) {
     if (projectId) {
-      setProjectData(workData.find((project) => project.id === projectId));
+      setProjectData(
+        WorkShowcaseData.find((project) => project.id === projectId)
+      );
 
       setProjectCategory(
-        projectFilterCategoriesData.find(
+        ProjectFilterCategoriesData.find(
           (category) => projectData?.category === category.categoryId
         )
       );
@@ -99,7 +101,7 @@ const WorkShowcasePage = () => {
                   <h4 className="mb-4">Technologies</h4>
                   <div className="d-flex flex-row flex-wrap">
                     {projectData?.technologies.map((technology) => (
-                      <SkillPill pill={technology} />
+                      <SkillPill pill={technology} key={technology} />
                     ))}
                   </div>
                 </div>
@@ -109,7 +111,7 @@ const WorkShowcasePage = () => {
                   <h4 className="mb-4">Dev Strategies</h4>
                   <div className="d-flex flex-row flex-wrap">
                     {projectData?.designPrinciples.map((technology) => (
-                      <SkillPill pill={technology} />
+                      <SkillPill pill={technology} key={technology} />
                     ))}
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import HardAndSoftSkillData from "../../interfaces/HardAndSoftSkillData";
+import HardAndSoftSkillData from "../../interfaces/IHardAndSoftSkill";
 import SkillPill from "./SkillPill";
 
 const HardAndSoftSkillsContainer = (props: {

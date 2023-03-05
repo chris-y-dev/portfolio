@@ -1,6 +1,6 @@
-import { ProjectFilterCategory } from "../../interfaces/ProjectFilterCategory";
+import { IProjectFilterCategory } from "../../interfaces/IProjectFilterCategory";
 
-const projectFilterCategoriesData: ProjectFilterCategory[] = [
+const ProjectFilterCategoriesData: IProjectFilterCategory[] = [
   {
     categoryName: "All",
     categoryId: "all",
@@ -19,4 +19,4 @@ const projectFilterCategoriesData: ProjectFilterCategory[] = [
   },
 ];
 
-export default projectFilterCategoriesData;
+export default ProjectFilterCategoriesData;

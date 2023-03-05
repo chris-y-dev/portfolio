@@ -2,17 +2,21 @@ import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons";
+import { faCloud } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import eventData from "../../assets/data/EventsData";
-import EventData from "../../interfaces/EventData";
+import eventData from "../../assets/data/AchievementsAndEventsData";
+import EventData from "../../interfaces/IAchievementsAndEvents";
 import { motion } from "framer-motion";
 
 const EventBlock = (props: { eventData: EventData }) => {
   function getIconUsingEventType(eventData: EventData) {
     switch (eventData.eventType.type) {
+      case "Cloud":
+        return faCloud;
       case "Certification":
+      case "Education":
         return faGraduationCap;
       case "Hackathon":
         if (eventData.eventType.isWinner) {
@@ -41,6 +45,31 @@ const EventBlock = (props: { eventData: EventData }) => {
         }
       case "Certification":
         return "--certification";
+
+      case "Cloud":
+        let str = "--cloud";
+        switch (eventData.eventType.companyColour) {
+          case "Microsoft":
+            str += " --microsoft";
+            break;
+          case "AWS":
+            str += " --aws";
+            break;
+          case "Oracle":
+            str += " --oracle";
+            break;
+          default:
+            str += "";
+        }
+        return str;
+
+      case "Education":
+        if (eventData.eventType.hasIconColour) {
+          return "--education";
+        } else {
+          return "--completion";
+        }
+
       default:
         return "--completion";
     }
@@ -84,7 +113,7 @@ const EventBlock = (props: { eventData: EventData }) => {
           </div>
           <div className="d-flex flex-column ms-2 me-1">
             <div className="--event-title">{props.eventData.title}</div>
-            <div className="--event-date">{props.eventData.date}</div>
+            <div className="--event-date mt-2">{props.eventData.date}</div>
           </div>
           <div
             className={`link_icon align-self-center ms-auto ${showOrHideLinkIcon(

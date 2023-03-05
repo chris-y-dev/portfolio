@@ -1,23 +1,25 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import ProjectBlock from "./ProjectBlock";
-import { ProjectFilterCategory } from "../../interfaces/ProjectFilterCategory";
-import workData from "../../assets/data/WorkShowcaseData";
-import projectFilterCategoriesData from "../../assets/data/projectFilterCategoriesData";
+import { IProjectFilterCategory } from "../../interfaces/IProjectFilterCategory";
+import ProjectFilterCategoriesData from "../../assets/data/ProjectFilterCategoriesData";
 import { motion } from "framer-motion";
 
 import "../../App.scss";
-import MyWorkData from "../../interfaces/MyWorkData";
+import IWorkData from "../../interfaces/IWorkData";
+import WorkShowcaseData from "../../assets/data/WorkShowcaseData";
 import orderProjectsByCategory from "../../hooks/orderProjectsByCategory";
 
 const MyWork = () => {
+  const [projectFilterCategories, setProjectFilterCategories] = useState<
+    IProjectFilterCategory[]
+  >([]);
   const [selectedFilter, setSelectedFilter] = useState("");
-  const [sortedWorkData, setSortedWorkData] = useState<MyWorkData[]>([]);
-
-  const filterCategories: ProjectFilterCategory[] = projectFilterCategoriesData;
+  const [sortedWorkData, setSortedWorkData] = useState<IWorkData[]>([]);
 
   useEffect(() => {
-    setSelectedFilter(filterCategories[0].categoryId);
-    setSortedWorkData(orderProjectsByCategory(workData));
+    setProjectFilterCategories(ProjectFilterCategoriesData);
+    setSelectedFilter(ProjectFilterCategoriesData[0].categoryId);
+    setSortedWorkData(orderProjectsByCategory(WorkShowcaseData));
   }, []);
 
   function toggleFilter(event: ChangeEvent<HTMLSelectElement>) {
@@ -38,7 +40,7 @@ const MyWork = () => {
               onChange={(categoryId) => toggleFilter(categoryId)}
             >
               {selectedFilter}
-              {filterCategories.map((category) => {
+              {projectFilterCategories.map((category) => {
                 return (
                   <option
                     value={category.categoryId}
