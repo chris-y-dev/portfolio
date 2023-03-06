@@ -1,22 +1,26 @@
 import React from "react";
 import { useRouteError } from "react-router-dom";
 import "../App.scss";
+import Header from "../components/header/Header";
 
 const ErrorPage = () => {
   const error = useRouteError();
   console.error(error);
 
   return (
-    <div className="container">
-      <div className="inner-container">
+    <div>
+      <Header />
+      <div className="container mt-5">
         <h1>Error</h1>
-        <p>
-          Page Not Found. Please go back to the{" "}
-          <a href="https://chris-y.pages.dev" className="error-link">
-            Home Page
-          </a>{" "}
-          and try again!
-        </p>
+        <div className="inner-container">
+          <p>
+            Page Not Found. Please go back to the{" "}
+            <a href="https://chris-y.pages.dev" className="error-link">
+              Home Page
+            </a>{" "}
+            and try again!
+          </p>
+        </div>
       </div>
     </div>
   );
