@@ -106,3 +106,12 @@ body,
       animation: wipe-enter 2s 1 !important;
     }
   }
+
+  .error-link{
+    text-decoration: none;
+    color: $light-blue-link;
+
+    &:hover{
+      color: $light-blue;
+    }
+  }
