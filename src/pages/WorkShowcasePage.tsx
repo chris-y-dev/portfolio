@@ -12,6 +12,7 @@ import IWorkData from "../interfaces/IWorkData";
 import WorkShowcaseData from "../assets/data/WorkShowcaseData";
 import { IProjectFilterCategory } from "../interfaces/IProjectFilterCategory";
 import ProjectFilterCategoriesData from "../assets/data/ProjectFilterCategoriesData";
+import ErrorPage from "./ErrorPage";
 
 const WorkShowcasePage = () => {
   const [projectData, setProjectData] = useState<IWorkData | undefined>();
@@ -45,8 +46,8 @@ const WorkShowcasePage = () => {
     getProjectData(getProjectId());
   }, [projectData]);
 
-  if (projectData === null) {
-    return <div>Project not found</div>;
+  if (projectData === undefined) {
+    return <ErrorPage />;
   } else {
     return (
       <div className="workShowcasePage">
