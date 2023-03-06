@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import ProjectFilterCategoriesData from "../assets/data/ProjectFilterCategoriesData";
 import "../App.scss";
 import Header from "../components/header/Header";
-import { IProjectFilterCategory } from "../interfaces/IProjectFilterCategory";
 import fetchStaticImage from "../hooks/fetchStaticImage";
 import VisitProjectButton from "../components/workShowcasePage/visitProjectButton/VisitProjectButton";
 import SkillPill from "../components/expertise/SkillPill";
@@ -12,6 +10,8 @@ import "../App.scss";
 import "../components/workShowcasePage/visitProjectButton/VisitProjectButton.scss";
 import IWorkData from "../interfaces/IWorkData";
 import WorkShowcaseData from "../assets/data/WorkShowcaseData";
+import { IProjectFilterCategory } from "../interfaces/IProjectFilterCategory";
+import ProjectFilterCategoriesData from "../assets/data/ProjectFilterCategoriesData";
 
 const WorkShowcasePage = () => {
   const [projectData, setProjectData] = useState<IWorkData | undefined>();
@@ -43,9 +43,6 @@ const WorkShowcasePage = () => {
 
   useEffect(() => {
     getProjectData(getProjectId());
-
-    console.log(projectData?.projectThumbnailPath);
-    console.log(projectCategory);
   }, [projectData]);
 
   if (projectData === null) {
