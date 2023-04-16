@@ -6,7 +6,7 @@ import BackToTopButton from "../backToTop/BackToTopButton";
 
 const Hero = () => {
   const nameTitle = "CHRIS Y.";
-  const subheading = "JUNIOR SOFTWARE ENGINEER, FRONT-END DEVELOPER";
+  const subheading = "JUNIOR SOFTWARE ENGINEER";
 
   return (
     <div className="hero-container py-5" id="home">
@@ -39,9 +39,10 @@ const Hero = () => {
             viewport={{ once: true }}
             transition={{ duration: 1.0 }}
           >
-            A <span className="mt_font">Music Therapist</span> - turned -{" "}
-            <span className="swe_font">Software Developer</span>. In my free
-            time, I also like to dabble in graphic design, digital
+            A <span className="mt_font">Paediatric Music Therapist</span> -
+            turned - <span className="swe_font">Software Developer</span>, with
+            over 1.5 years of enterprise-level development experience. In my
+            free time, I also like to dabble in graphic design, digital
             illustrations, and 3D modelling!
           </motion.p>
         </div>
