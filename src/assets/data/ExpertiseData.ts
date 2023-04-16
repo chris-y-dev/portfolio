@@ -4,7 +4,7 @@ const ExpertiseData: IExpertiseData[] = [
   {
     expertiseTitle: "Software Dev",
     description:
-      "Commercial development experience of WebAPIs and Angular applications with Monolith and Microservices architectures. Familiar with SOLID principles and CLEAN architecture, particularly the use of Depency Injection.",
+      "Commercial experience developing WebAPIs and Angular applications with Monolith and Microservices architectures. Familiar with SOLID principles and CLEAN architecture, particularly Depency Injection.",
     descriptionHighlight: undefined,
     graphicPath: "/expertise/software-development.png",
   },
