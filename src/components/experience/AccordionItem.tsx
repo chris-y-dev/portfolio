@@ -20,6 +20,10 @@ const AccordionItem = (props: {
     props.toggleAccordion(id);
   }
 
+  function replaceWithBr(desc: string) {
+    return desc.replace(/\n/g, "<br />");
+  }
+
   return (
     <motion.div
       className="w-100"
@@ -59,7 +63,11 @@ const AccordionItem = (props: {
                 {props.item.workPeriod}
               </div>
             </div>
-            <p> {props.item.description}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: replaceWithBr(props.item.description),
+              }}
+            />
             <div className="d-flex flex-row flex-wrap">
               {props.item.technologies.map((tech) => {
                 return <SkillPill pill={tech} key={tech} />;
