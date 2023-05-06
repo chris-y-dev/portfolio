@@ -11,7 +11,7 @@ export default function orderProjectsByCategory(
   }
 
   function getOrderValue(x: MyWorkData) {
-    if (x.isFeatured) return 1;
+    // if (x.isFeatured) return 1;
 
     switch (x.category) {
       case "software":
