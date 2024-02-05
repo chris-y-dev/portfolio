@@ -64,7 +64,7 @@ const AchievementsAndEventsData: IAchievementsAndEvents[] = [
   {
     title:
       "Masters of IT (Software Engineering specialisation) - Swinburne University of Technology",
-    date: "Feb 2022 ~ Current",
+    date: "Feb 2022 ~ Oct 2023",
     link: undefined,
     eventType: {
       type: "Education",
