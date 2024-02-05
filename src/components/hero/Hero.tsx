@@ -40,10 +40,10 @@ const Hero = () => {
             transition={{ duration: 1.0 }}
           >
             A <span className="mt_font">Paediatric Music Therapist</span> -
-            turned - <span className="swe_font">Software Developer</span>, with
-            over 1.5 years of enterprise-level development experience. In my
-            free time, I also like to dabble in graphic design, digital
-            illustrations, and 3D modelling!
+            turned - <span className="swe_font">Software Engineer</span>, with
+            over 1.5 years of enterprise-level experience. In my free time, I
+            also like to catch up on the latest tech news, and dabble in digital
+            illustrations!
           </motion.p>
         </div>
         {/* <div id="scroll_prompt_container" className="text-center">
