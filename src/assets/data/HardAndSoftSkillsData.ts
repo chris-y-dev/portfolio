@@ -4,19 +4,26 @@ const HardAndSoftSkillsData: IHardAndSoftSkill[] = [
   {
     proficiencyTitle: "Expert",
     technolgies: [
+      "JavaScript",
+      "TypeScript",
       "C#",
       "Dotnet",
       "API",
-      "Angular",
-      "JavaScript",
-      "TypeScript",
+      "Vue 3",
       "HTML",
       "CSS",
     ],
   },
   {
     proficiencyTitle: "Proficient",
-    technolgies: ["React", "SOLID", "CLEAN", "Docker", "Unit Testing"],
+    technolgies: [
+      "SOLID",
+      "CLEAN",
+      "Docker",
+      "Unit Testing (backend)",
+      "Angular",
+      "React",
+    ],
   },
   {
     proficiencyTitle: "Intermediate",
@@ -24,7 +31,6 @@ const HardAndSoftSkillsData: IHardAndSoftSkill[] = [
       "AWS",
       "Azure",
       "SQL",
-      "Python",
       "Python",
       "ReactNative",
       "Express",
