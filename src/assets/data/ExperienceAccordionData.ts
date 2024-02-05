@@ -3,6 +3,25 @@ import ExperienceAccordion from "../../interfaces/IExperienceAccordion";
 const ExperienceAccordionData: ExperienceAccordion[] = [
   {
     id: "item1",
+    buttonLabel: "Software Engineer @ JDoodle",
+    workType: "Full-time",
+    workPeriod: "May 2023 - February 2024",
+    description:
+      "JDoodle is an Australian startup providing web-based compilers & coding-related solutions. I worked in the front-end team, wearing many hats at once. I was responsible for framework upgrade (Vue 3), implementing new features, and decision making on frontend architecture.\n\nMy most memorable achievement was designing the architecture & implementing a content-management application, which enabled the marketing team to freely add new articles/documentation/blogs to the website without the need for a software engineer to make changes to the code.\n\nManaging a large enterprise-level code base is difficult - so I adhered to best practices/patterns particularly the Single Responsibility Principle (SRP), Dependency Inversion Principle (DIP) and Component State Management.",
+    companyImagePath: "/experience/jdoodle_logo.png",
+    technologies: [
+      "Typescript",
+      "Vue 2",
+      "Vue 3",
+      "GraphQL",
+      "Docker",
+      "Strapi",
+      "SRP/DIP",
+      "State Management",
+    ],
+  },
+  {
+    id: "item2",
     buttonLabel: "Software Engineer Intern @ Xero",
     workType: "Full-time",
     workPeriod: "November 2022 - February 2023",
@@ -12,7 +31,7 @@ const ExperienceAccordionData: ExperienceAccordion[] = [
     technologies: ["C#", "Dotnet", "Docker", "AWS", "TeamCity", "Git"],
   },
   {
-    id: "item2",
+    id: "item3",
     buttonLabel: "Frontend Developer @ Pegboard Software",
     workPeriod: "July 2022 - Ongoing",
     workType: "Part-time",
@@ -29,7 +48,7 @@ const ExperienceAccordionData: ExperienceAccordion[] = [
     ],
   },
   {
-    id: "item3",
+    id: "item4",
     buttonLabel: "Web Desginer and Developer @ Bernies Music Land",
     workType: "Casual",
     workPeriod: "May 2022 - Feb 2023",
