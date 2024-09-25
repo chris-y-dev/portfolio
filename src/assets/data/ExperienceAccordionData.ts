@@ -3,6 +3,24 @@ import ExperienceAccordion from "../../interfaces/IExperienceAccordion";
 const ExperienceAccordionData: ExperienceAccordion[] = [
   {
     id: "item1",
+    buttonLabel: "Graduate Software Engineer @ Xero",
+    workType: "Full-time",
+    workPeriod: "Feb 2024 - Current",
+    description:
+      "My favorite aspect has been observing how software engineering decisions are made, as well as getting hands-on engineering experience to tackle industry/growth challenges and requirements.\n\nUnder the guidance of experienced engineers, I am getting a deeper understanding of CLEAN architecture principles, various levels of software testing.\n\nI have been working on new & legacy applications of both microservice/monolithic architectures, as well as automation of various tasks.\n\n",
+    companyImagePath: "/experience/xero_logo.png",
+    technologies: [
+      "C#/.NET",
+      "SQL",
+      "DynamoDB",
+      "StepFunctions",
+      "Health Monitoring",
+      "Unit/Component/Integration/E2E Testing",
+      "Containerization",
+    ],
+  },
+  {
+    id: "item2",
     buttonLabel: "Software Engineer @ JDoodle",
     workType: "Full-time",
     workPeriod: "May 2023 - February 2024",
@@ -21,7 +39,7 @@ const ExperienceAccordionData: ExperienceAccordion[] = [
     ],
   },
   {
-    id: "item2",
+    id: "item3",
     buttonLabel: "Software Engineer Intern @ Xero",
     workType: "Full-time",
     workPeriod: "November 2022 - February 2023",
@@ -31,7 +49,7 @@ const ExperienceAccordionData: ExperienceAccordion[] = [
     technologies: ["C#", "Dotnet", "Docker", "AWS", "TeamCity", "Git"],
   },
   {
-    id: "item3",
+    id: "item4",
     buttonLabel: "Frontend Developer @ Pegboard Software",
     workPeriod: "July 2022 - Ongoing",
     workType: "Part-time",
@@ -48,7 +66,7 @@ const ExperienceAccordionData: ExperienceAccordion[] = [
     ],
   },
   {
-    id: "item4",
+    id: "item5",
     buttonLabel: "Web Desginer and Developer @ Bernies Music Land",
     workType: "Casual",
     workPeriod: "May 2022 - Feb 2023",
