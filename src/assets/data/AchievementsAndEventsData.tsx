@@ -26,19 +26,31 @@ const AchievementsAndEventsData: IAchievementsAndEvents[] = [
     },
   },
   {
-    title: "Microsoft Azure Fundamentals AZ-900",
-    date: "Sept 2022",
-    link: "https://www.credly.com/badges/c2216284-c359-4bd2-92c9-afc9cd45c164/linked_in?t=rhrj17",
+    title: "AWS Certified Developer - Associate",
+    date: "Sept 2024",
+    link: undefined,
     eventType: {
       type: "Cloud",
       isWinner: false,
       place: 0,
+      companyColour: "AWS",
+      hasIconColour: false,
+    },
+  },
+  {
+    title: "Microsoft Azure Fundamentals AZ-900",
+    date: "Sept 2022",
+    link: undefined,
+    eventType: {
+      type: "Cloud",
+      isWinner: false,
+      place: 1,
       companyColour: "Microsoft",
       hasIconColour: false,
     },
   },
   {
-    title: "IntegraDev Work Experience Day (Hackathon Winners)",
+    title: "IntegraDev Work Experience Day (Hackathon Winner Opportunity)",
     date: "July 2022",
     link: undefined,
     eventType: {
@@ -50,7 +62,7 @@ const AchievementsAndEventsData: IAchievementsAndEvents[] = [
     },
   },
   {
-    title: "RedMarble.AI Work Experience Day (Hackathon Winners)",
+    title: "RedMarble.AI Work Experience Day (Hackathon Winner Opportunity)",
     date: "July 2022",
     link: undefined,
     eventType: {
