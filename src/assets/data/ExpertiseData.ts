@@ -2,16 +2,16 @@ import IExpertiseData from "../../interfaces/IExpertiseData";
 
 const ExpertiseData: IExpertiseData[] = [
   {
-    expertiseTitle: "Software Engineering",
+    expertiseTitle: "Backend Engineering",
     description:
-      "Enterprise-level experience implementing API and web applications with Monolith or Microservices architectures. Familiar with SOLID principles and CLEAN architecture, particularly Single Responsible Priciple & Depency Injection.",
+      "Enterprise-level experience implementing complex web applications/services. Particularly interested in decisions that impact performance, database design, scalability and security.",
     descriptionHighlight: undefined,
     graphicPath: "/expertise/software-development.png",
   },
   {
-    expertiseTitle: "Frontend Dev",
+    expertiseTitle: "Frontend Engineering",
     description:
-      "1.5+ years of enterprise-level front-end experience using old & new frameworks (Vue2, Vue3, Angular). Preference for Typescript for code readibility.",
+      "2+ years of frontend experience using legacy & modern patterns/frameworks (Vue2, Vue3, Angular, React). Preference for Typescript for code maintainability.",
     descriptionHighlight:
       "Meticulous about Responsiveness - Try on Mobile/Resize this site!",
     graphicPath: "/expertise/frontend-development.png",
@@ -19,7 +19,7 @@ const ExpertiseData: IExpertiseData[] = [
   {
     expertiseTitle: "Web Design",
     description:
-      "Through a side hobby, I have experience designing simple and modern websites for small businesses, informed by UX/UI principles.",
+      "As a side hobby, I design and deliver simple websites for small businesses, driven by best UX principles.",
     descriptionHighlight: undefined,
     graphicPath: "/expertise/web-design.png",
   },
