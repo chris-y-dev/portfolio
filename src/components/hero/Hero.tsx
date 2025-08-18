@@ -41,8 +41,8 @@ const Hero = () => {
           >
             <span className="mt_font">Ex-Paediatric Music Therapist</span> -
             turned - <span className="swe_font">Software Engineer</span>, with
-            2+ years enterprise-level experience. In my free time, I like to
-            catch up on the latest tech news, stay active, and even dabble in
+            2+ years enterprise-level experience. Outside of work, I like to
+            keep up with the latest tech news, stay active, and even dabble in
             digital illustrations!
           </motion.p>
         </div>

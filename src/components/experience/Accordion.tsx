@@ -28,7 +28,7 @@ const Accordion = () => {
       {accordionData.map((item, index) => {
         return (
           <motion.div
-            className="w-100"
+            className={`w-100`}
             initial={{ y: "9rem" }}
             whileInView={{ y: "0rem" }}
             viewport={{ once: true }}
