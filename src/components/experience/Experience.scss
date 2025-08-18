@@ -1,9 +1,14 @@
 @import "../../App.scss";
 $blue-shade: rgb(49, 80, 149);
+$pink_shade: rgb(227, 58, 40);
 
 $accordion-button-inactive: #34353a;
 $accordion-panel: #2b3448;
 
+$mt_font: rgb(255, 147, 135);
+$swe_font: $light-blue-link;
+
+$light-pink: rgb(237, 125, 112);
 
 #experience{
     margin-bottom: 3rem;
@@ -21,15 +26,44 @@ $accordion-panel: #2b3448;
 
     &.--btn-active{
         transition: 0.6s;
-        background-color: $light-blue;
-        box-shadow: inset 0 0 10px 0px rgba($color: $blue-shade, $alpha: 0.5);   
+         
     }
 
     &.--btn-inactive{
         transition: 0.2s;
         background-color: $accordion-button-inactive;
     }
+
+    // Contextual active colors based on border
+    &.mt_border.--btn-active {
+        background-color: $light-pink;
+        box-shadow: inset 0 0 10px 0px rgba($color: $pink-shade, $alpha: 0.5); 
+    }
+
+    &.swe_border.--btn-active {
+        background-color: $light-blue;
+        box-shadow: inset 0 0 10px 0px rgba($color: $blue-shade, $alpha: 0.5); 
+    }
+
+   .current_pill {
+    font-size: 1rem;       // text-xs
+    font-weight: 500;          // font-medium
+    background-color: #e3f4ff; // bg-blue-100
+    color: #4669f5;           // text-blue-800
+    padding: 0 0.5rem; // py-0.5 px-2
+    border-radius: 999px;     // rounded-full    // optional, ensures it sizes like a tag
 }
+
+}
+
+.mt_border {
+    border: 2px solid $mt_font;
+}
+
+.swe_border {
+    border: 2px solid $swe_font;
+}
+
 
 @keyframes openingIcon {
     from {

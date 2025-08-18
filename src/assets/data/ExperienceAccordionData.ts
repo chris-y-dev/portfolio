@@ -2,6 +2,24 @@ import ExperienceAccordion from "../../interfaces/IExperienceAccordion";
 
 const ExperienceAccordionData: ExperienceAccordion[] = [
   {
+    id: "item0",
+    buttonLabel: "Software Engineer @ Xero",
+    isCurrent: true,
+    workType: "Full-time",
+    workPeriod: "Feb 2025 - Current",
+    description:
+      "Working in the Payments space, I build full-stack solutions from backend architecture to customer-facing features. My main work is building event-driven, serverless payment systems with focus on scalability and reliability.\n\nI love taking on technological challenges such as implementing idempotent webhook flows to ensure safe and consistent payment processing, and uplifting our application observability to better detect and resolve customer issues in the payment flow.",
+    companyImagePath: "/experience/xero_logo.png",
+    technologies: [
+      "C#/.NET",
+      "Severless Architecture",
+      "DynamoDB",
+      "SQL",
+      "Lambdas/Step Functions",
+      "AWS",
+    ],
+  },
+  {
     id: "item1",
     buttonLabel: "Graduate Software Engineer @ Xero",
     workType: "Full-time",
@@ -82,6 +100,23 @@ const ExperienceAccordionData: ExperienceAccordion[] = [
       "PHP",
       "SQL",
     ],
+  },
+  {
+    id: "item6",
+    buttonLabel: "Paediatric Music Therapist @ Various Melbourne clinics",
+    workType: "Full-time",
+    workPeriod: "May 2020 - Jan 2023",
+    description:
+      "As a Paediatric Music Therapist, I used music to support children and adolescents in achieving developmental and personal goals. I provided therapy services for clients with diverse disabilities and needs, consulted with families and staff to offer educational and therapeutic guidance, and maintained confidential documentation.\n\n This experience strengthened my skills in empathy, communication, and problem-solving — qualities I now carry into my work as a Software Engineer.",
+    companyImagePath: "/experience/amta_logo.png",
+    technologies: [
+      "Empathy & Active Listening",
+      "Clear Verbal Communication",
+      "Conflict Resolution",
+      "Facilitating Group Dynamics",
+      "Adaptability",
+    ],
+    isMusicTherapy: true,
   },
 ];
 

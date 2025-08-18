@@ -15,6 +15,9 @@ const AccordionItem = (props: {
 }) => {
   const companyLogo = fetchStaticImage(props.item.companyImagePath);
 
+  console.log("PATH", props.item.companyImagePath);
+  console.log("Company logo", companyLogo);
+
   function toggleAccordion(id: string) {
     console.log(id);
     props.toggleAccordion(id);
@@ -35,10 +38,24 @@ const AccordionItem = (props: {
       <button
         className={`accordionButton ${
           props.isOpen ? "--btn-active" : "--btn-inactive"
-        } d-flex flex-row my-2 py-3 px-4 text-left justify-content-between align-items-center`}
+        } d-flex flex-row my-2 py-3 px-4 text-left justify-content-between align-items-center ${
+          props.item.isMusicTherapy ? "mt_border" : "swe_border"
+        }`}
         onClick={() => toggleAccordion(props.item.id)}
       >
-        {props.item.buttonLabel}
+        <div
+          className="flex flex-col md:flex-row items-center w-full me-2 md:me-0"
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <div style={{ display: "inline-block" }} className="me-3 md:me-3">
+            {props.item.buttonLabel}
+          </div>
+          {props.item.isCurrent && (
+            <div className="current_pill" style={{ display: "inline-block" }}>
+              Current
+            </div>
+          )}
+        </div>
         <FontAwesomeIcon
           icon={faChevronDown}
           className={`${
