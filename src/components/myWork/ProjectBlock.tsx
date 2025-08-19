@@ -1,6 +1,5 @@
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
 import fetchStaticImage from "../../hooks/fetchStaticImage";
 import MyWorkData from "../../interfaces/IWorkData";
 import "./MyWork.scss";
