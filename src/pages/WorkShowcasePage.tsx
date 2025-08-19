@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../App.scss";
 import Header from "../components/header/Header";
@@ -44,6 +44,7 @@ const WorkShowcasePage = () => {
 
   useEffect(() => {
     getProjectData(getProjectId());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [projectData]);
 
   if (projectData === undefined) {

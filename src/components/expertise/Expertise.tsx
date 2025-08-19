@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import IExpertiseData from "../../interfaces/IExpertiseData";
-import HardAndSoftSkillData from "../../interfaces/IHardAndSoftSkill";
-import TechnologiesData from "../../interfaces/IHardAndSoftSkill";
 import "./Expertise.scss";
 import ExpertiseContainer from "./ExpertiseContainer";
 import HardAndSoftSkillsContainer from "./HardAndSoftSkillsContainer";

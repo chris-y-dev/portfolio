@@ -1,8 +1,6 @@
-import React from "react";
 import "./Hero.scss";
 import "../../App.scss";
 import { motion } from "framer-motion";
-import BackToTopButton from "../backToTop/BackToTopButton";
 
 const Hero = () => {
   const nameTitle = "CHRIS Y.";

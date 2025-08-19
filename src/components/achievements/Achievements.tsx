@@ -1,4 +1,3 @@
-import React, { MutableRefObject } from "react";
 import "./Achievements.scss";
 import "../../App.scss";
 

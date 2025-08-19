@@ -5,8 +5,6 @@ import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons";
 import { faCloud } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import eventData from "../../assets/data/AchievementsAndEventsData";
 import EventData from "../../interfaces/IAchievementsAndEvents";
 import { motion } from "framer-motion";
 
