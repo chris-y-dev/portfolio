@@ -2,41 +2,36 @@ import IHardAndSoftSkill from "../../interfaces/IHardAndSoftSkill";
 
 const HardAndSoftSkillsData: IHardAndSoftSkill[] = [
   {
-    proficiencyTitle: "Expert",
+    proficiencyTitle: "Day-to-day",
+    class: "gold",
     technolgies: [
-      "C#",
-      "Dotnet",
-      "JavaScript/TypeScript",
+      "C# / .NET",
+      "JavaScript/TypeScript (React)",
       "HTML/CSS",
-      "Software Testing",
-    ],
-  },
-  {
-    proficiencyTitle: "Proficient",
-    technolgies: [
       "AWS",
-      "SQL",
-      "OOP, SOLID Principles",
-      "MicroServices, CLEAN architecture",
       "Docker",
-      "Angular",
-      "React",
-      "Vue3",
+      "AI Tools (copilot, MCP)",
+      "SumoLogic",
+      "CICD - Teamcity/GHA",
     ],
   },
   {
-    proficiencyTitle: "Intermediate",
-    technolgies: ["Kotlin", "Python", "Networking", "ReactNative"],
+    proficiencyTitle: "Occasional",
+    class: "silver",
+    technolgies: ["SQL", "Python", "Angular", "Vue3"],
   },
+  // {
+  //   proficiencyTitle: "Intermediate",
+  //   technolgies: ["Kotlin", "Python", "Networking", "ReactNative"],
+  // },
   {
     proficiencyTitle: "Soft Skill Highlights",
     technolgies: [
       "Clear Communicator",
+      "Ownership / Accountability",
       "Empathetic & Respectful",
-      "Open-minded",
+      "Quick & Keen Learner",
       "Feedback-seeking",
-      "Quick Learner",
-      "Accountable",
     ],
   },
 ];

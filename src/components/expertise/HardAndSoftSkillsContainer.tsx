@@ -6,16 +6,18 @@ const HardAndSoftSkillsContainer = (props: {
   skillData: HardAndSoftSkillData;
 }) => {
   const skillType_styling: { [key: string]: any } = {
-    Expert: "--expert",
-    Proficient: "--proficient",
+    gold: "--gold",
+    silver: "--silver",
     Intermediate: "--intermediate",
-    "Soft Skill Highlights": "--softSkills",
+    softSkills: "--softSkills",
   };
 
   return (
     <div
       className={`skillContainer entrance py-3 px-4 ${
-        skillType_styling[props.skillData.proficiencyTitle]
+        skillType_styling[
+          props.skillData.class ? props.skillData.class : "softSkills"
+        ]
       }`}
     >
       <h3 className="heading mb-4">{props.skillData.proficiencyTitle}</h3>

@@ -8,7 +8,7 @@ const ExperienceAccordionData: ExperienceAccordion[] = [
     workType: "Full-time",
     workPeriod: "Feb 2025 - Current",
     description:
-      "Working in the Payments space, I build full-stack solutions from backend architecture to customer-facing features. My main work is building event-driven, serverless payment systems with focus on scalability and reliability.\n\nI love taking on technological challenges such as implementing idempotent webhook flows to ensure safe and consistent payment processing, and uplifting our application observability to better detect and resolve customer issues in the payment flow.",
+      "In the Payments space, I'm building full-stack solutions from backend architecture to customer-facing UIs. My main work is building an event-driven, serverless payment system with a focus on idempotency and reliability.\n\nI love taking on technological challenges such as implementing idempotent webhook flows to ensure safe and consistent payment processing, and uplifting our application observability to better detect and resolve customer issues in the payment flow.",
     companyImagePath: "/experience/xero_logo.png",
     technologies: [
       "C#/.NET",
