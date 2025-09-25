@@ -1,34 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import "../../App.scss";
+import { HashLink } from "react-router-hash-link";
 import BackToTopButton from "../backToTop/BackToTopButton";
 import "./Header.scss";
 
 const Header = () => {
-  const [absolutePath, setAbsolutePath] = useState("");
-  const location = useLocation();
-
-  useEffect(() => {
-    // console.log(location.pathname);
-    determineHref(location.pathname);
-  });
-
-  function determineHref(locationPathname: string): void {
-    const pageName = locationPathname.split("/")[1];
-    console.log(pageName);
-
-    if (pageName === "") {
-      setAbsolutePath("");
-    } else {
-      setAbsolutePath("https://chris-y-dev.github.io/portfolio");
-    }
-  }
-
   return (
     <div>
       <nav className="navbar navbar-dark navbar-expand-lg border-blue px-5 pt-5 pb-3">
         <div className="container-fluid border-red justify-content-between">
-          <a className="brand-logo" href="/">
+          <a className="brand-logo" href="/portfolio">
             CHRIS_Y.DEV
           </a>
           <button
@@ -51,41 +31,35 @@ const Header = () => {
                 <a
                   className="nav-link active"
                   aria-current="page"
-                  href={`${absolutePath}`}
+                  href={`/portfolio`}
                 >
                   Home
                 </a>
               </li>
               <li className="nav-item px-2">
-                <a
-                  className="nav-link"
-                  href={`${absolutePath + "#experience"}`}
-                >
+                <HashLink className="nav-link" smooth to={`${"#experience"}`}>
                   Experience
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item px-2">
-                <a
-                  className="nav-link"
-                  href={`${absolutePath + "#achievements"}`}
-                >
+                <HashLink className="nav-link" smooth to={`${"#achievements"}`}>
                   Achievements
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item px-2">
-                <a className="nav-link" href={`${absolutePath + "#expertise"}`}>
+                <HashLink className="nav-link" smooth to={`${"#expertise"}`}>
                   Expertise
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item px-2">
-                <a className="nav-link" href={`${absolutePath + "#myWork"}`}>
+                <HashLink className="nav-link" smooth to={`${"#myWork"}`}>
                   My Work
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item px-2">
-                <a className="nav-link" href={`${absolutePath + "#socials"}`}>
+                <HashLink className="nav-link" smooth to={`${"#socials"}`}>
                   Socials
-                </a>
+                </HashLink>
               </li>
             </ul>
           </div>

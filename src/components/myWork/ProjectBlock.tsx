@@ -9,7 +9,7 @@ const ProjectBlock = (props: { projectData: MyWorkData }) => {
 
   return (
     <div className="projectBlock d-flex flex-column">
-      <a href={"/work-showcase/" + props.projectData.id}>
+      <a href={"/portfolio/work-showcase/" + props.projectData.id}>
         <img src={img} alt={props.projectData.name} />
         <div
           className={`featured_badge py-2 px-4 ${
