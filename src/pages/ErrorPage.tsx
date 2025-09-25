@@ -15,7 +15,10 @@ const ErrorPage = () => {
         <div className="inner-container">
           <p>
             Page Not Found. Please go back to the{" "}
-            <a href="https://chris-y.pages.dev" className="error-link">
+            <a
+              href="https://chris-y-dev.github.io/portfolio"
+              className="error-link"
+            >
               Home Page
             </a>{" "}
             and try again!

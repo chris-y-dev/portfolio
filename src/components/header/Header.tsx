@@ -20,7 +20,7 @@ const Header = () => {
     if (pageName === "") {
       setAbsolutePath("");
     } else {
-      setAbsolutePath("https://chris-y.pages.dev/");
+      setAbsolutePath("https://chris-y-dev.github.io/portfolio");
     }
   }
 
