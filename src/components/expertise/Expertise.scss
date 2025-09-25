@@ -93,13 +93,13 @@ $container-heading-size: 2rem;
         
     }
 
-    &.--expert{
+    &.--gold{
 
         .pillContainer{
             background-image: linear-gradient(to right, $expert-gold, $expert-gold-dark);
         }
     }
-    &.--proficient{
+    &.--silver{
 
         .pillContainer{
             background-image: linear-gradient(to right, $proficient-silver, $proficient-silver-dark);

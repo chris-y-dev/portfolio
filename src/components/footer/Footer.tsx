@@ -3,7 +3,6 @@ import "./Footer.scss";
 import ISocialData from "../../interfaces/ISocialData";
 import fetchStaticImage from "../../hooks/fetchStaticImage";
 import SocialData from "../../assets/data/SocialData";
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {

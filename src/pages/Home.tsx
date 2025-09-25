@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Achievements from "../components/achievements/Achievements";
 import Experience from "../components/experience/Experience";
