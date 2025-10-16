@@ -23,9 +23,9 @@ const ExperienceAccordionData: ExperienceAccordion[] = [
     id: "item1",
     buttonLabel: "Graduate Software Engineer @ Xero",
     workType: "Full-time",
-    workPeriod: "Feb 2024 - Current",
+    workPeriod: "Feb 2024 - Feb 2025",
     description:
-      "My favorite aspect has been observing how software engineering decisions are made, as well as getting hands-on engineering experience to tackle industry/growth challenges and requirements.\n\nUnder the guidance of experienced engineers, I am getting a deeper understanding of CLEAN architecture principles, various levels of software testing.\n\nI have been working on new & legacy applications of both microservice/monolithic architectures, as well as automation of various tasks.\n\n",
+      "My favorite aspect of being a Graduate Software Enginee was rotating across 3 teams, gaining hands-on experience working on backend, security, and full-stack development.\n\nI worked on new & legacy applications of both microservice/monolithic architectures, as well as automation of various tasks.\n\nUnder the guidance of experienced engineers, I am getting a deeper understanding of CLEAN architecture principles, various levels of software testing, and observed how software engineering requirements are negotiated and made.",
     companyImagePath: "/experience/xero_logo.png",
     technologies: [
       "C#/.NET",
@@ -69,7 +69,7 @@ const ExperienceAccordionData: ExperienceAccordion[] = [
   {
     id: "item4",
     buttonLabel: "Frontend Developer @ Pegboard Software",
-    workPeriod: "July 2022 - Ongoing",
+    workPeriod: "July 2022 - June 2023",
     workType: "Part-time",
     description:
       "Developing custom web-applications and CRMs at a software company, for clients from various industries. My role requires me to be autonomous, proactively make decisions, take initiatives to learn new technologies/libraries, and communicate with various stakeholders through creating clear documentation.\n\nMy biggest achievement was leading the development of a new e-commerce app that incorporates 3D models.",
