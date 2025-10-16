@@ -11,7 +11,7 @@ const ExpertiseData: IExpertiseData[] = [
   {
     expertiseTitle: "Frontend Engineering",
     description:
-      "2+ years of frontend experience building with legacy & modern patterns/frameworks (Vue2, Vue3, Angular, React).",
+      "2 years of frontend experience building with legacy & modern patterns/frameworks (Vue2, Vue3, Angular, React).",
     descriptionHighlight:
       "Meticulous about Responsiveness - Try on Mobile/Resize this site!",
     graphicPath: "/expertise/frontend-development.png",

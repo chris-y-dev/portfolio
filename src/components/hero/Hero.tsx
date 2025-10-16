@@ -38,9 +38,9 @@ const Hero = () => {
             transition={{ duration: 1.0 }}
           >
             <span className="mt_font">Ex-Paediatric Music Therapist</span> -
-            turned - <span className="swe_font">Software Engineer</span>, with
-            2+ years enterprise-level experience. Outside of work, I like to
-            keep up with the latest tech news, stay active, and even dabble in
+            turned - <span className="swe_font">Software Engineer</span>, with 3
+            years enterprise-level experience. Outside of work, I like to keep
+            up with the latest tech news, stay active, and even dabble in
             digital illustrations!
           </motion.p>
         </div>
