@@ -50,6 +50,18 @@ const AchievementsAndEventsData: IAchievementsAndEvents[] = [
     },
   },
   {
+    title: "Google Cybersecurity Professional Certificate (v.2)",
+    date: "Jun 2026",
+    link: undefined,
+    eventType: {
+      type: "Cloud",
+      isWinner: false,
+      place: 0,
+      companyColour: "Google",
+      hasIconColour: false,
+    },
+  },
+  {
     title: "IntegraDev Work Experience Day (Hackathon Winner Opportunity)",
     date: "July 2022",
     link: undefined,

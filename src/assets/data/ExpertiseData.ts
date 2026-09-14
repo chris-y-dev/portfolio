@@ -17,9 +17,9 @@ const ExpertiseData: IExpertiseData[] = [
     graphicPath: "/expertise/frontend-development.png",
   },
   {
-    expertiseTitle: "Web Design",
+    expertiseTitle: "AI & Engineering",
     description:
-      "As a side hobby, I like to design and deliver simple websites for small businesses, driven by best UX principles.",
+      "Part of Xero's Early AI adopter department. Practical experience building reusable AI workflows, AI-powered E2E tests, and development tooling that improves velocity and quality consistency. Comfortable working at the frontier of how AI is changing how software gets built.",
     descriptionHighlight: undefined,
     graphicPath: "/expertise/web-design.png",
   },

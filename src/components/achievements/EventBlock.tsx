@@ -6,7 +6,6 @@ import { faCloud } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import EventData from "../../interfaces/IAchievementsAndEvents";
-import { motion } from "framer-motion";
 
 const EventBlock = (props: { eventData: EventData }) => {
   function getIconUsingEventType(eventData: EventData) {
@@ -56,6 +55,9 @@ const EventBlock = (props: { eventData: EventData }) => {
           case "Oracle":
             str += " --oracle";
             break;
+          case "Google":
+            str += " --google";
+            break;
           default:
             str += "";
         }
@@ -90,18 +92,12 @@ const EventBlock = (props: { eventData: EventData }) => {
   }
 
   return (
-    <motion.div
-      className="eventBlock_motionContainer"
-      initial={{ y: "9rem" }}
-      whileInView={{ y: "0rem" }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-    >
+    <div className="eventBlock_motionContainer">
       <a
         href={props.eventData.link}
         className={`eventBlock_link ${generateLinkClass(props.eventData.link)}`}
       >
-        <div className="eventBlock_container d-flex flex-row align-items-center py-3 px-3">
+        <div className="eventBlock_container surface-card d-flex flex-row align-items-center py-3 px-3">
           <div className="icon_container">
             <FontAwesomeIcon
               icon={getIconUsingEventType(props.eventData)}
@@ -115,14 +111,14 @@ const EventBlock = (props: { eventData: EventData }) => {
           </div>
           <div
             className={`link_icon align-self-center ms-auto ${showOrHideLinkIcon(
-              props.eventData.link
+              props.eventData.link,
             )}`}
           >
             <FontAwesomeIcon icon={faArrowAltCircleRight} size="lg" />
           </div>
         </div>
       </a>
-    </motion.div>
+    </div>
   );
 };
 

@@ -5,12 +5,14 @@ import "./Header.scss";
 
 const Header = () => {
   return (
-    <div>
-      <nav className="navbar navbar-dark navbar-expand-lg border-blue px-5 pt-5 pb-3">
-        <div className="container-fluid border-red justify-content-between">
+    <header>
+      <nav className="navbar navbar-dark navbar-expand-lg">
+        <div className="header-inner">
           <a className="brand-logo" href="/portfolio">
-            CHRIS_Y.DEV
+            <span className="brand-dot" aria-hidden="true"></span>
+            <span>Chris Y.</span>
           </a>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -22,43 +24,40 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div
-            className="collapse navbar-collapse justify-content-end border-green"
+            className="collapse navbar-collapse justify-content-end"
             id="navbarSupportedContent"
           >
-            <ul className="navbar-nav justify-content-right">
+            <ul className="navbar-nav">
               <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href={`/portfolio`}
-                >
+                <HashLink className="nav-link active" smooth to="#home">
                   Home
-                </a>
-              </li>
-              <li className="nav-item px-2">
-                <HashLink className="nav-link" smooth to={`${"#experience"}`}>
-                  Experience
                 </HashLink>
               </li>
-              <li className="nav-item px-2">
-                <HashLink className="nav-link" smooth to={`${"#achievements"}`}>
+              <li className="nav-item">
+                <HashLink className="nav-link" smooth to="#resume">
+                  Resume
+                </HashLink>
+              </li>
+              <li className="nav-item">
+                <HashLink className="nav-link" smooth to="#certifications">
+                  Certs & Events
+                </HashLink>
+              </li>
+              <li className="nav-item">
+                <HashLink className="nav-link" smooth to="#education">
+                  Education
+                </HashLink>
+              </li>
+              <li className="nav-item">
+                <HashLink className="nav-link" smooth to="#achievements">
                   Achievements
                 </HashLink>
               </li>
-              <li className="nav-item px-2">
-                <HashLink className="nav-link" smooth to={`${"#expertise"}`}>
-                  Expertise
-                </HashLink>
-              </li>
-              <li className="nav-item px-2">
-                <HashLink className="nav-link" smooth to={`${"#myWork"}`}>
-                  My Work
-                </HashLink>
-              </li>
-              <li className="nav-item px-2">
-                <HashLink className="nav-link" smooth to={`${"#socials"}`}>
-                  Socials
+              <li className="nav-item">
+                <HashLink className="nav-link" smooth to="#expertise">
+                  Skills
                 </HashLink>
               </li>
             </ul>
@@ -66,7 +65,7 @@ const Header = () => {
         </div>
       </nav>
       <BackToTopButton />
-    </div>
+    </header>
   );
 };
 

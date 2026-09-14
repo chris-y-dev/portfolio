@@ -1,106 +1,62 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AccordionData from "../../interfaces/IExperienceAccordion";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import SkillPill from "../expertise/SkillPill";
 import fetchStaticImage from "../../hooks/fetchStaticImage";
 import "../../App.scss";
-import { motion } from "framer-motion";
 
-const AccordionItem = (props: {
-  item: AccordionData;
-  isOpen: boolean;
-  toggleAccordion: Function;
-}) => {
+const AccordionItem = (props: { item: AccordionData }) => {
   const companyLogo = fetchStaticImage(props.item.companyImagePath);
-
-  console.log("PATH", props.item.companyImagePath);
-  console.log("Company logo", companyLogo);
-
-  function toggleAccordion(id: string) {
-    console.log(id);
-    props.toggleAccordion(id);
-  }
 
   function replaceWithBr(desc: string) {
     return desc.replace(/\n/g, "<br />");
   }
 
   return (
-    <motion.div
-      className="w-100"
-      initial={{ y: "9rem" }}
-      whileInView={{ y: "0rem" }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+    <div
+      className={`timeline-item ${props.item.isMusicTherapy ? "timeline-music" : "timeline-swe"}`}
     >
-      <button
-        className={`accordionButton ${
-          props.isOpen ? "--btn-active" : "--btn-inactive"
-        } d-flex flex-row my-2 py-3 px-4 text-left justify-content-between align-items-center ${
-          props.item.isMusicTherapy ? "mt_border" : "swe_border"
-        }`}
-        onClick={() => toggleAccordion(props.item.id)}
-      >
-        <div
-          className="flex flex-col md:flex-row items-center w-full me-2 md:me-0"
-          style={{ display: "flex", alignItems: "center" }}
-        >
-          <div style={{ display: "inline-block" }} className="me-3 md:me-3">
-            {props.item.buttonLabel}
+      <div className="timeline-marker">
+        <span className="timeline-dot"></span>
+      </div>
+
+      <div className="timeline-card">
+        <div className="timeline-header">
+          <div>
+            <p className="timeline-date">
+              <FontAwesomeIcon icon={faCalendar} className="me-2" />
+              {props.item.workPeriod}
+            </p>
+            <h3 className="timeline-title">{props.item.buttonLabel}</h3>
           </div>
+          <img className="companyLogo" src={companyLogo} alt={props.item.id} />
+        </div>
+
+        <div className="timeline-meta">
+          <span>
+            <FontAwesomeIcon icon={faBriefcase} className="me-2" />
+            {props.item.workType}
+          </span>
           {props.item.isCurrent && (
-            <div className="current_pill" style={{ display: "inline-block" }}>
-              Current
-            </div>
+            <span className="current_pill">Current</span>
           )}
         </div>
-        <FontAwesomeIcon
-          icon={faChevronDown}
-          className={`${
-            props.isOpen ? "--btn-active-icon" : "--btn-inactive-icon"
-          }`}
+
+        <p
+          className="timeline-description"
+          dangerouslySetInnerHTML={{
+            __html: replaceWithBr(props.item.description),
+          }}
         />
-      </button>
-      <div
-        className={`accordionPanel p-4 my-3 ${
-          props.isOpen ? "--showAccordion d-flex flex-row" : "--hideAccordion"
-        }`}
-      >
-        <div className="row">
-          <div className="col-lg-9 col-md-8 col-xs-12 d-flex flex-column">
-            <div className="row mb-4 gy-2">
-              <div className="col-md-3 col-sm-12">
-                <FontAwesomeIcon icon={faBriefcase} className="me-2 " />
-                {props.item.workType}
-              </div>
-              <div className="col-lg-9 col-md-8 col-sm-12">
-                <FontAwesomeIcon icon={faCalendar} className="me-2" />
-                {props.item.workPeriod}
-              </div>
-            </div>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: replaceWithBr(props.item.description),
-              }}
-            />
-            <div className="d-flex flex-row flex-wrap">
-              {props.item.technologies.map((tech) => {
-                return <SkillPill pill={tech} key={tech} />;
-              })}
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 col-xs-12 order-md-last order-first text-center">
-            <img
-              className="companyLogo py-3"
-              src={companyLogo}
-              alt={props.item.id}
-            />
-          </div>
+
+        <div className="timeline-skills">
+          {props.item.technologies.map((tech) => {
+            return <SkillPill pill={tech} key={tech} />;
+          })}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
