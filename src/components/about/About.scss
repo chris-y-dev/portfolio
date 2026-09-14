@@ -1,0 +1,51 @@
+@import "../../App.scss";
+
+.about-section {
+  position: relative;
+  padding: 3.5rem 0 2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-copy {
+  padding-right: 1rem;
+}
+
+.about-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.about-image-slot {
+  width: min(28vw, 330px);
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  border: 1px dashed rgba(147, 197, 253, 0.45);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.48));
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.35);
+  color: rgba(221, 234, 255, 0.82);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image-slot {
+    width: min(58vw, 300px);
+  }
+}

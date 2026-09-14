@@ -5,6 +5,7 @@
 $microsoft-colour: rgb(59, 129, 250);
 $aws-colour: rgb(255, 140, 40);
 $oracle-colour: rgb(194, 43, 43);
+$google-colour: rgb(234, 67, 53);
 $default-white: rgb(229, 229, 229);
 
 
@@ -29,6 +30,7 @@ $default-white: rgb(229, 229, 229);
             transform: translateY(-10px);
             transition-duration: 0.2s;
             box-shadow: 0 5px 10px 4px rgba($color: #000000, $alpha: 0.5);
+            border-color: rgba(125, 211, 252, 0.45);
 
             .--event-title{
                 color: $light-blue-link !important;
@@ -55,17 +57,18 @@ $default-white: rgb(229, 229, 229);
 }
 
 .eventBlock_container{
-    background-color: $dark-grey-panel;
-    border-radius: 0.3rem;
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 1rem;
     height: 100%;
     position: relative;
 
     .--event-title{
-        font-size: 1.2rem;
+        font-size: 1.08rem;
     }
     
     .--event-date{
-        font-size: 0.9rem;
+        font-size: 0.82rem;
         font-weight: 300;
     }
 
@@ -134,6 +137,12 @@ $default-white: rgb(229, 229, 229);
                 color: $oracle-colour;
             }
 
+        }
+
+        &.--google{
+            *{
+                color: $google-colour;
+            }
         }
     }
 

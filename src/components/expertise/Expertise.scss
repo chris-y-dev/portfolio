@@ -35,8 +35,9 @@ $container-heading-size: 2rem;
 }
 
 .expertiseContainer{
-    border-radius: 10px;
-    background-color: rgba($dark-grey-panel, 1);
+    border-radius: 1rem;
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(148, 163, 184, 0.18);
     height: 100%;
     text-align: left;
     padding: 0.5rem 1rem;
@@ -56,13 +57,13 @@ $container-heading-size: 2rem;
     }
 
     h3{
-        font-size: $container-heading-size;
+        font-size: 1.4rem;
     }
 
     p{
         text-align: left;
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 1.05rem;
     }
 
     img{

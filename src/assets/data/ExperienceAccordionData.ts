@@ -25,7 +25,7 @@ const ExperienceAccordionData: ExperienceAccordion[] = [
     workType: "Full-time",
     workPeriod: "Feb 2024 - Feb 2025",
     description:
-      "My favorite aspect of being a Graduate Software Enginee was rotating across 3 teams, gaining hands-on experience working on backend, security, and full-stack development.\n\nI worked on new & legacy applications of both microservice/monolithic architectures, as well as automation of various tasks.\n\nUnder the guidance of experienced engineers, I am getting a deeper understanding of CLEAN architecture principles, various levels of software testing, and observed how software engineering requirements are negotiated and made.",
+      "My favorite aspect of being a Graduate Software Enginee was rotating across 3 teams, gaining hands-on experience working on backend, security, and full-stack development.\n\nI worked on new & legacy applications of both microservice/monolithic architectures, as well as automation of security tasks.\n\nUnder the guidance of experienced engineers, I got a deeper understanding of software architecture tradeoffs, and observed how software engineering requirements are negotiated and made.",
     companyImagePath: "/experience/xero_logo.png",
     technologies: [
       "C#/.NET",

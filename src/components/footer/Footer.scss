@@ -1,132 +1,89 @@
 @import "../../App.scss";
-@import "../achievements/Achievements.scss";
-
-$footer-left: #191919;
-$footer-right: rgb(18, 18, 18);
-
-@import '../../../node_modules/bootstrap/scss/functions';
-@import '../../../node_modules/bootstrap/scss/variables';
-@import '../../../node_modules/bootstrap/scss/mixins';
-
-#socials{
-    height: 40rem;
-    width: 100%;
+.site-footer {
+  width: 100%;
+  padding: 7rem 1.5rem 7rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.12), rgba(2, 6, 23, 0.72));
 }
 
-.socials_container{
-   background-color: $footer-left;
-
-    h2{
-        font-weight: 200;
-    }
-
-    ul{
-        padding: 0;
-    }
-
-    li{
-        list-style: none;
-        
-        &:hover{
-            a{
-                color: $light-blue-link;
-            }
-            transform: translateX(10px);
-            .social_icon{
-                *{
-                    color:$light-blue-link;
-                }
-            }
-        }
-    }
-
-    a{
-        text-decoration: none;
-        color: white;
-        font-weight: 200;
-        font-size: 1.5rem;
-
-        .social_icon{
-            max-width: 24px;
-        }
-    }
-
-    @include media-breakpoint-down(md){
-        height: 30rem !important;
-    }
-
-    @include media-breakpoint-down(sm){
-        height: 26rem !important;
-    }
-
+.site-footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.second_container{
-    background-color:$footer-right;
-
-    .profile-message_image-container{
-        border-radius: 100%;
-        overflow: hidden;
-        width: 10rem;
-        height: 10rem;
-        
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        @include media-breakpoint-down(xxl){
-            margin-bottom: 2rem;
-        }
-
-        @include media-breakpoint-down(sm){
-            width: 8rem;
-            height: 8rem;
-            margin-bottom: 2rem;
-        }
-    }
-
-    .profile-message_message{
-        max-width: 30rem;
-        font-size: 1.2rem;
-
-        @include media-breakpoint-down(sm){
-           margin: 1rem 0 2rem 0!important;
-        }
-    }
-
-    .typography{
-        width:100%;
-        max-width: 30rem;
-    }
-
-    p{
-        font-weight: 200;
-    }
-
-    @include media-breakpoint-down(md){
-        height: 40rem !important;
-    }
-   
+.site-footer__eyebrow {
+  margin-bottom: 1rem;
+  color: $light-blue-link;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
-.footer-containers_sizing{
-    height: 100%;
+.site-footer h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
 
-    @include media-breakpoint-down(sm){
-        padding: 4rem 2rem !important;
-    }
+.site-footer__message {
+  max-width: 38rem;
+  margin: 1.25rem auto 2rem;
+  color: $muted-text;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
 
-    @include media-breakpoint-up(md){
-        padding-top: 5rem !important;
-    }
+.site-footer__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.25rem;
+  border: 1px solid rgba(125, 211, 252, 0.5);
+  border-radius: 999px;
+  background: rgba(125, 211, 252, 0.12);
+  color: #ecf8ff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 
-    @include media-breakpoint-up(xl){
-        padding-left: 7rem !important;
-    }
+  &:hover {
+    transform: translateY(-2px);
+    border-color: $light-blue-link;
+    background: rgba(125, 211, 252, 0.2);
+    color: #fff;
+  }
+}
 
-    @include media-breakpoint-up(xxl){
-        padding-left: 8% !important;
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin-top: 2.5rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: $muted-text;
+    font-size: 0.82rem;
+    text-decoration: none;
+
+    &:hover {
+      color: $light-blue-link;
     }
+  }
+}
+
+.site-footer__version {
+  margin: 3.5rem 0 0;
+  color: rgba(147, 168, 201, 0.55);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
 }

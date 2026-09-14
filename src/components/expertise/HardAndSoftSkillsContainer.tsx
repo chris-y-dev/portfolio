@@ -8,7 +8,7 @@ const HardAndSoftSkillsContainer = (props: {
   const skillType_styling: { [key: string]: any } = {
     gold: "--gold",
     silver: "--silver",
-    Intermediate: "--intermediate",
+    intermediate: "--intermediate",
     softSkills: "--softSkills",
   };
 

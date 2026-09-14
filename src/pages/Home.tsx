@@ -6,19 +6,19 @@ import Expertise from "../components/expertise/Expertise";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
-import MyWork from "../components/myWork/MyWork";
+// import MyWork from "../components/myWork/MyWork";
 
 const Home = () => {
   const location = useLocation();
 
   const [scrollToElement, setScrollToElement] = useState<HTMLElement | null>(
-    null
+    null,
   );
 
   useEffect(() => {
     function selectAndScrollToElementByHash() {
       var element: HTMLElement | null = document.getElementById(
-        location.hash.slice(1)
+        location.hash.slice(1),
       );
 
       console.log("Scroll function");
@@ -36,11 +36,21 @@ const Home = () => {
     <div className="text-white vh-100 backgorund-primary">
       <Header />
       <Hero />
+      <div
+        className="announcement-bar"
+        aria-label="Professional highlights banner"
+      >
+        <div className="announcement-inner">
+          <span>AWS &amp; Azure Certified</span>
+          <span>Enterprise&amp; Startup</span>
+          <span>Australian Citizen</span>
+          <span>Canberra · ACT</span>
+        </div>
+      </div>
       <Experience />
-      {/* <div id="experience-bg" className="p-5"></div> */}
       <Achievements />
       <Expertise />
-      <MyWork />
+      {/* <MyWork /> */}
       <Footer />
     </div>
   );

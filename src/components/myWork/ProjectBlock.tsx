@@ -8,7 +8,7 @@ const ProjectBlock = (props: { projectData: MyWorkData }) => {
   const img = fetchStaticImage(props.projectData.projectThumbnailPath);
 
   return (
-    <div className="projectBlock d-flex flex-column">
+    <div className="projectBlock surface-card d-flex flex-column">
       <a href={"/portfolio/work-showcase/" + props.projectData.id}>
         <img src={img} alt={props.projectData.name} />
         <div

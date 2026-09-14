@@ -2,7 +2,6 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import ProjectBlock from "./ProjectBlock";
 import { IProjectFilterCategory } from "../../interfaces/IProjectFilterCategory";
 import ProjectFilterCategoriesData from "../../assets/data/ProjectFilterCategoriesData";
-import { motion } from "framer-motion";
 
 import "../../App.scss";
 import IWorkData from "../../interfaces/IWorkData";
@@ -63,30 +62,24 @@ const MyWork = () => {
                   return project.category === selectedFilter;
                 }
               })
-              .map((project, index) => {
+              .map((project) => {
                 if (project.isFeatured) {
                   return (
-                    <motion.div
+                    <div
                       className="col-lg-8 col-sm-12 border-green order"
-                      initial={{ y: "9rem" }}
-                      whileInView={{ y: "0rem" }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6 + index * 0.1 }}
+                      key={project.id}
                     >
-                      <ProjectBlock projectData={project} key={project.id} />
-                    </motion.div>
+                      <ProjectBlock projectData={project} />
+                    </div>
                   );
                 } else {
                   return (
-                    <motion.div
+                    <div
                       className="col-lg-4 col-md-6 col-sm-12 border-green order"
-                      initial={{ y: "9rem" }}
-                      whileInView={{ y: "0rem" }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6 + index * 0.1 }}
+                      key={project.id}
                     >
-                      <ProjectBlock projectData={project} key={project.id} />
-                    </motion.div>
+                      <ProjectBlock projectData={project} />
+                    </div>
                   );
                 }
               })}

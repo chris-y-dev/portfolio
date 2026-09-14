@@ -3,34 +3,11 @@ import "../../App.scss";
 
 import AchievementsAndEventsData from "../../assets/data/AchievementsAndEventsData";
 import EventBlock from "./EventBlock";
-import { motion } from "framer-motion";
 
 const Achievements = () => {
   return (
     <div className="py-5 mb-5 --section-margin-lg" id="achievements">
-      <div className="container border-red mb-5">
-        <h2 className="section-heading">ACHIEVEMENTS</h2>
-        <div className="border-green row gy-2 gx-2">
-          {AchievementsAndEventsData.filter((event) => {
-            return (
-              event.eventType.type === "Hackathon" &&
-              event.eventType.isWinner === true
-            );
-          }).map((event, i) => (
-            <motion.div
-              className="col-md-6 col-sm-12"
-              initial={{ y: "9rem" }}
-              whileInView={{ y: "0rem" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 + i * 0.2 }}
-              key={event.title}
-            >
-              <EventBlock eventData={event} />
-            </motion.div>
-          ))}
-        </div>
-      </div>
-      <div className="container border-red pt-5 mb-5">
+      <div className="container border-red pt-5 mb-5" id="certifications">
         <h2 className="section-heading">CERTIFICATIONS & EVENTS</h2>
         <div className="row gx-2 gy-2 border-green">
           {AchievementsAndEventsData.filter((event) => {
@@ -39,37 +16,39 @@ const Achievements = () => {
               event.eventType.isWinner === false &&
               event.eventType.type !== "Education"
             );
-          }).map((event, i) => (
-            <motion.div
-              className="col-md-6 col-sm-12 entrance"
-              initial={{ y: "9rem" }}
-              whileInView={{ y: "0rem" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 + i * 0.2 }}
-              key={event.title}
-            >
+          }).map((event) => (
+            <div className="col-md-6 col-sm-12 entrance" key={event.title}>
               <EventBlock eventData={event} />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
-      <div className="container border-red pt-5 mb-5">
+      <div className="container border-red pt-5 mb-5" id="education">
         <h2 className="section-heading">EDUCATION</h2>
         <div className="row gx-2 gy-2 border-green">
           {AchievementsAndEventsData.filter((event) => {
             return event.eventType.type === "Education";
-          }).map((event, i) => (
-            <motion.div
-              className="col-md-6 col-sm-12 entrance"
-              initial={{ y: "9rem" }}
-              whileInView={{ y: "0rem" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 + i * 0.2 }}
-              key={event.title}
-            >
+          }).map((event) => (
+            <div className="col-md-6 col-sm-12 entrance" key={event.title}>
               <EventBlock eventData={event} />
-            </motion.div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="container border-red mb-5">
+        <h2 className="section-heading">ACHIEVEMENTS</h2>
+        <div className="border-green row gy-2 gx-2">
+          {AchievementsAndEventsData.filter((event) => {
+            return (
+              event.eventType.type === "Hackathon" &&
+              event.eventType.isWinner === true
+            );
+          }).map((event) => (
+            <div className="col-md-6 col-sm-12" key={event.title}>
+              <EventBlock eventData={event} />
+            </div>
           ))}
         </div>
       </div>
