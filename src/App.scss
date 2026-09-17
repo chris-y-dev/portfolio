@@ -18,6 +18,7 @@ $glow: rgba(125, 211, 252, 0.5);
 
 :root {
   color-scheme: dark;
+  --section-max-width: 1100px;
 }
 
 * {
@@ -89,8 +90,11 @@ body,
 
 
 
+.container,
 .inner-container {
-  width: 100%;
+  width: min(90vw, var(--section-max-width));
+  max-width: var(--section-max-width);
+  margin-inline: auto;
 
   .row {
     width: 100% !important;
