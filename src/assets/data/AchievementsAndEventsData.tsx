@@ -26,6 +26,18 @@ const AchievementsAndEventsData: IAchievementsAndEvents[] = [
     },
   },
   {
+    title: "Google Cybersecurity Professional Certificate (v.2)",
+    date: "Jun 2026",
+    link: undefined,
+    eventType: {
+      type: "Cloud",
+      isWinner: false,
+      place: 0,
+      companyColour: "Google",
+      hasIconColour: false,
+    },
+  },
+  {
     title: "AWS Certified Developer - Associate",
     date: "Sept 2024",
     link: undefined,
@@ -46,18 +58,6 @@ const AchievementsAndEventsData: IAchievementsAndEvents[] = [
       isWinner: false,
       place: 1,
       companyColour: "Microsoft",
-      hasIconColour: false,
-    },
-  },
-  {
-    title: "Google Cybersecurity Professional Certificate (v.2)",
-    date: "Jun 2026",
-    link: undefined,
-    eventType: {
-      type: "Cloud",
-      isWinner: false,
-      place: 0,
-      companyColour: "Google",
       hasIconColour: false,
     },
   },

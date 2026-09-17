@@ -9,9 +9,10 @@ test("keeps the current role open by default and exposes a collapsed preview for
   const currentTitle = screen.getByText("Software Engineer @ Xero", {
     selector: "h3",
   });
-  const graduateTitle = screen.getByText("Graduate Software Engineer @ Xero", {
-    selector: "h3",
-  });
+  const graduateTitle = screen.getByText(
+    "Graduate Software Engineer @ Xero (Product, Security rotations)",
+    { selector: "h3" },
+  );
 
   expect(currentTitle.closest("button")).toHaveAttribute(
     "aria-expanded",
