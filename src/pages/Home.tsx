@@ -42,7 +42,7 @@ const Home = () => {
       >
         <div className="announcement-inner">
           <span>AWS &amp; Azure Certified</span>
-          <span>Enterprise&amp; Startup</span>
+          <span>Enterprise &amp; Startup</span>
           <span>Australian Citizen</span>
           <span>Canberra · ACT</span>
         </div>

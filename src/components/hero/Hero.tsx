@@ -72,15 +72,18 @@ const Hero = () => {
             turned <span className="swe_font">software engineer</span>, with
             experience across enterprise (Xero), startup, and small-business
             environments. At Xero, I work on online bill payment systems
-            processing millions in monthly USD transactions, with a focus on
-            data integrity, reliability, and observability at scale.
+            processing millions in monthly transactions, with a focus on data
+            integrity, reliability, and observability at scale.
           </p>
           <p className="hero-line">
-            Beyond payments, I've worked across security engineering, frontend
-            delivery, and infrastructure ownership. I adapt quickly to new
-            domains. Currently learning to integrate AI capabilities into my
-            homelab, including LLM-powered chatbots and context-aware
-            applications.
+            I've also worked across security engineering and frontend delivery.
+            I pick up new domains quickly, and am currently learning to
+            integrate AI capabilities into my homelab, including LLM-powered
+            chatbots and RAG applications.
+          </p>
+          <p className="hero-line">
+            Outside of work, I enjoy bird photography, tweaking my homelab, and
+            staying active.
           </p>
           <div className="hero-stack-block" aria-label="Technology stack panel">
             <div className="stack-header">
