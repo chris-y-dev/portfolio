@@ -202,6 +202,19 @@
   margin: 0.5rem 0;
 }
 
+.timeline-prior-role {
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.timeline-prior-role-title {
+  margin: 0 0 0.65rem;
+  color: #f8fbff;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
 .timeline-skills {
   display: flex;
   flex-wrap: wrap;

@@ -95,11 +95,37 @@ const AccordionItem = (props: {
               }}
             />
 
-            <div className="timeline-skills">
-              {props.item.technologies.map((tech) => {
-                return <SkillPill pill={tech} key={tech} />;
+            <div
+              className="timeline-skills"
+              role="group"
+              aria-label={`${props.item.buttonLabel} skills`}
+            >
+              {props.item.skills.map((skill) => {
+                return <SkillPill pill={skill} key={skill} />;
               })}
             </div>
+
+            {props.item.priorRole?.map((role) => (
+              <section className="timeline-prior-role" key={role.title}>
+                <p className="timeline-date">{role.workPeriod}</p>
+                <h4 className="timeline-prior-role-title">{role.title}</h4>
+                <p
+                  className="timeline-description"
+                  dangerouslySetInnerHTML={{
+                    __html: replaceWithBr(role.description),
+                  }}
+                />
+                <div
+                  className="timeline-skills"
+                  role="group"
+                  aria-label={`${role.title} skills`}
+                >
+                  {role.skills.map((skill) => (
+                    <SkillPill pill={skill} key={skill} />
+                  ))}
+                </div>
+              </section>
+            ))}
           </div>
         )}
       </div>
