@@ -9,7 +9,7 @@ import "../../App.scss";
 const AccordionItem = (props: {
   item: AccordionData;
   isOpen: boolean;
-  onToggle: () => void;
+  onToggle: (element: HTMLButtonElement) => void;
 }) => {
   const companyLogo = fetchStaticImage(props.item.companyImagePath);
 
@@ -39,7 +39,7 @@ const AccordionItem = (props: {
         <button
           type="button"
           className="timeline-trigger"
-          onClick={props.onToggle}
+          onClick={(event) => props.onToggle(event.currentTarget)}
           aria-expanded={props.isOpen}
           aria-controls={`experience-panel-${props.item.id}`}
         >
