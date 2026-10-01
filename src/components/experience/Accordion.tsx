@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import AccordionItem from "./AccordionItem";
 import IExperienceAccordion from "../../interfaces/IExperienceAccordion";
 import ExperienceAccordionData from "../../assets/data/ExperienceAccordionData";
@@ -8,6 +8,10 @@ const Accordion = () => {
     [],
   );
   const [openItemId, setOpenItemId] = useState<string | null>(null);
+  const pendingAnchor = useRef<{
+    element: HTMLButtonElement;
+    top: number;
+  } | null>(null);
 
   useEffect(() => {
     const data = ExperienceAccordionData;
@@ -17,7 +21,32 @@ const Accordion = () => {
     setOpenItemId(currentRole?.id ?? data[0]?.id ?? null);
   }, []);
 
-  const handleToggle = (id: string) => {
+  useLayoutEffect(() => {
+    const anchor = pendingAnchor.current;
+    if (!anchor) return;
+
+    pendingAnchor.current = null;
+    if (!window.matchMedia("(max-width: 767.98px)").matches) return;
+
+    const scrollAmount =
+      anchor.element.getBoundingClientRect().top - anchor.top;
+    if (Math.abs(scrollAmount) < 1) return;
+
+    const behavior = window.matchMedia("(prefers-reduced-motion: reduce)")
+      .matches
+      ? "auto"
+      : "smooth";
+    window.scrollBy({ top: scrollAmount, behavior });
+  }, [openItemId]);
+
+  const handleToggle = (id: string, element: HTMLButtonElement) => {
+    if (openItemId !== null && openItemId !== id) {
+      pendingAnchor.current = {
+        element,
+        top: element.getBoundingClientRect().top,
+      };
+    }
+
     setOpenItemId((current) => (current === id ? null : id));
   };
 
@@ -31,7 +60,7 @@ const Accordion = () => {
             <AccordionItem
               item={item}
               isOpen={isOpen}
-              onToggle={() => handleToggle(item.id)}
+              onToggle={(element) => handleToggle(item.id, element)}
             />
           </div>
         );
